@@ -1,0 +1,40 @@
+---
+title: The Rise of the FP&A AI Agent
+url: "https://chatfin.ai/blog/the-rise-of-the-fpa-ai-agent/"
+type: sub
+cluster: blog
+slug: the-rise-of-the-fpa-ai-agent
+snapshots:
+  - period: "2026-08-03_2026-08-10"
+    label: Aug 3–10
+    start: "2026-08-03"
+    end: "2026-08-10"
+    clicks: 0
+    impressions: 25
+    ctr: 0
+    position: 11.32
+  - period: "2026-08-10_2026-08-17"
+    label: Aug 10–17
+    start: "2026-08-10"
+    end: "2026-08-17"
+    clicks: 0
+    impressions: 11
+    ctr: 0
+    position: 9.55
+---
+
+# The Rise of the FP&A AI Agent
+
+Tracked page in the **Blog** cluster.
+`https://chatfin.ai/blog/the-rise-of-the-fpa-ai-agent/`
+
+## Latest snapshot
+
+- **Position:** 9.6 (improved)
+- **Clicks:** 0 (held steady)
+- **Impressions:** 11 (fell)
+- **CTR:** 0.00%
+
+## Notes
+
+_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._

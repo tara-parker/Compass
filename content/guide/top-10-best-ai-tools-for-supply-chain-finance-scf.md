@@ -1,0 +1,40 @@
+---
+title: Top 10 Best AI Tools for Supply Chain Finance Scf
+url: "https://chatfin.ai/guide/top-10-best-ai-tools-for-supply-chain-finance-scf/"
+type: sub
+cluster: guide
+slug: top-10-best-ai-tools-for-supply-chain-finance-scf
+snapshots:
+  - period: "2026-08-03_2026-08-10"
+    label: Aug 3–10
+    start: "2026-08-03"
+    end: "2026-08-10"
+    clicks: 1
+    impressions: 97
+    ctr: 0.0103
+    position: 18.84
+  - period: "2026-08-10_2026-08-17"
+    label: Aug 10–17
+    start: "2026-08-10"
+    end: "2026-08-17"
+    clicks: 2
+    impressions: 131
+    ctr: 0.0153
+    position: 27.73
+---
+
+# Top 10 Best AI Tools for Supply Chain Finance Scf
+
+Tracked page in the **Guide** cluster.
+`https://chatfin.ai/guide/top-10-best-ai-tools-for-supply-chain-finance-scf/`
+
+## Latest snapshot
+
+- **Position:** 27.7 (slipped)
+- **Clicks:** 2 (rose)
+- **Impressions:** 131 (rose)
+- **CTR:** 1.53%
+
+## Notes
+
+_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._

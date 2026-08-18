@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
+}
+
+html {
+  color-scheme: dark;
+}
+
+body {
+  background:
+    radial-gradient(1200px 600px at 100% -10%, #17203c 0%, transparent 55%),
+    radial-gradient(1000px 500px at -10% 10%, #141a30 0%, transparent 50%),
+    #0b1020;
+  color: #e6e9f2;
+  min-height: 100vh;
+}
+
+/* thin scrollbars */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #2a3357 transparent;
+}
+*::-webkit-scrollbar {
+  height: 8px;
+  width: 8px;
+}
+*::-webkit-scrollbar-thumb {
+  background: #2a3357;
+  border-radius: 8px;
+}
+
+/* --- markdown prose (kept dependency-free) --- */
+.prose {
+  color: #cdd3e3;
+  line-height: 1.7;
+  font-size: 0.95rem;
+}
+.prose h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #fff;
+  margin: 0 0 0.75rem;
+}
+.prose h2 {
+  font-size: 1.15rem;
+  font-weight: 650;
+  color: #f2f4fb;
+  margin: 1.6rem 0 0.6rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid #232b45;
+}
+.prose h3 {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #eef1f9;
+  margin: 1.1rem 0 0.4rem;
+}
+.prose p {
+  margin: 0.6rem 0;
+}
+.prose ul {
+  margin: 0.5rem 0;
+  padding-left: 1.2rem;
+  list-style: disc;
+}
+.prose ol {
+  margin: 0.5rem 0;
+  padding-left: 1.2rem;
+  list-style: decimal;
+}
+.prose li {
+  margin: 0.25rem 0;
+}
+.prose a {
+  color: #8fb0ff;
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.prose code {
+  background: #151b2e;
+  border: 1px solid #232b45;
+  padding: 0.1rem 0.35rem;
+  border-radius: 6px;
+  font-size: 0.85em;
+  color: #b9c6ff;
+}
+.prose pre {
+  background: #0e1424;
+  border: 1px solid #232b45;
+  padding: 1rem;
+  border-radius: 12px;
+  overflow-x: auto;
+}
+.prose pre code {
+  background: transparent;
+  border: 0;
+  padding: 0;
+}
+.prose blockquote {
+  border-left: 3px solid #2a3357;
+  padding-left: 1rem;
+  color: #9aa3bd;
+  font-style: italic;
+}
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+  font-size: 0.85rem;
+}
+.prose th,
+.prose td {
+  border: 1px solid #232b45;
+  padding: 0.5rem 0.7rem;
+  text-align: left;
+}
