@@ -15,18 +15,4 @@ snapshots:
     position: 9.21
 ---
 
-# AI Agents for Compliance Internal Audit
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/ai-agents-for-compliance-internal-audit/`
-
-## Latest snapshot
-
-- **Position:** 9.2 (first reading)
-- **Clicks:** 1 ()
-- **Impressions:** 14 ()
-- **CTR:** 7.14%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

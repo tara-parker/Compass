@@ -23,18 +23,4 @@ snapshots:
     position: 8.28
 ---
 
-# Pcaob AI in the Audit What Finance and Audit Teams Should Expect
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/pcaob-ai-in-the-audit-what-finance-and-audit-teams-should-expect/`
-
-## Latest snapshot
-
-- **Position:** 8.3 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 88 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

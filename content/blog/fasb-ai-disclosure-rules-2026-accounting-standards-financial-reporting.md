@@ -23,18 +23,4 @@ snapshots:
     position: 6.49
 ---
 
-# Fasb AI Disclosure Rules 2026 Accounting Standards Financial Reporting
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/fasb-ai-disclosure-rules-2026-accounting-standards-financial-reporting/`
-
-## Latest snapshot
-
-- **Position:** 6.5 (slipped)
-- **Clicks:** 3 (rose)
-- **Impressions:** 129 (rose)
-- **CTR:** 2.33%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

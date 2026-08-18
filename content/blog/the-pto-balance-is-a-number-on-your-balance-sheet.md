@@ -23,18 +23,4 @@ snapshots:
     position: 7.48
 ---
 
-# The Pto Balance Is a Number on Your Balance Sheet
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/the-pto-balance-is-a-number-on-your-balance-sheet/`
-
-## Latest snapshot
-
-- **Position:** 7.5 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 96 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

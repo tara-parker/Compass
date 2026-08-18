@@ -23,18 +23,4 @@ snapshots:
     position: 8.48
 ---
 
-# AI Timesheet Automation and Reconciliation
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/ai-timesheet-automation-and-reconciliation/`
-
-## Latest snapshot
-
-- **Position:** 8.5 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 25 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

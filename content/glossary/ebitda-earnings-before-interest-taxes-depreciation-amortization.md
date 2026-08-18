@@ -15,18 +15,4 @@ snapshots:
     position: 26.08
 ---
 
-# Ebitda Earnings Before Interest Taxes Depreciation Amortization
-
-Tracked page in the **Glossary** cluster.
-`https://chatfin.ai/glossary/ebitda-earnings-before-interest-taxes-depreciation-amortization/`
-
-## Latest snapshot
-
-- **Position:** 26.1 (first reading)
-- **Clicks:** 0 ()
-- **Impressions:** 12 ()
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

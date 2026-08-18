@@ -15,18 +15,4 @@ snapshots:
     position: 12.11
 ---
 
-# ERP Connectivity AI Agents for Integrated Finance Operations
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/erp-connectivity-ai-agents-for-integrated-finance-operations/`
-
-## Latest snapshot
-
-- **Position:** 12.1 (first reading)
-- **Clicks:** 0 ()
-- **Impressions:** 9 ()
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

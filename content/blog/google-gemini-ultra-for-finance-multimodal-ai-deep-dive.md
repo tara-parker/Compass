@@ -23,18 +23,4 @@ snapshots:
     position: 8.97
 ---
 
-# Google Gemini Ultra for Finance Multimodal AI Deep Dive
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/google-gemini-ultra-for-finance-multimodal-ai-deep-dive/`
-
-## Latest snapshot
-
-- **Position:** 9.0 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 147 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

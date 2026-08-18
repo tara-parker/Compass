@@ -15,18 +15,4 @@ snapshots:
     position: 5.17
 ---
 
-# NetSuite AI Agents for Finance and Where Governance Still Matters
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/netsuite-ai-agents-for-finance-and-where-governance-still-matters/`
-
-## Latest snapshot
-
-- **Position:** 5.2 (first reading)
-- **Clicks:** 0 ()
-- **Impressions:** 12 ()
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

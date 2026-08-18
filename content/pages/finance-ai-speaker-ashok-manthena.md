@@ -23,18 +23,4 @@ snapshots:
     position: 3.18
 ---
 
-# Finance AI Speaker Ashok Manthena
-
-Tracked page in the **Pages** cluster.
-`https://chatfin.ai/finance-ai-speaker-ashok-manthena/`
-
-## Latest snapshot
-
-- **Position:** 3.2 (improved)
-- **Clicks:** 1 (rose)
-- **Impressions:** 11 (fell)
-- **CTR:** 9.09%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

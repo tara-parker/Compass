@@ -23,18 +23,4 @@ snapshots:
     position: 11.83
 ---
 
-# AI Agents for SAP S 4hana Ecc Complete Finance Automation Intelligence Platform
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/ai-agents-for-sap-s-4hana-ecc-complete-finance-automation-intelligence-platform/`
-
-## Latest snapshot
-
-- **Position:** 11.8 (improved)
-- **Clicks:** 3 (rose)
-- **Impressions:** 69 (rose)
-- **CTR:** 4.35%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

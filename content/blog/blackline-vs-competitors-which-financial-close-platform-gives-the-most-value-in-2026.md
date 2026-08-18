@@ -23,18 +23,4 @@ snapshots:
     position: 8.08
 ---
 
-# BlackLine vs Competitors Which Financial Close Platform Gives the Most Value in 2026
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/blackline-vs-competitors-which-financial-close-platform-gives-the-most-value-in-2026/`
-
-## Latest snapshot
-
-- **Position:** 8.1 (improved)
-- **Clicks:** 1 (rose)
-- **Impressions:** 495 (rose)
-- **CTR:** 0.20%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

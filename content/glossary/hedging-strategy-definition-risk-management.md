@@ -23,18 +23,4 @@ snapshots:
     position: 34.22
 ---
 
-# Hedging Strategy Definition Risk Management
-
-Tracked page in the **Glossary** cluster.
-`https://chatfin.ai/glossary/hedging-strategy-definition-risk-management/`
-
-## Latest snapshot
-
-- **Position:** 34.2 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 9 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

@@ -23,18 +23,4 @@ snapshots:
     position: 9.37
 ---
 
-# SAP Business One AP Automation AI Agents for Smb Invoice Processing
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/sap-business-one-ap-automation-ai-agents-for-smb-invoice-processing/`
-
-## Latest snapshot
-
-- **Position:** 9.4 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 19 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

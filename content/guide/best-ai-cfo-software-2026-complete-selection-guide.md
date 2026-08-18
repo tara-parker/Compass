@@ -23,18 +23,4 @@ snapshots:
     position: 10.95
 ---
 
-# Best AI CFO Software 2026 Complete Selection Guide
-
-Tracked page in the **Guide** cluster.
-`https://chatfin.ai/guide/best-ai-cfo-software-2026-complete-selection-guide/`
-
-## Latest snapshot
-
-- **Position:** 10.9 (slipped)
-- **Clicks:** 2 (rose)
-- **Impressions:** 249 (fell)
-- **CTR:** 0.80%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

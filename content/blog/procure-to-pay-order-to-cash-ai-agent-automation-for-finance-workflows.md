@@ -23,18 +23,4 @@ snapshots:
     position: 55.95
 ---
 
-# Procure to Pay Order to Cash AI Agent Automation for Finance Workflows
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/procure-to-pay-order-to-cash-ai-agent-automation-for-finance-workflows/`
-
-## Latest snapshot
-
-- **Position:** 56.0 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 66 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

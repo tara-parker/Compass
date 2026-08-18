@@ -15,18 +15,4 @@ snapshots:
     position: 6.89
 ---
 
-# AP Team Manually Matches Thousands of Supplier Invoices Jde Automation Platform
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/ap-team-manually-matches-thousands-of-supplier-invoices-jde-automation-platform/`
-
-## Latest snapshot
-
-- **Position:** 6.9 (first reading)
-- **Clicks:** 1 ()
-- **Impressions:** 9 ()
-- **CTR:** 11.11%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

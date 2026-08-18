@@ -23,18 +23,4 @@ snapshots:
     position: 13.09
 ---
 
-# What We Learned Connecting AI Agents to SAP Business One
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/what-we-learned-connecting-ai-agents-to-sap-business-one/`
-
-## Latest snapshot
-
-- **Position:** 13.1 (slipped)
-- **Clicks:** 0 (fell)
-- **Impressions:** 32 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

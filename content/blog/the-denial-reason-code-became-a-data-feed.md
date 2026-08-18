@@ -15,18 +15,4 @@ snapshots:
     position: 5.0
 ---
 
-# The Denial Reason Code Became a Data Feed
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/the-denial-reason-code-became-a-data-feed/`
-
-## Latest snapshot
-
-- **Position:** 5.0 (first reading)
-- **Clicks:** 1 ()
-- **Impressions:** 4 ()
-- **CTR:** 25.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

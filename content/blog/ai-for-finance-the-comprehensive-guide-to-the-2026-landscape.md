@@ -23,18 +23,4 @@ snapshots:
     position: 30.78
 ---
 
-# AI for Finance the Comprehensive Guide to the 2026 Landscape
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/ai-for-finance-the-comprehensive-guide-to-the-2026-landscape/`
-
-## Latest snapshot
-
-- **Position:** 30.8 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 18 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

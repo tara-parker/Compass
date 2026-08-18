@@ -15,18 +15,4 @@ snapshots:
     position: 16.09
 ---
 
-# Master Data Is the Automation Project
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/master-data-is-the-automation-project/`
-
-## Latest snapshot
-
-- **Position:** 16.1 (first reading)
-- **Clicks:** 0 ()
-- **Impressions:** 11 ()
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

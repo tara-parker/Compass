@@ -23,18 +23,4 @@ snapshots:
     position: 18.15
 ---
 
-# AI Agents for Sage Complete Finance Automation Intelligence Platform
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/ai-agents-for-sage-complete-finance-automation-intelligence-platform/`
-
-## Latest snapshot
-
-- **Position:** 18.1 (improved)
-- **Clicks:** 0 (fell)
-- **Impressions:** 20 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

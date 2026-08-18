@@ -23,18 +23,4 @@ snapshots:
     position: 12.59
 ---
 
-# Automated Invoice Processing with Machine Learning 2026 Guide
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/automated-invoice-processing-with-machine-learning-2026-guide/`
-
-## Latest snapshot
-
-- **Position:** 12.6 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 130 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

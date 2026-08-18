@@ -23,18 +23,4 @@ snapshots:
     position: 25.71
 ---
 
-# AI Powered Dynamics 365 Finance Automate Gl AP AR and Financial Reporting
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/ai-powered-dynamics-365-finance-automate-gl-ap-ar-and-financial-reporting/`
-
-## Latest snapshot
-
-- **Position:** 25.7 (slipped)
-- **Clicks:** 1 (rose)
-- **Impressions:** 209 (fell)
-- **CTR:** 0.48%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

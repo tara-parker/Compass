@@ -23,18 +23,4 @@ snapshots:
     position: 16.43
 ---
 
-# AI Fixed Asset Management Automated Depreciation Lifecycle Tracking
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/new-ai-agents-for-cfos/ai-fixed-asset-management-automated-depreciation-lifecycle-tracking/`
-
-## Latest snapshot
-
-- **Position:** 16.4 (slipped)
-- **Clicks:** 0 (fell)
-- **Impressions:** 53 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

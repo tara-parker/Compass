@@ -23,18 +23,4 @@ snapshots:
     position: 9.14
 ---
 
-# 10 FP&A Thought Leaders Every Finance Pro Should Follow
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/10-fpa-thought-leaders-every-finance-pro-should-follow/`
-
-## Latest snapshot
-
-- **Position:** 9.1 (improved)
-- **Clicks:** 2 (rose)
-- **Impressions:** 28 (fell)
-- **CTR:** 7.14%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

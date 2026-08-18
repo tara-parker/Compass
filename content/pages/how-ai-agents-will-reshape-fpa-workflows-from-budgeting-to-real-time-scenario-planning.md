@@ -23,18 +23,4 @@ snapshots:
     position: 11.07
 ---
 
-# How AI Agents Will Reshape FP&A Workflows From Budgeting to Real Time Scenario Planning
-
-Tracked page in the **Pages** cluster.
-`https://chatfin.ai/how-ai-agents-will-reshape-fpa-workflows-from-budgeting-to-real-time-scenario-planning/`
-
-## Latest snapshot
-
-- **Position:** 11.1 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 107 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

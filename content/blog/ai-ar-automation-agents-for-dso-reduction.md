@@ -23,18 +23,4 @@ snapshots:
     position: 6.45
 ---
 
-# AI AR Automation Agents for Dso Reduction
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/ai-ar-automation-agents-for-dso-reduction/`
-
-## Latest snapshot
-
-- **Position:** 6.5 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 152 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

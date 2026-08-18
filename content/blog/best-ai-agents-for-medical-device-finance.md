@@ -15,18 +15,4 @@ snapshots:
     position: 11.77
 ---
 
-# Best AI Agents for Medical Device Finance
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/best-ai-agents-for-medical-device-finance/`
-
-## Latest snapshot
-
-- **Position:** 11.8 (first reading)
-- **Clicks:** 4 ()
-- **Impressions:** 13 ()
-- **CTR:** 30.77%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

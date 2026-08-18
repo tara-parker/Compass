@@ -23,18 +23,4 @@ snapshots:
     position: 24.08
 ---
 
-# Step By Step Guide Building AI Agents for Reconciliations
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/step-by-step-guide-building-ai-agents-for-reconciliations/`
-
-## Latest snapshot
-
-- **Position:** 24.1 (slipped)
-- **Clicks:** 7 (rose)
-- **Impressions:** 195 (fell)
-- **CTR:** 3.59%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

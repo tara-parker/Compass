@@ -23,18 +23,4 @@ snapshots:
     position: 11.4
 ---
 
-# AI Reconciliation Closing the Books in Record Time
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/ai-reconciliation-closing-the-books-in-record-time/`
-
-## Latest snapshot
-
-- **Position:** 11.4 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 10 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

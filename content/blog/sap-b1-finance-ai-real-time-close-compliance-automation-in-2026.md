@@ -23,18 +23,4 @@ snapshots:
     position: 15.55
 ---
 
-# SAP b1 Finance AI Real Time Close Compliance Automation in 2026
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/sap-b1-finance-ai-real-time-close-compliance-automation-in-2026/`
-
-## Latest snapshot
-
-- **Position:** 15.6 (slipped)
-- **Clicks:** 0 (fell)
-- **Impressions:** 42 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

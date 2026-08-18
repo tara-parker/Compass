@@ -23,18 +23,4 @@ snapshots:
     position: 20.08
 ---
 
-# AI in Accounts Receivable Collections Cash Automation Guide
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/ai-finance/ai-in-accounts-receivable-collections-cash-automation-guide/`
-
-## Latest snapshot
-
-- **Position:** 20.1 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 197 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

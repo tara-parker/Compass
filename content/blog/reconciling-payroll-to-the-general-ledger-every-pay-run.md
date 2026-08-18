@@ -23,18 +23,4 @@ snapshots:
     position: 14.83
 ---
 
-# Reconciling Payroll to the General Ledger Every Pay Run
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/reconciling-payroll-to-the-general-ledger-every-pay-run/`
-
-## Latest snapshot
-
-- **Position:** 14.8 (slipped)
-- **Clicks:** 0 (fell)
-- **Impressions:** 12 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

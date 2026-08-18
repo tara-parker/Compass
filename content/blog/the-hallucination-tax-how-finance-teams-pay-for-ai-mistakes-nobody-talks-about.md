@@ -23,18 +23,4 @@ snapshots:
     position: 12.52
 ---
 
-# The Hallucination Tax How Finance Teams Pay for AI Mistakes Nobody Talks About
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/the-hallucination-tax-how-finance-teams-pay-for-ai-mistakes-nobody-talks-about/`
-
-## Latest snapshot
-
-- **Position:** 12.5 (slipped)
-- **Clicks:** 1 (held steady)
-- **Impressions:** 97 (rose)
-- **CTR:** 1.03%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

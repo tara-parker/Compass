@@ -23,18 +23,4 @@ snapshots:
     position: 34.43
 ---
 
-# AI Agents in Finance Complete Guide to Autonomous Financial Automation
-
-Tracked page in the **Glossary** cluster.
-`https://chatfin.ai/glossary/ai-agents-in-finance-complete-guide-to-autonomous-financial-automation/`
-
-## Latest snapshot
-
-- **Position:** 34.4 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 621 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

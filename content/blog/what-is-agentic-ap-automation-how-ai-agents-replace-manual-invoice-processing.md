@@ -23,18 +23,4 @@ snapshots:
     position: 11.32
 ---
 
-# What Is Agentic AP Automation How AI Agents Replace Manual Invoice Processing
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/what-is-agentic-ap-automation-how-ai-agents-replace-manual-invoice-processing/`
-
-## Latest snapshot
-
-- **Position:** 11.3 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 34 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

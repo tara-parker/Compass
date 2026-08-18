@@ -23,18 +23,4 @@ snapshots:
     position: 8.74
 ---
 
-# Nvidia h100 to b200 Gpu Performance Evolution for Finance AI
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/nvidia-h100-to-b200-gpu-performance-evolution-for-finance-ai/`
-
-## Latest snapshot
-
-- **Position:** 8.7 (improved)
-- **Clicks:** 0 (fell)
-- **Impressions:** 399 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

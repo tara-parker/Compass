@@ -15,18 +15,4 @@ snapshots:
     position: 43.94
 ---
 
-# Building AI Agents for AP Invoice Coding a Step By Step Guide
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/building-ai-agents-for-ap-invoice-coding-a-step-by-step-guide/`
-
-## Latest snapshot
-
-- **Position:** 43.9 (first reading)
-- **Clicks:** 0 ()
-- **Impressions:** 18 ()
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

@@ -23,18 +23,4 @@ snapshots:
     position: 7.8
 ---
 
-# What Is Microsoft Copilot for Finance in Dynamics 365 a 2026 Breakdown
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/what-is-microsoft-copilot-for-finance-in-dynamics-365-a-2026-breakdown/`
-
-## Latest snapshot
-
-- **Position:** 7.8 (improved)
-- **Clicks:** 0 (fell)
-- **Impressions:** 71 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

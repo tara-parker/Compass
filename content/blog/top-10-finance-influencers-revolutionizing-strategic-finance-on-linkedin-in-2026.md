@@ -23,18 +23,4 @@ snapshots:
     position: 11.56
 ---
 
-# Top 10 Finance Influencers Revolutionizing Strategic Finance on Linkedin in 2026
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/top-10-finance-influencers-revolutionizing-strategic-finance-on-linkedin-in-2026/`
-
-## Latest snapshot
-
-- **Position:** 11.6 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 16 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

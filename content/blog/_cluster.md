@@ -23,13 +23,4 @@ snapshots:
     position: 15.5
 ---
 
-# Blog cluster
-
-1082 tracked pages.
-
-## Cluster totals (latest)
-
-- **Clicks:** 249 (fell)
-- **Impressions:** 83952 (fell)
-- **Avg position:** 15.5 (slipped)
-- **CTR:** 0.30%
+_Editable notes for the Blog cluster._

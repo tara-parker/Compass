@@ -15,18 +15,4 @@ snapshots:
     position: 11.75
 ---
 
-# Agentic Payments Are Coming When Your AI Agent Pays the Invoice
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/agentic-payments-are-coming-when-your-ai-agent-pays-the-invoice/`
-
-## Latest snapshot
-
-- **Position:** 11.8 (first reading)
-- **Clicks:** 0 ()
-- **Impressions:** 59 ()
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

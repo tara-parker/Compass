@@ -23,18 +23,4 @@ snapshots:
     position: 18.0
 ---
 
-# FloQast Alternatives Which Financial Close Platform Actually Fits Your Team in 2026
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/floqast-alternatives-which-financial-close-platform-actually-fits-your-team-in-2026/`
-
-## Latest snapshot
-
-- **Position:** 18.0 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 41 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

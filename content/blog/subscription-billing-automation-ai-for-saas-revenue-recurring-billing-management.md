@@ -23,18 +23,4 @@ snapshots:
     position: 15.85
 ---
 
-# Subscription Billing Automation AI for SaaS Revenue Recurring Billing Management
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/subscription-billing-automation-ai-for-saas-revenue-recurring-billing-management/`
-
-## Latest snapshot
-
-- **Position:** 15.8 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 59 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

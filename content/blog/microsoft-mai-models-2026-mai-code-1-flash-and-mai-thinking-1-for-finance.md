@@ -23,18 +23,4 @@ snapshots:
     position: 9.93
 ---
 
-# Microsoft Mai Models 2026 Mai Code 1 Flash and Mai Thinking 1 for Finance
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/microsoft-mai-models-2026-mai-code-1-flash-and-mai-thinking-1-for-finance/`
-
-## Latest snapshot
-
-- **Position:** 9.9 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 14 (held steady)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

@@ -23,18 +23,4 @@ snapshots:
     position: 8.0
 ---
 
-# Purpose Codes Are Master Data Now
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/purpose-codes-are-master-data-now/`
-
-## Latest snapshot
-
-- **Position:** 8.0 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 18 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

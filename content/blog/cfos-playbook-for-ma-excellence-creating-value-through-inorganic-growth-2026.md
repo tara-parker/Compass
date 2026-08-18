@@ -23,18 +23,4 @@ snapshots:
     position: 13.89
 ---
 
-# CFOs Playbook for Ma Excellence Creating Value Through Inorganic Growth 2026
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/cfos-playbook-for-ma-excellence-creating-value-through-inorganic-growth-2026/`
-
-## Latest snapshot
-
-- **Position:** 13.9 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 19 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

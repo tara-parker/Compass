@@ -15,18 +15,4 @@ snapshots:
     position: 5.38
 ---
 
-# AI in Fixed Assets the Definitive Guide to Asset Management
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/new-ai-agents-for-cfos/ai-in-fixed-assets-the-definitive-guide-to-asset-management/`
-
-## Latest snapshot
-
-- **Position:** 5.4 (first reading)
-- **Clicks:** 1 ()
-- **Impressions:** 8 ()
-- **CTR:** 12.50%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

@@ -23,18 +23,4 @@ snapshots:
     position: 59.16
 ---
 
-# Best AI Solutions for Automating Accounts Payable in 2026 a Direct Comparison
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/best-ai-solutions-for-automating-accounts-payable-in-2026-a-direct-comparison`
-
-## Latest snapshot
-
-- **Position:** 59.2 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 203 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

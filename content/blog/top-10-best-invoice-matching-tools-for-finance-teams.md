@@ -23,18 +23,4 @@ snapshots:
     position: 45.97
 ---
 
-# Top 10 Best Invoice Matching Tools for Finance Teams
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/top-10-best-invoice-matching-tools-for-finance-teams/`
-
-## Latest snapshot
-
-- **Position:** 46.0 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 146 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

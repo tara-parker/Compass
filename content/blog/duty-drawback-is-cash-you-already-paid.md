@@ -23,18 +23,4 @@ snapshots:
     position: 10.89
 ---
 
-# Duty Drawback Is Cash You Already Paid
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/duty-drawback-is-cash-you-already-paid/`
-
-## Latest snapshot
-
-- **Position:** 10.9 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 18 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

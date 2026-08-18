@@ -15,18 +15,4 @@ snapshots:
     position: 5.64
 ---
 
-# Campfire vs Rillet 2026
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/campfire-vs-rillet-2026/`
-
-## Latest snapshot
-
-- **Position:** 5.6 (first reading)
-- **Clicks:** 1 ()
-- **Impressions:** 14 ()
-- **CTR:** 7.14%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

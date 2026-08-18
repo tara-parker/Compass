@@ -23,18 +23,4 @@ snapshots:
     position: 8.78
 ---
 
-# The Human in the Loop Redefining Financial Control in an Autonomous World
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/the-human-in-the-loop-redefining-financial-control-in-an-autonomous-world/`
-
-## Latest snapshot
-
-- **Position:** 8.8 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 9 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

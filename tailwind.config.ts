@@ -9,17 +9,17 @@ const config: Config = {
     extend: {
       colors: {
         ink: {
-          DEFAULT: "#0b1020",
-          soft: "#151b2e",
-          line: "#232b45",
+          DEFAULT: "#090c15",
+          soft: "#111726",
+          line: "#1e2740",
         },
         brand: {
-          DEFAULT: "#5b8cff",
-          soft: "#8fb0ff",
+          DEFAULT: "#6d8fe8",
+          soft: "#9db4f0",
         },
-        up: "#22c55e",
-        down: "#ef4444",
-        flat: "#94a3b8",
+        up: "#4ade80",
+        down: "#f2777a",
+        flat: "#7c8aa5",
       },
       fontFamily: {
         sans: ["var(--font-sans)", "ui-sans-serif", "system-ui", "sans-serif"],

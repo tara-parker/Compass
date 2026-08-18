@@ -23,18 +23,4 @@ snapshots:
     position: 13.53
 ---
 
-# Top 10 Best AI Agent Tools for CFOs Finance Leaders
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/top-10-best-ai-agent-tools-for-cfos-finance-leaders/`
-
-## Latest snapshot
-
-- **Position:** 13.5 (slipped)
-- **Clicks:** 1 (rose)
-- **Impressions:** 59 (rose)
-- **CTR:** 1.69%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

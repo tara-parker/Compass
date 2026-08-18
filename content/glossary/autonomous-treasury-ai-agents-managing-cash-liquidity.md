@@ -23,18 +23,4 @@ snapshots:
     position: 5.82
 ---
 
-# Autonomous Treasury AI Agents Managing Cash Liquidity
-
-Tracked page in the **Glossary** cluster.
-`https://chatfin.ai/glossary/autonomous-treasury-ai-agents-managing-cash-liquidity/`
-
-## Latest snapshot
-
-- **Position:** 5.8 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 11 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

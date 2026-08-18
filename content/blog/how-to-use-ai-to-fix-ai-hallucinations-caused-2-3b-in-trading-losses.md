@@ -23,18 +23,4 @@ snapshots:
     position: 7.51
 ---
 
-# How to Use AI to Fix AI Hallucinations Caused 2 3b in Trading Losses
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/how-to-use-ai-to-fix-ai-hallucinations-caused-2-3b-in-trading-losses/`
-
-## Latest snapshot
-
-- **Position:** 7.5 (slipped)
-- **Clicks:** 2 (fell)
-- **Impressions:** 312 (rose)
-- **CTR:** 0.64%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

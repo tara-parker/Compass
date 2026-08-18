@@ -23,18 +23,4 @@ snapshots:
     position: 5.45
 ---
 
-# AI Two Way and Three Way Matching in Sage Intacct
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/ai-two-way-and-three-way-matching-in-sage-intacct/`
-
-## Latest snapshot
-
-- **Position:** 5.5 (slipped)
-- **Clicks:** 0 (fell)
-- **Impressions:** 20 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

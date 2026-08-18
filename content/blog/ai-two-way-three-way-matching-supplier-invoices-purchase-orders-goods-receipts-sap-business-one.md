@@ -23,18 +23,4 @@ snapshots:
     position: 12.44
 ---
 
-# AI Two Way Three Way Matching Supplier Invoices Purchase Orders Goods Receipts SAP Business One
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/ai-two-way-three-way-matching-supplier-invoices-purchase-orders-goods-receipts-sap-business-one/`
-
-## Latest snapshot
-
-- **Position:** 12.4 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 9 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

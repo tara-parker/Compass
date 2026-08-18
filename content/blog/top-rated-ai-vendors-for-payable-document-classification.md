@@ -23,18 +23,4 @@ snapshots:
     position: 6.31
 ---
 
-# Top Rated AI Vendors for Payable Document Classification
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/top-rated-ai-vendors-for-payable-document-classification/`
-
-## Latest snapshot
-
-- **Position:** 6.3 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 26 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

@@ -23,18 +23,4 @@ snapshots:
     position: 12.42
 ---
 
-# The Future of Finance Top AI Accounting Software 2026
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/the-future-of-finance-top-ai-accounting-software-2026/`
-
-## Latest snapshot
-
-- **Position:** 12.4 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 19 (held steady)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

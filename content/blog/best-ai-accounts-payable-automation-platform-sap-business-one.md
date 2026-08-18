@@ -23,18 +23,4 @@ snapshots:
     position: 16.65
 ---
 
-# Best AI Accounts Payable Automation Platform SAP Business One
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/best-ai-accounts-payable-automation-platform-sap-business-one/`
-
-## Latest snapshot
-
-- **Position:** 16.6 (slipped)
-- **Clicks:** 1 (rose)
-- **Impressions:** 20 (fell)
-- **CTR:** 5.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

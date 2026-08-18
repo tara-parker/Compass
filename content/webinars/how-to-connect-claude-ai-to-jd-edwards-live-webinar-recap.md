@@ -23,18 +23,4 @@ snapshots:
     position: 16.2
 ---
 
-# How to Connect Claude AI to Jd Edwards Live Webinar Recap
-
-Tracked page in the **Webinars** cluster.
-`https://chatfin.ai/webinars/how-to-connect-claude-ai-to-jd-edwards-live-webinar-recap/`
-
-## Latest snapshot
-
-- **Position:** 16.2 (slipped)
-- **Clicks:** 2 (fell)
-- **Impressions:** 49 (fell)
-- **CTR:** 4.08%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

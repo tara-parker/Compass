@@ -432,68 +432,17 @@ def _delta_word(latest, prev, field, lower_better=False):
 
 
 def build_page_body(info, snaps, latest, prev):
-    lines = [f"# {info['title']}", "",
-             f"Tracked page in the **{cluster_title(info['cluster'])}** cluster.",
-             f"`{info['url']}`", ""]
-    if latest:
-        lines += [
-            "## Latest snapshot", "",
-            f"- **Position:** {fmt(latest['position'])} "
-            f"({_delta_word(latest, prev, 'position', lower_better=True) or 'first reading'})",
-            f"- **Clicks:** {latest['clicks']} "
-            f"({_delta_word(latest, prev, 'clicks')})",
-            f"- **Impressions:** {latest['impressions']} "
-            f"({_delta_word(latest, prev, 'impressions')})",
-            f"- **CTR:** {pct(latest['ctr'])}",
-            "",
-        ]
-    lines += ["## Notes", "",
-              "_Add manual observations here. This file is the source of truth "
-              "for this page and is safe to edit; ingest only rewrites the "
-              "frontmatter snapshots._", ""]
-    return "\n".join(lines)
+    # Body is the editable notes area only. All metrics live in frontmatter and
+    # are rendered by the UI, so we deliberately do not repeat them here.
+    return "_No notes yet. Edit this file to add observations for this page._"
 
 
 def build_cluster_body(cluster, urls, snaps):
-    latest = snaps[-1] if snaps else None
-    prev = snaps[-2] if len(snaps) > 1 else None
-    lines = [f"# {cluster_title(cluster)} cluster", "",
-             f"{len(urls)} tracked pages.", ""]
-    if latest:
-        lines += [
-            "## Cluster totals (latest)", "",
-            f"- **Clicks:** {latest['clicks']} ({_delta_word(latest, prev, 'clicks')})",
-            f"- **Impressions:** {latest['impressions']} ({_delta_word(latest, prev, 'impressions')})",
-            f"- **Avg position:** {fmt(latest['position'])} "
-            f"({_delta_word(latest, prev, 'position', lower_better=True)})",
-            f"- **CTR:** {pct(latest['ctr'])}",
-            "",
-        ]
-    return "\n".join(lines)
+    return f"_Editable notes for the {cluster_title(cluster)} cluster._"
 
 
 def build_root_body(root_snaps, cluster_pages, periods):
-    latest = root_snaps[-1] if root_snaps else None
-    prev = root_snaps[-2] if len(root_snaps) > 1 else None
-    lines = ["# ChatFin — Site Overview", "",
-             "The main pillar. Whole-site Search performance rolled up across "
-             f"**{len(cluster_pages)} clusters** and "
-             f"**{sum(len(v) for v in cluster_pages.values())} tracked pages**.", ""]
-    if latest:
-        lines += [
-            f"## Totals — {latest['label']}", "",
-            f"- **Clicks:** {latest['clicks']} ({_delta_word(latest, prev, 'clicks')})",
-            f"- **Impressions:** {latest['impressions']} ({_delta_word(latest, prev, 'impressions')})",
-            f"- **Avg position:** {fmt(latest['position'])} "
-            f"({_delta_word(latest, prev, 'position', lower_better=True)})",
-            f"- **CTR:** {pct(latest['ctr'])}",
-            "",
-        ]
-    lines += ["## Periods tracked", ""]
-    for p in periods:
-        lines.append(f"- {p['label']} (`{p['id']}`)")
-    lines.append("")
-    return "\n".join(lines)
+    return "_Editable notes for the site pillar._"
 
 
 def fmt(v):

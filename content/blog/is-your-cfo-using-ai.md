@@ -23,18 +23,4 @@ snapshots:
     position: 20.69
 ---
 
-# Is Your CFO Using AI
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/is-your-cfo-using-ai/`
-
-## Latest snapshot
-
-- **Position:** 20.7 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 49 (held steady)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

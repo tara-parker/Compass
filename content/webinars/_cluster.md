@@ -23,13 +23,4 @@ snapshots:
     position: 15.35
 ---
 
-# Webinars cluster
-
-2 tracked pages.
-
-## Cluster totals (latest)
-
-- **Clicks:** 2 (fell)
-- **Impressions:** 79 (fell)
-- **Avg position:** 15.3 (slipped)
-- **CTR:** 2.53%
+_Editable notes for the Webinars cluster._

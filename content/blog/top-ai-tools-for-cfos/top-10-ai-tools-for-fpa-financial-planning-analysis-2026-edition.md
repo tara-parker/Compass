@@ -23,18 +23,4 @@ snapshots:
     position: 26.44
 ---
 
-# Top 10 AI Tools for FP&A Financial Planning Analysis 2026 Edition
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/top-ai-tools-for-cfos/top-10-ai-tools-for-fpa-financial-planning-analysis-2026-edition/`
-
-## Latest snapshot
-
-- **Position:** 26.4 (slipped)
-- **Clicks:** 5 (rose)
-- **Impressions:** 1191 (fell)
-- **CTR:** 0.42%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

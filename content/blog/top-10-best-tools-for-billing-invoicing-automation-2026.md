@@ -23,18 +23,4 @@ snapshots:
     position: 7.71
 ---
 
-# Top 10 Best Tools for Billing Invoicing Automation 2026
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/top-10-best-tools-for-billing-invoicing-automation-2026/`
-
-## Latest snapshot
-
-- **Position:** 7.7 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 34 (held steady)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

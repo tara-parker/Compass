@@ -15,18 +15,4 @@ snapshots:
     position: 11.33
 ---
 
-# Outsourcing vs AI Finance Agents for Back Office Operations
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/outsourcing-vs-ai-finance-agents-for-back-office-operations/`
-
-## Latest snapshot
-
-- **Position:** 11.3 (first reading)
-- **Clicks:** 1 ()
-- **Impressions:** 9 ()
-- **CTR:** 11.11%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

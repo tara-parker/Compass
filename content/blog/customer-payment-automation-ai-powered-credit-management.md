@@ -23,18 +23,4 @@ snapshots:
     position: 38.8
 ---
 
-# Customer Payment Automation AI Powered Credit Management
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/customer-payment-automation-ai-powered-credit-management/`
-
-## Latest snapshot
-
-- **Position:** 38.8 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 107 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

@@ -23,18 +23,4 @@ snapshots:
     position: 8.42
 ---
 
-# CFO AI Strategy 2026 Investment Trends Moving Toward Production Deployment
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/cfo-ai-strategy-2026-investment-trends-moving-toward-production-deployment/`
-
-## Latest snapshot
-
-- **Position:** 8.4 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 19 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

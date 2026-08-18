@@ -23,18 +23,4 @@ snapshots:
     position: 17.52
 ---
 
-# Financial Modeling AI Best FP&A Scenario Planning Software
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/financial-modeling-ai-best-fpa-scenario-planning-software/`
-
-## Latest snapshot
-
-- **Position:** 17.5 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 163 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

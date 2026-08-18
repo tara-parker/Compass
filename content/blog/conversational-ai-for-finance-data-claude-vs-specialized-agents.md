@@ -23,18 +23,4 @@ snapshots:
     position: 6.94
 ---
 
-# Conversational AI for Finance Data Claude vs Specialized Agents
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/conversational-ai-for-finance-data-claude-vs-specialized-agents/`
-
-## Latest snapshot
-
-- **Position:** 6.9 (slipped)
-- **Clicks:** 1 (held steady)
-- **Impressions:** 16 (fell)
-- **CTR:** 6.25%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

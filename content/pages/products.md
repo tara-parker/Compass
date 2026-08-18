@@ -23,18 +23,4 @@ snapshots:
     position: 3.36
 ---
 
-# Products
-
-Tracked page in the **Pages** cluster.
-`https://chatfin.ai/products/`
-
-## Latest snapshot
-
-- **Position:** 3.4 (slipped)
-- **Clicks:** 1 (held steady)
-- **Impressions:** 123 (fell)
-- **CTR:** 0.81%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

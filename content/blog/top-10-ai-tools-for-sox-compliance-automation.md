@@ -15,18 +15,4 @@ snapshots:
     position: 16.7
 ---
 
-# Top 10 AI Tools for Sox Compliance Automation
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/top-10-ai-tools-for-sox-compliance-automation/`
-
-## Latest snapshot
-
-- **Position:** 16.7 (first reading)
-- **Clicks:** 0 ()
-- **Impressions:** 37 ()
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

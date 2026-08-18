@@ -23,18 +23,4 @@ snapshots:
     position: 9.17
 ---
 
-# AI Agents for SAP S 4hana ChatFin Finance Automation
-
-Tracked page in the **AI ERP** cluster.
-`https://chatfin.ai/ai-erp/ai-agents-for-sap-s-4hana-chatfin-finance-automation/`
-
-## Latest snapshot
-
-- **Position:** 9.2 (slipped)
-- **Clicks:** 2 (rose)
-- **Impressions:** 29 (held steady)
-- **CTR:** 6.90%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

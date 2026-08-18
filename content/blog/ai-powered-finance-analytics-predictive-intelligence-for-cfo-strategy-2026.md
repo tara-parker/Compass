@@ -23,18 +23,4 @@ snapshots:
     position: 7.2
 ---
 
-# AI Powered Finance Analytics Predictive Intelligence for CFO Strategy 2026
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/ai-powered-finance-analytics-predictive-intelligence-for-cfo-strategy-2026/`
-
-## Latest snapshot
-
-- **Position:** 7.2 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 10 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

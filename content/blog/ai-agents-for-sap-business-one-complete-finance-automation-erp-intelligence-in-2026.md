@@ -23,18 +23,4 @@ snapshots:
     position: 11.47
 ---
 
-# AI Agents for SAP Business One Complete Finance Automation ERP Intelligence in 2026
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/ai-agents-for-sap-business-one-complete-finance-automation-erp-intelligence-in-2026/`
-
-## Latest snapshot
-
-- **Position:** 11.5 (slipped)
-- **Clicks:** 2 (fell)
-- **Impressions:** 177 (fell)
-- **CTR:** 1.13%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

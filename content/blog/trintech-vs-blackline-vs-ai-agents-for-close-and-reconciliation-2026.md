@@ -15,18 +15,4 @@ snapshots:
     position: 6.94
 ---
 
-# Trintech vs BlackLine vs AI Agents for Close and Reconciliation 2026
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/trintech-vs-blackline-vs-ai-agents-for-close-and-reconciliation-2026/`
-
-## Latest snapshot
-
-- **Position:** 6.9 (first reading)
-- **Clicks:** 0 ()
-- **Impressions:** 16 ()
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

@@ -23,18 +23,4 @@ snapshots:
     position: 15.9
 ---
 
-# Investment Banking AI Technology Top Tools for Ib Professionals 2026
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/investment-banking-ai-technology-top-tools-for-ib-professionals-2026/`
-
-## Latest snapshot
-
-- **Position:** 15.9 (improved)
-- **Clicks:** 0 (fell)
-- **Impressions:** 139 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

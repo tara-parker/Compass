@@ -23,18 +23,4 @@ snapshots:
     position: 7.32
 ---
 
-# AI in Accounting and Finance 2026 How AI Is Reshaping Financial Operations
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/ai-in-accounting-and-finance-2026-how-ai-is-reshaping-financial-operations/`
-
-## Latest snapshot
-
-- **Position:** 7.3 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 321 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

@@ -142,6 +142,23 @@ export function getCluster(name: string): ClusterDoc | null {
   return getClusters().find((c) => c.cluster === name) ?? null;
 }
 
+export type SubFolder = { name: string; slug: string[]; count: number };
+
+/** Nested sub-folders (sub-clusters) directly under a cluster, preserving depth. */
+export function getSubFolders(cluster: string): SubFolder[] {
+  const groups = new Map<string, number>();
+  for (const p of getAllPages()) {
+    if (p.cluster !== cluster) continue;
+    if (p.routeSlug.length > 2) {
+      const sub = p.routeSlug[1];
+      groups.set(sub, (groups.get(sub) ?? 0) + 1);
+    }
+  }
+  return [...groups.entries()]
+    .map(([name, count]) => ({ name, slug: [cluster, name], count }))
+    .sort((a, b) => b.count - a.count);
+}
+
 export function getPageByRoute(slug: string[]): PageDoc | null {
   const rel = slug.join("/") + ".md";
   const f = allFiles().find((x) => x.rel === rel);

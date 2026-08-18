@@ -23,18 +23,4 @@ snapshots:
     position: 4.08
 ---
 
-# The Tech CFO Rewires the Finance Team Caitlin Haberberger
-
-Tracked page in the **Podcast** cluster.
-`https://chatfin.ai/podcast/the-tech-cfo-rewires-the-finance-team-caitlin-haberberger/`
-
-## Latest snapshot
-
-- **Position:** 4.1 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 25 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

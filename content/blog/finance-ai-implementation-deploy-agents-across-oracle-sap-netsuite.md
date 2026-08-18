@@ -15,18 +15,4 @@ snapshots:
     position: 12.75
 ---
 
-# Finance AI Implementation Deploy Agents Across Oracle SAP NetSuite
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/finance-ai-implementation-deploy-agents-across-oracle-sap-netsuite/`
-
-## Latest snapshot
-
-- **Position:** 12.8 (first reading)
-- **Clicks:** 0 ()
-- **Impressions:** 20 ()
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

@@ -23,18 +23,4 @@ snapshots:
     position: 27.08
 ---
 
-# Top 10 AI Tools for Financial Reporting Automation
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/top-10-ai-tools-for-financial-reporting-automation/`
-
-## Latest snapshot
-
-- **Position:** 27.1 (slipped)
-- **Clicks:** 1 (fell)
-- **Impressions:** 89 (rose)
-- **CTR:** 1.12%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

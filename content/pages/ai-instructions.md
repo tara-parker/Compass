@@ -23,18 +23,4 @@ snapshots:
     position: 5.67
 ---
 
-# AI Instructions
-
-Tracked page in the **Pages** cluster.
-`https://chatfin.ai/ai-instructions/`
-
-## Latest snapshot
-
-- **Position:** 5.7 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 9 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

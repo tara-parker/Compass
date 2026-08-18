@@ -15,18 +15,4 @@ snapshots:
     position: 3.67
 ---
 
-# France Turns on 1 September Your AP Inbox Does Not
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/france-turns-on-1-september-your-ap-inbox-does-not/`
-
-## Latest snapshot
-
-- **Position:** 3.7 (first reading)
-- **Clicks:** 1 ()
-- **Impressions:** 9 ()
-- **CTR:** 11.11%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

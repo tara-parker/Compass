@@ -23,18 +23,4 @@ snapshots:
     position: 7.4
 ---
 
-# CFO AI Tools Comparison 2026 Top Platforms for Finance Automation
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/cfo-ai-tools-comparison-2026-top-platforms-for-finance-automation/`
-
-## Latest snapshot
-
-- **Position:** 7.4 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 20 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

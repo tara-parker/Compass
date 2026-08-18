@@ -23,13 +23,4 @@ snapshots:
     position: 67.58
 ---
 
-# Solutions cluster
-
-7 tracked pages.
-
-## Cluster totals (latest)
-
-- **Clicks:** 3 (rose)
-- **Impressions:** 1461 (fell)
-- **Avg position:** 67.6 (improved)
-- **CTR:** 0.21%
+_Editable notes for the Solutions cluster._

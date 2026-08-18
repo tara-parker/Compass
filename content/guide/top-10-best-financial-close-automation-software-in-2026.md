@@ -23,18 +23,4 @@ snapshots:
     position: 13.92
 ---
 
-# Top 10 Best Financial Close Automation Software in 2026
-
-Tracked page in the **Guide** cluster.
-`https://chatfin.ai/guide/top-10-best-financial-close-automation-software-in-2026/`
-
-## Latest snapshot
-
-- **Position:** 13.9 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 24 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

@@ -23,18 +23,4 @@ snapshots:
     position: 23.17
 ---
 
-# 10 AI Tools Transforming Finance Overnight
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/10-ai-tools-transforming-finance-overnight/`
-
-## Latest snapshot
-
-- **Position:** 23.2 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 75 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

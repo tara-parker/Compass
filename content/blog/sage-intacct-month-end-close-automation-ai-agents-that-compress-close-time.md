@@ -23,18 +23,4 @@ snapshots:
     position: 6.36
 ---
 
-# Sage Intacct Month End Close Automation AI Agents That Compress Close Time
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/sage-intacct-month-end-close-automation-ai-agents-that-compress-close-time/`
-
-## Latest snapshot
-
-- **Position:** 6.4 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 77 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

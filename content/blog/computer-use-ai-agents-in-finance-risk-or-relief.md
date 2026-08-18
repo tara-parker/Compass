@@ -15,18 +15,4 @@ snapshots:
     position: 5.73
 ---
 
-# Computer Use AI Agents in Finance Risk Or Relief
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/computer-use-ai-agents-in-finance-risk-or-relief/`
-
-## Latest snapshot
-
-- **Position:** 5.7 (first reading)
-- **Clicks:** 1 ()
-- **Impressions:** 11 ()
-- **CTR:** 9.09%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

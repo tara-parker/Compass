@@ -23,18 +23,4 @@ snapshots:
     position: 10.17
 ---
 
-# The Real Role of Vp of Finance in 2026 Spoiler Its Not Just Reporting
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/the-real-role-of-vp-of-finance-in-2026-spoiler-its-not-just-reporting/`
-
-## Latest snapshot
-
-- **Position:** 10.2 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 23 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

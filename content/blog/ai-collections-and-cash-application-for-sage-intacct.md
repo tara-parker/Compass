@@ -15,18 +15,4 @@ snapshots:
     position: 5.75
 ---
 
-# AI Collections and Cash Application for Sage Intacct
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/ai-collections-and-cash-application-for-sage-intacct/`
-
-## Latest snapshot
-
-- **Position:** 5.8 (first reading)
-- **Clicks:** 0 ()
-- **Impressions:** 8 ()
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

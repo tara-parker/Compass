@@ -23,18 +23,4 @@ snapshots:
     position: 25.8
 ---
 
-# Top 10 AI Tools for Account Payables
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/top-10-ai-tools-for-account-payables/`
-
-## Latest snapshot
-
-- **Position:** 25.8 (improved)
-- **Clicks:** 0 (fell)
-- **Impressions:** 2830 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

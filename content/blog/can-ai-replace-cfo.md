@@ -23,18 +23,4 @@ snapshots:
     position: 79.24
 ---
 
-# Can AI Replace CFO
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/can-ai-replace-cfo/`
-
-## Latest snapshot
-
-- **Position:** 79.2 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 46 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

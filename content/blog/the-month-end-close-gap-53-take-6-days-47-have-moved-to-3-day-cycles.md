@@ -15,18 +15,4 @@ snapshots:
     position: 6.07
 ---
 
-# The Month End Close Gap 53 Take 6 Days 47 Have Moved to 3 Day Cycles
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/the-month-end-close-gap-53-take-6-days-47-have-moved-to-3-day-cycles/`
-
-## Latest snapshot
-
-- **Position:** 6.1 (first reading)
-- **Clicks:** 0 ()
-- **Impressions:** 15 ()
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

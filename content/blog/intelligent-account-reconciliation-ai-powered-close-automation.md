@@ -15,18 +15,4 @@ snapshots:
     position: 53.67
 ---
 
-# Intelligent Account Reconciliation AI Powered Close Automation
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/intelligent-account-reconciliation-ai-powered-close-automation/`
-
-## Latest snapshot
-
-- **Position:** 53.7 (first reading)
-- **Clicks:** 0 ()
-- **Impressions:** 9 ()
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

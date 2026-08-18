@@ -23,18 +23,4 @@ snapshots:
     position: 4.88
 ---
 
-# Top 10 AI Tools for Controllers Accounting Operations 2026 Edition
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/top-ai-tools-for-cfos/top-10-ai-tools-for-controllers-accounting-operations-2026-edition/`
-
-## Latest snapshot
-
-- **Position:** 4.9 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 58 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

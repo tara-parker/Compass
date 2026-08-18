@@ -23,13 +23,4 @@ snapshots:
     position: 17.62
 ---
 
-# Pages cluster
-
-39 tracked pages.
-
-## Cluster totals (latest)
-
-- **Clicks:** 19 (fell)
-- **Impressions:** 2196 (fell)
-- **Avg position:** 17.6 (slipped)
-- **CTR:** 0.87%
+_Editable notes for the Pages cluster._

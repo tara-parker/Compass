@@ -23,18 +23,4 @@ snapshots:
     position: 17.44
 ---
 
-# Big 4 AI vs a Finance AI Platform What Mid Market Should Choose
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/big-4-ai-vs-a-finance-ai-platform-what-mid-market-should-choose/`
-
-## Latest snapshot
-
-- **Position:** 17.4 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 18 (held steady)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

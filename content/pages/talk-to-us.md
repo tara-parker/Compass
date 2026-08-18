@@ -15,18 +15,4 @@ snapshots:
     position: 4.23
 ---
 
-# Talk to US
-
-Tracked page in the **Pages** cluster.
-`https://chatfin.ai/talk-to-us/`
-
-## Latest snapshot
-
-- **Position:** 4.2 (first reading)
-- **Clicks:** 1 ()
-- **Impressions:** 13 ()
-- **CTR:** 7.69%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

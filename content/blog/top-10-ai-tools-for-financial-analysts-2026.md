@@ -23,18 +23,4 @@ snapshots:
     position: 8.05
 ---
 
-# Top 10 AI Tools for Financial Analysts 2026
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/top-10-ai-tools-for-financial-analysts-2026/`
-
-## Latest snapshot
-
-- **Position:** 8.1 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 20 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

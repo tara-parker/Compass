@@ -23,18 +23,4 @@ snapshots:
     position: 8.27
 ---
 
-# Complete FP&A Software Comparison for Enterprise Finance Planning in 2026
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/complete-fpa-software-comparison-for-enterprise-finance-planning-in-2026/`
-
-## Latest snapshot
-
-- **Position:** 8.3 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 145 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

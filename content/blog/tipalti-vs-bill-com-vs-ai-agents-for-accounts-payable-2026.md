@@ -23,18 +23,4 @@ snapshots:
     position: 10.25
 ---
 
-# Tipalti vs Bill Com vs AI Agents for Accounts Payable 2026
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/tipalti-vs-bill-com-vs-ai-agents-for-accounts-payable-2026/`
-
-## Latest snapshot
-
-- **Position:** 10.2 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 55 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

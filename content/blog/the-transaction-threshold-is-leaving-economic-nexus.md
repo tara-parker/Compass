@@ -23,18 +23,4 @@ snapshots:
     position: 8.68
 ---
 
-# The Transaction Threshold Is Leaving Economic Nexus
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/the-transaction-threshold-is-leaving-economic-nexus/`
-
-## Latest snapshot
-
-- **Position:** 8.7 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 47 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

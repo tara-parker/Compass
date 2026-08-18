@@ -23,18 +23,4 @@ snapshots:
     position: 9.88
 ---
 
-# Step By Step Creating AI Agents for Financial Reconciliations 2026
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/step-by-step-creating-ai-agents-for-financial-reconciliations-2026/`
-
-## Latest snapshot
-
-- **Position:** 9.9 (improved)
-- **Clicks:** 2 (rose)
-- **Impressions:** 78 (rose)
-- **CTR:** 2.56%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

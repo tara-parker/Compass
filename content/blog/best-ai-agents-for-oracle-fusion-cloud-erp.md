@@ -23,18 +23,4 @@ snapshots:
     position: 8.81
 ---
 
-# Best AI Agents for Oracle Fusion Cloud ERP
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/best-ai-agents-for-oracle-fusion-cloud-erp/`
-
-## Latest snapshot
-
-- **Position:** 8.8 (improved)
-- **Clicks:** 1 (rose)
-- **Impressions:** 90 (fell)
-- **CTR:** 1.11%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

@@ -15,18 +15,4 @@ snapshots:
     position: 8.2
 ---
 
-# Per Load Profitability Lives Outside the Ledger
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/per-load-profitability-lives-outside-the-ledger/`
-
-## Latest snapshot
-
-- **Position:** 8.2 (first reading)
-- **Clicks:** 0 ()
-- **Impressions:** 10 ()
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

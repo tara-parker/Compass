@@ -23,18 +23,4 @@ snapshots:
     position: 11.89
 ---
 
-# Step By Step Guide to Building AI Agents for Document Processing
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/step-by-step-guide-to-building-ai-agents-for-document-processing/`
-
-## Latest snapshot
-
-- **Position:** 11.9 (slipped)
-- **Clicks:** 10 (rose)
-- **Impressions:** 372 (fell)
-- **CTR:** 2.69%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

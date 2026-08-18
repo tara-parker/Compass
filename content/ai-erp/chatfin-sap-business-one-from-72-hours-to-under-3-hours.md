@@ -23,18 +23,4 @@ snapshots:
     position: 7.64
 ---
 
-# ChatFin SAP Business One From 72 Hours to Under 3 Hours
-
-Tracked page in the **AI ERP** cluster.
-`https://chatfin.ai/ai-erp/chatfin-sap-business-one-from-72-hours-to-under-3-hours/`
-
-## Latest snapshot
-
-- **Position:** 7.6 (slipped)
-- **Clicks:** 1 (rose)
-- **Impressions:** 11 (fell)
-- **CTR:** 9.09%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

@@ -23,18 +23,4 @@ snapshots:
     position: 21.85
 ---
 
-# AI Accounts Payable Automation the End of Manual Invoice Processing
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/ai-accounts-payable-automation-the-end-of-manual-invoice-processing/`
-
-## Latest snapshot
-
-- **Position:** 21.9 (improved)
-- **Clicks:** 1 (rose)
-- **Impressions:** 2457 (fell)
-- **CTR:** 0.04%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

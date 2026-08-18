@@ -23,18 +23,4 @@ snapshots:
     position: 8.33
 ---
 
-# Best AI Agents for Revenue Recognition in 2026
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/best-ai-agents-for-revenue-recognition-in-2026/`
-
-## Latest snapshot
-
-- **Position:** 8.3 (slipped)
-- **Clicks:** 1 (held steady)
-- **Impressions:** 6 (fell)
-- **CTR:** 16.67%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

@@ -23,18 +23,4 @@ snapshots:
     position: 6.98
 ---
 
-# Top 10 Best Tools for Revenue Operations SaaS Finance 2026
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/top-10-best-tools-for-revenue-operations-saas-finance-2026/`
-
-## Latest snapshot
-
-- **Position:** 7.0 (improved)
-- **Clicks:** 0 (fell)
-- **Impressions:** 43 (held steady)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

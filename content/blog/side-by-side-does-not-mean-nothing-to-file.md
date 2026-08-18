@@ -15,18 +15,4 @@ snapshots:
     position: 10.08
 ---
 
-# Side By Side Does Not Mean Nothing to File
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/side-by-side-does-not-mean-nothing-to-file/`
-
-## Latest snapshot
-
-- **Position:** 10.1 (first reading)
-- **Clicks:** 0 ()
-- **Impressions:** 12 ()
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

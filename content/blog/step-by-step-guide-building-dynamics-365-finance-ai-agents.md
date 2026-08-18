@@ -23,18 +23,4 @@ snapshots:
     position: 21.31
 ---
 
-# Step By Step Guide Building Dynamics 365 Finance AI Agents
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/step-by-step-guide-building-dynamics-365-finance-ai-agents/`
-
-## Latest snapshot
-
-- **Position:** 21.3 (slipped)
-- **Clicks:** 1 (rose)
-- **Impressions:** 70 (rose)
-- **CTR:** 1.43%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

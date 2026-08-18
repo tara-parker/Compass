@@ -23,18 +23,4 @@ snapshots:
     position: 5.29
 ---
 
-# AI Extract Invoice Data Email Pdf Create Draft AP Invoice SAP Business One
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/ai-extract-invoice-data-email-pdf-create-draft-ap-invoice-sap-business-one/`
-
-## Latest snapshot
-
-- **Position:** 5.3 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 14 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

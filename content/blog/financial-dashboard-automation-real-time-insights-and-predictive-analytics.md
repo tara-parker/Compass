@@ -23,18 +23,4 @@ snapshots:
     position: 18.36
 ---
 
-# Financial Dashboard Automation Real Time Insights and Predictive Analytics
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/financial-dashboard-automation-real-time-insights-and-predictive-analytics/`
-
-## Latest snapshot
-
-- **Position:** 18.4 (slipped)
-- **Clicks:** 1 (rose)
-- **Impressions:** 325 (rose)
-- **CTR:** 0.31%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

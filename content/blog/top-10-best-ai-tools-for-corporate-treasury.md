@@ -23,18 +23,4 @@ snapshots:
     position: 7.97
 ---
 
-# Top 10 Best AI Tools for Corporate Treasury
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/top-10-best-ai-tools-for-corporate-treasury/`
-
-## Latest snapshot
-
-- **Position:** 8.0 (slipped)
-- **Clicks:** 5 (rose)
-- **Impressions:** 1413 (fell)
-- **CTR:** 0.35%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

@@ -15,18 +15,4 @@ snapshots:
     position: 13.94
 ---
 
-# The AI Buildout and Your Finance Budget Reading Hyperscaler Capex
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/the-ai-buildout-and-your-finance-budget-reading-hyperscaler-capex/`
-
-## Latest snapshot
-
-- **Position:** 13.9 (first reading)
-- **Clicks:** 0 ()
-- **Impressions:** 84 ()
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

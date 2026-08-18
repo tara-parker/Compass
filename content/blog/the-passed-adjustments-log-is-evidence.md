@@ -15,18 +15,4 @@ snapshots:
     position: 2.73
 ---
 
-# The Passed Adjustments Log Is Evidence
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/the-passed-adjustments-log-is-evidence/`
-
-## Latest snapshot
-
-- **Position:** 2.7 (first reading)
-- **Clicks:** 1 ()
-- **Impressions:** 11 ()
-- **CTR:** 9.09%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

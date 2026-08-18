@@ -15,18 +15,4 @@ snapshots:
     position: 10.94
 ---
 
-# AI Finance Team Productivity How Automation Changes Headcount Planning
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/ai-finance-team-productivity-how-automation-changes-headcount-planning/`
-
-## Latest snapshot
-
-- **Position:** 10.9 (first reading)
-- **Clicks:** 0 ()
-- **Impressions:** 17 ()
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

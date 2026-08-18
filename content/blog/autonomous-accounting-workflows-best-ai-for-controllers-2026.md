@@ -23,18 +23,4 @@ snapshots:
     position: 5.46
 ---
 
-# Autonomous Accounting Workflows Best AI for Controllers 2026
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/autonomous-accounting-workflows-best-ai-for-controllers-2026/`
-
-## Latest snapshot
-
-- **Position:** 5.5 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 37 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

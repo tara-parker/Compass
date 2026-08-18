@@ -23,18 +23,4 @@ snapshots:
     position: 8.95
 ---
 
-# ROI of AI in Finance Real Numbers Benchmarks CFO Business Case 2026
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/ai-agents-for-finance-automation/roi-of-ai-in-finance-real-numbers-benchmarks-cfo-business-case-2026/`
-
-## Latest snapshot
-
-- **Position:** 8.9 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 20 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

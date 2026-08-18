@@ -15,18 +15,4 @@ snapshots:
     position: 6.8
 ---
 
-# Iso Iec 42001 AI Management Systems What Finance Teams Need to Know
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/iso-iec-42001-ai-management-systems-what-finance-teams-need-to-know/`
-
-## Latest snapshot
-
-- **Position:** 6.8 (first reading)
-- **Clicks:** 1 ()
-- **Impressions:** 5 ()
-- **CTR:** 20.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

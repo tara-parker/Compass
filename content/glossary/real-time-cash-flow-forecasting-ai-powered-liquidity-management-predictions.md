@@ -23,18 +23,4 @@ snapshots:
     position: 62.5
 ---
 
-# Real Time Cash Flow Forecasting AI Powered Liquidity Management Predictions
-
-Tracked page in the **Glossary** cluster.
-`https://chatfin.ai/glossary/real-time-cash-flow-forecasting-ai-powered-liquidity-management-predictions/`
-
-## Latest snapshot
-
-- **Position:** 62.5 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 10 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

@@ -15,18 +15,4 @@ snapshots:
     position: 8.73
 ---
 
-# Reconciliation AI Agents Development Code Examples Best Practices
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/reconciliation-ai-agents-development-code-examples-best-practices`
-
-## Latest snapshot
-
-- **Position:** 8.7 (first reading)
-- **Clicks:** 1 ()
-- **Impressions:** 22 ()
-- **CTR:** 4.55%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

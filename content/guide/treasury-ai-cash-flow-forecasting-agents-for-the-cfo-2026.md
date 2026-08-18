@@ -23,18 +23,4 @@ snapshots:
     position: 6.25
 ---
 
-# Treasury AI Cash Flow Forecasting Agents for the CFO 2026
-
-Tracked page in the **Guide** cluster.
-`https://chatfin.ai/guide/treasury-ai-cash-flow-forecasting-agents-for-the-cfo-2026/`
-
-## Latest snapshot
-
-- **Position:** 6.2 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 12 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

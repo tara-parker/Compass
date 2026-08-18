@@ -23,18 +23,4 @@ snapshots:
     position: 12.33
 ---
 
-# Who Provides Better Integration Support Than Rillet Alternatives
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/who-provides-better-integration-support-than-rillet-alternatives/`
-
-## Latest snapshot
-
-- **Position:** 12.3 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 15 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

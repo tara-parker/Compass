@@ -23,18 +23,4 @@ snapshots:
     position: 16.38
 ---
 
-# AI for Fixed Asset Management Depreciation Disposals and Audit
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/ai-for-fixed-asset-management-depreciation-disposals-and-audit/`
-
-## Latest snapshot
-
-- **Position:** 16.4 (slipped)
-- **Clicks:** 1 (rose)
-- **Impressions:** 16 (fell)
-- **CTR:** 6.25%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

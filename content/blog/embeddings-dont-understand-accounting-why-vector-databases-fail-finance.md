@@ -23,18 +23,4 @@ snapshots:
     position: 10.31
 ---
 
-# Embeddings Dont Understand Accounting Why Vector Databases Fail Finance
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/embeddings-dont-understand-accounting-why-vector-databases-fail-finance/`
-
-## Latest snapshot
-
-- **Position:** 10.3 (slipped)
-- **Clicks:** 0 (fell)
-- **Impressions:** 35 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

@@ -23,18 +23,4 @@ snapshots:
     position: 8.46
 ---
 
-# AI Accounting Alternatives to Rillet 2026 Comparison
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/ai-accounting-alternatives-to-rillet-2026-comparison/`
-
-## Latest snapshot
-
-- **Position:** 8.5 (slipped)
-- **Clicks:** 1 (rose)
-- **Impressions:** 487 (rose)
-- **CTR:** 0.21%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

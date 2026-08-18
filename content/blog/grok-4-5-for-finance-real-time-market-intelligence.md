@@ -15,18 +15,4 @@ snapshots:
     position: 6.1
 ---
 
-# Grok 4 5 for Finance Real Time Market Intelligence
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/grok-4-5-for-finance-real-time-market-intelligence/`
-
-## Latest snapshot
-
-- **Position:** 6.1 (first reading)
-- **Clicks:** 1 ()
-- **Impressions:** 41 ()
-- **CTR:** 2.44%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

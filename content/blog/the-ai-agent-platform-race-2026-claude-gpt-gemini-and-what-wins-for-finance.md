@@ -23,18 +23,4 @@ snapshots:
     position: 6.56
 ---
 
-# The AI Agent Platform Race 2026 Claude GPT Gemini and What Wins for Finance
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/the-ai-agent-platform-race-2026-claude-gpt-gemini-and-what-wins-for-finance/`
-
-## Latest snapshot
-
-- **Position:** 6.6 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 25 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

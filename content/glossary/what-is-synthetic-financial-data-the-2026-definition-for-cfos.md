@@ -23,18 +23,4 @@ snapshots:
     position: 12.05
 ---
 
-# What Is Synthetic Financial Data the 2026 Definition for CFOs
-
-Tracked page in the **Glossary** cluster.
-`https://chatfin.ai/glossary/what-is-synthetic-financial-data-the-2026-definition-for-cfos/`
-
-## Latest snapshot
-
-- **Position:** 12.1 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 37 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

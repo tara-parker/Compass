@@ -23,18 +23,4 @@ snapshots:
     position: 7.7
 ---
 
-# AI for Working Capital Optimization How CFOs Are Using AI Agents to Free Up Cash in 2026
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/ai-for-working-capital-optimization-how-cfos-are-using-ai-agents-to-free-up-cash-in-2026/`
-
-## Latest snapshot
-
-- **Position:** 7.7 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 63 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

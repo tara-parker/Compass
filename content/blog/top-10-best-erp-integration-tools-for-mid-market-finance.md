@@ -15,18 +15,4 @@ snapshots:
     position: 6.84
 ---
 
-# Top 10 Best ERP Integration Tools for Mid Market Finance
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/top-10-best-erp-integration-tools-for-mid-market-finance/`
-
-## Latest snapshot
-
-- **Position:** 6.8 (first reading)
-- **Clicks:** 0 ()
-- **Impressions:** 19 ()
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

@@ -15,18 +15,4 @@ snapshots:
     position: 8.08
 ---
 
-# Trade Promotion Accruals Are a Guess Until They Are Not
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/trade-promotion-accruals-are-a-guess-until-they-are-not/`
-
-## Latest snapshot
-
-- **Position:** 8.1 (first reading)
-- **Clicks:** 0 ()
-- **Impressions:** 26 ()
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

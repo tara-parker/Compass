@@ -15,18 +15,4 @@ snapshots:
     position: 23.0
 ---
 
-# The 163j Limit Moved Your Model Did Not
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/the-163j-limit-moved-your-model-did-not/`
-
-## Latest snapshot
-
-- **Position:** 23.0 (first reading)
-- **Clicks:** 1 ()
-- **Impressions:** 2 ()
-- **CTR:** 50.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

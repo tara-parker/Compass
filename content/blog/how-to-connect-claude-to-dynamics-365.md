@@ -23,18 +23,4 @@ snapshots:
     position: 8.73
 ---
 
-# How to Connect Claude to Dynamics 365
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/how-to-connect-claude-to-dynamics-365/`
-
-## Latest snapshot
-
-- **Position:** 8.7 (improved)
-- **Clicks:** 0 (fell)
-- **Impressions:** 22 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

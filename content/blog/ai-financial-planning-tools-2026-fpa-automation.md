@@ -23,18 +23,4 @@ snapshots:
     position: 64.85
 ---
 
-# AI Financial Planning Tools 2026 FP&A Automation
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/ai-financial-planning-tools-2026-fpa-automation/`
-
-## Latest snapshot
-
-- **Position:** 64.8 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 13 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

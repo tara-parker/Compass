@@ -23,18 +23,4 @@ snapshots:
     position: 20.46
 ---
 
-# SAP S 4hana Migration Stalled How AI Agents Bridge the Gap
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/sap-s-4hana-migration-stalled-how-ai-agents-bridge-the-gap/`
-
-## Latest snapshot
-
-- **Position:** 20.5 (improved)
-- **Clicks:** 1 (rose)
-- **Impressions:** 13 (fell)
-- **CTR:** 7.69%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

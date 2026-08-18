@@ -15,18 +15,4 @@ snapshots:
     position: 41.27
 ---
 
-# Scalable Finance AI Enterprise Agents for All ERP Platforms
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/scalable-finance-ai-enterprise-agents-for-all-erp-platforms/`
-
-## Latest snapshot
-
-- **Position:** 41.3 (first reading)
-- **Clicks:** 0 ()
-- **Impressions:** 11 ()
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

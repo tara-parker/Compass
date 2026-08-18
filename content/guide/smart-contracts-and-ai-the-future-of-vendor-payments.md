@@ -23,18 +23,4 @@ snapshots:
     position: 10.55
 ---
 
-# Smart Contracts and AI the Future of Vendor Payments
-
-Tracked page in the **Guide** cluster.
-`https://chatfin.ai/guide/smart-contracts-and-ai-the-future-of-vendor-payments/`
-
-## Latest snapshot
-
-- **Position:** 10.6 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 22 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

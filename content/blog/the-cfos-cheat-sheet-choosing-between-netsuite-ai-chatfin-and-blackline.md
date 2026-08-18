@@ -23,18 +23,4 @@ snapshots:
     position: 7.08
 ---
 
-# The CFOs Cheat Sheet Choosing Between NetSuite AI ChatFin and BlackLine
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/the-cfos-cheat-sheet-choosing-between-netsuite-ai-chatfin-and-blackline/`
-
-## Latest snapshot
-
-- **Position:** 7.1 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 12 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

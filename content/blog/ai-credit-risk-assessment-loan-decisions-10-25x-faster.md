@@ -23,18 +23,4 @@ snapshots:
     position: 52.08
 ---
 
-# AI Credit Risk Assessment Loan Decisions 10 25x Faster
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/ai-credit-risk-assessment-loan-decisions-10-25x-faster/`
-
-## Latest snapshot
-
-- **Position:** 52.1 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 12 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

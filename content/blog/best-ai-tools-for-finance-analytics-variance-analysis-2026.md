@@ -23,18 +23,4 @@ snapshots:
     position: 15.42
 ---
 
-# Best AI Tools for Finance Analytics Variance Analysis 2026
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/best-ai-tools-for-finance-analytics-variance-analysis-2026/`
-
-## Latest snapshot
-
-- **Position:** 15.4 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 89 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

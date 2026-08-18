@@ -15,18 +15,4 @@ snapshots:
     position: 4.4
 ---
 
-# 10 Best AI Agents for FP&A Teams Finance
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/10-best-ai-agents-for-fpa-teams-finance/`
-
-## Latest snapshot
-
-- **Position:** 4.4 (first reading)
-- **Clicks:** 1 ()
-- **Impressions:** 5 ()
-- **CTR:** 20.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

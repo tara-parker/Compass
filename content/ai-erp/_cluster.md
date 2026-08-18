@@ -23,13 +23,4 @@ snapshots:
     position: 8.82
 ---
 
-# AI ERP cluster
-
-4 tracked pages.
-
-## Cluster totals (latest)
-
-- **Clicks:** 3 (rose)
-- **Impressions:** 77 (fell)
-- **Avg position:** 8.8 (slipped)
-- **CTR:** 3.90%
+_Editable notes for the AI ERP cluster._

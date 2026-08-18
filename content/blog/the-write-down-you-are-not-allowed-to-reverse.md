@@ -23,18 +23,4 @@ snapshots:
     position: 8.76
 ---
 
-# The Write Down You Are Not Allowed to Reverse
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/the-write-down-you-are-not-allowed-to-reverse/`
-
-## Latest snapshot
-
-- **Position:** 8.8 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 273 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

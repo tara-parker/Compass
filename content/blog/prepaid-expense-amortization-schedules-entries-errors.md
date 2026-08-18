@@ -23,18 +23,4 @@ snapshots:
     position: 9.39
 ---
 
-# Prepaid Expense Amortization Schedules Entries Errors
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/prepaid-expense-amortization-schedules-entries-errors/`
-
-## Latest snapshot
-
-- **Position:** 9.4 (slipped)
-- **Clicks:** 0 (fell)
-- **Impressions:** 31 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

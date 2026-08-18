@@ -23,18 +23,4 @@ snapshots:
     position: 7.12
 ---
 
-# CFO Guide to AI for the General Ledger Automation Analysis and Exception Management
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/cfo-guide-to-ai-for-the-general-ledger-automation-analysis-and-exception-management/`
-
-## Latest snapshot
-
-- **Position:** 7.1 (improved)
-- **Clicks:** 1 (rose)
-- **Impressions:** 17 (fell)
-- **CTR:** 5.88%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

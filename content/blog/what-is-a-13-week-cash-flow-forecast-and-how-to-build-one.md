@@ -23,18 +23,4 @@ snapshots:
     position: 40.41
 ---
 
-# What Is a 13 Week Cash Flow Forecast and How to Build One
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/what-is-a-13-week-cash-flow-forecast-and-how-to-build-one/`
-
-## Latest snapshot
-
-- **Position:** 40.4 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 51 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

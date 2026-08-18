@@ -23,18 +23,4 @@ snapshots:
     position: 17.84
 ---
 
-# Automated Close Management AI Reconciliation Intelligence Platform
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/automated-close-management-ai-reconciliation-intelligence-platform/`
-
-## Latest snapshot
-
-- **Position:** 17.8 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 31 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

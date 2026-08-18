@@ -23,18 +23,4 @@ snapshots:
     position: 7.5
 ---
 
-# The Freight Invoice Nobody Matches to a Shipment
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/the-freight-invoice-nobody-matches-to-a-shipment/`
-
-## Latest snapshot
-
-- **Position:** 7.5 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 48 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

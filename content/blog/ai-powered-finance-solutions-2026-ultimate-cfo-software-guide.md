@@ -23,18 +23,4 @@ snapshots:
     position: 11.47
 ---
 
-# AI Powered Finance Solutions 2026 Ultimate CFO Software Guide
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/ai-powered-finance-solutions-2026-ultimate-cfo-software-guide/`
-
-## Latest snapshot
-
-- **Position:** 11.5 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 30 (held steady)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

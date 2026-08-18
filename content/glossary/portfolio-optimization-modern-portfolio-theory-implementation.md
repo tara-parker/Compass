@@ -23,18 +23,4 @@ snapshots:
     position: 61.43
 ---
 
-# Portfolio Optimization Modern Portfolio Theory Implementation
-
-Tracked page in the **Glossary** cluster.
-`https://chatfin.ai/glossary/portfolio-optimization-modern-portfolio-theory-implementation/`
-
-## Latest snapshot
-
-- **Position:** 61.4 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 181 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

@@ -15,18 +15,4 @@ snapshots:
     position: 5.44
 ---
 
-# Real Time Finance Reporting
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/real-time-finance-reporting/`
-
-## Latest snapshot
-
-- **Position:** 5.4 (first reading)
-- **Clicks:** 1 ()
-- **Impressions:** 9 ()
-- **CTR:** 11.11%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

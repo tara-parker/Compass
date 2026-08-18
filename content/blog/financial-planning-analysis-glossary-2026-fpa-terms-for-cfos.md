@@ -23,18 +23,4 @@ snapshots:
     position: 10.11
 ---
 
-# Financial Planning Analysis Glossary 2026 FP&A Terms for CFOs
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/financial-planning-analysis-glossary-2026-fpa-terms-for-cfos/`
-
-## Latest snapshot
-
-- **Position:** 10.1 (slipped)
-- **Clicks:** 0 (fell)
-- **Impressions:** 97 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

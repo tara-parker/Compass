@@ -23,13 +23,4 @@ snapshots:
     position: 9.9
 ---
 
-# Integrations cluster
-
-1 tracked pages.
-
-## Cluster totals (latest)
-
-- **Clicks:** 0 (held steady)
-- **Impressions:** 40 (fell)
-- **Avg position:** 9.9 (improved)
-- **CTR:** 0.00%
+_Editable notes for the Integrations cluster._

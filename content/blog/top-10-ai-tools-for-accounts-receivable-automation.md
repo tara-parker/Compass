@@ -23,18 +23,4 @@ snapshots:
     position: 42.36
 ---
 
-# Top 10 AI Tools for Accounts Receivable Automation
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/top-10-ai-tools-for-accounts-receivable-automation/`
-
-## Latest snapshot
-
-- **Position:** 42.4 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 14 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

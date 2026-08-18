@@ -1,7 +1,15 @@
 import type { Metadata } from "next";
+import { Poppins } from "next/font/google";
 import Link from "next/link";
 import "./globals.css";
 import { getPeriods } from "@/lib/content";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-sans",
+  display: "swap",
+});
 
 export const metadata: Metadata = {
   title: "Compass — ChatFin rank tracker",
@@ -25,7 +33,7 @@ export default function RootLayout({
   const periods = getPeriods();
   const latest = periods[periods.length - 1];
   return (
-    <html lang="en">
+    <html lang="en" className={poppins.variable}>
       <body>
         <div className="mx-auto flex min-h-screen max-w-7xl flex-col px-5 sm:px-8">
           <header className="flex flex-wrap items-center gap-x-6 gap-y-3 py-5">

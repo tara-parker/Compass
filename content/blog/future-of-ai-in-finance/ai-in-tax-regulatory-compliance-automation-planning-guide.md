@@ -15,18 +15,4 @@ snapshots:
     position: 11.83
 ---
 
-# AI in Tax Regulatory Compliance Automation Planning Guide
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/future-of-ai-in-finance/ai-in-tax-regulatory-compliance-automation-planning-guide/`
-
-## Latest snapshot
-
-- **Position:** 11.8 (first reading)
-- **Clicks:** 0 ()
-- **Impressions:** 12 ()
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

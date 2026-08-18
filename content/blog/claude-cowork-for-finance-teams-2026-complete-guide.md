@@ -23,18 +23,4 @@ snapshots:
     position: 6.44
 ---
 
-# Claude Cowork for Finance Teams 2026 Complete Guide
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/claude-cowork-for-finance-teams-2026-complete-guide/`
-
-## Latest snapshot
-
-- **Position:** 6.4 (improved)
-- **Clicks:** 1 (held steady)
-- **Impressions:** 9 (rose)
-- **CTR:** 11.11%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

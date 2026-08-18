@@ -23,18 +23,4 @@ snapshots:
     position: 11.59
 ---
 
-# 5 Red Flags When Choosing AI Finance Tools and How to Avoid Them
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/5-red-flags-when-choosing-ai-finance-tools-and-how-to-avoid-them/`
-
-## Latest snapshot
-
-- **Position:** 11.6 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 29 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

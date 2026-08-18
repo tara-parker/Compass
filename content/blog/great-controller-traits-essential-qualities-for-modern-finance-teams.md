@@ -23,18 +23,4 @@ snapshots:
     position: 7.86
 ---
 
-# Great Controller Traits Essential Qualities for Modern Finance Teams
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/great-controller-traits-essential-qualities-for-modern-finance-teams/`
-
-## Latest snapshot
-
-- **Position:** 7.9 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 28 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

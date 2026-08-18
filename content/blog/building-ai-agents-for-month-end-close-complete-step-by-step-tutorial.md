@@ -15,18 +15,4 @@ snapshots:
     position: 12.25
 ---
 
-# Building AI Agents for Month End Close Complete Step By Step Tutorial
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/building-ai-agents-for-month-end-close-complete-step-by-step-tutorial/`
-
-## Latest snapshot
-
-- **Position:** 12.2 (first reading)
-- **Clicks:** 0 ()
-- **Impressions:** 84 ()
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

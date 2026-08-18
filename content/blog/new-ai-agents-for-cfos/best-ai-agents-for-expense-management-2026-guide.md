@@ -23,18 +23,4 @@ snapshots:
     position: 8.12
 ---
 
-# Best AI Agents for Expense Management 2026 Guide
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/new-ai-agents-for-cfos/best-ai-agents-for-expense-management-2026-guide/`
-
-## Latest snapshot
-
-- **Position:** 8.1 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 24 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

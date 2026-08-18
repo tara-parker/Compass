@@ -23,18 +23,4 @@ snapshots:
     position: 40.93
 ---
 
-# Top 10 Best Document Processing Tools for Finance Operations
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/top-10-best-document-processing-tools-for-finance-operations/`
-
-## Latest snapshot
-
-- **Position:** 40.9 (improved)
-- **Clicks:** 1 (rose)
-- **Impressions:** 54 (fell)
-- **CTR:** 1.85%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

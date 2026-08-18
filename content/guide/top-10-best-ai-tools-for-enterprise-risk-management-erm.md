@@ -23,18 +23,4 @@ snapshots:
     position: 41.39
 ---
 
-# Top 10 Best AI Tools for Enterprise Risk Management Erm
-
-Tracked page in the **Guide** cluster.
-`https://chatfin.ai/guide/top-10-best-ai-tools-for-enterprise-risk-management-erm/`
-
-## Latest snapshot
-
-- **Position:** 41.4 (slipped)
-- **Clicks:** 4 (rose)
-- **Impressions:** 1161 (fell)
-- **CTR:** 0.34%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

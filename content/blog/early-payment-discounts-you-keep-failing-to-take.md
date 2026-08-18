@@ -15,18 +15,4 @@ snapshots:
     position: 7.19
 ---
 
-# Early Payment Discounts You Keep Failing to Take
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/early-payment-discounts-you-keep-failing-to-take/`
-
-## Latest snapshot
-
-- **Position:** 7.2 (first reading)
-- **Clicks:** 0 ()
-- **Impressions:** 16 ()
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

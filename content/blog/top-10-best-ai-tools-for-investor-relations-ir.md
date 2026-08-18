@@ -23,18 +23,4 @@ snapshots:
     position: 14.08
 ---
 
-# Top 10 Best AI Tools for Investor Relations Ir
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/top-10-best-ai-tools-for-investor-relations-ir/`
-
-## Latest snapshot
-
-- **Position:** 14.1 (improved)
-- **Clicks:** 1 (held steady)
-- **Impressions:** 321 (rose)
-- **CTR:** 0.31%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

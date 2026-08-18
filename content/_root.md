@@ -56,18 +56,4 @@ daily:
   - { date: "2026-08-17", clicks: 18, impressions: 2715, ctr: 0.0066, position: 14.7 }
 ---
 
-# ChatFin — Site Overview
-
-The main pillar. Whole-site Search performance rolled up across **14 clusters** and **1198 tracked pages**.
-
-## Totals — Aug 10–17
-
-- **Clicks:** 378 (fell)
-- **Impressions:** 98722 (fell)
-- **Avg position:** 17.3 (slipped)
-- **CTR:** 0.38%
-
-## Periods tracked
-
-- Aug 3–10 (`2026-08-03_2026-08-10`)
-- Aug 10–17 (`2026-08-10_2026-08-17`)
+_Editable notes for the site pillar._

@@ -23,18 +23,4 @@ snapshots:
     position: 14.35
 ---
 
-# AI Accounting Roles Finance Career Evolution
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/ai-accounting-roles-finance-career-evolution/`
-
-## Latest snapshot
-
-- **Position:** 14.3 (slipped)
-- **Clicks:** 1 (rose)
-- **Impressions:** 17 (rose)
-- **CTR:** 5.88%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

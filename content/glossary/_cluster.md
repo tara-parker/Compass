@@ -23,13 +23,4 @@ snapshots:
     position: 30.42
 ---
 
-# Glossary cluster
-
-32 tracked pages.
-
-## Cluster totals (latest)
-
-- **Clicks:** 1 (fell)
-- **Impressions:** 5137 (rose)
-- **Avg position:** 30.4 (slipped)
-- **CTR:** 0.02%
+_Editable notes for the Glossary cluster._

@@ -23,18 +23,4 @@ snapshots:
     position: 5.01
 ---
 
-# Will Credit Analysts Be Replaced By AI in 2026
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/will-credit-analysts-be-replaced-by-ai-in-2026/`
-
-## Latest snapshot
-
-- **Position:** 5.0 (slipped)
-- **Clicks:** 2 (fell)
-- **Impressions:** 223 (rose)
-- **CTR:** 0.90%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

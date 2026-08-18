@@ -23,18 +23,4 @@ snapshots:
     position: 15.79
 ---
 
-# Top 10 AI Tools for Sox Compliance Internal Controls 2026 Edition
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/top-ai-tools-for-cfos/top-10-ai-tools-for-sox-compliance-internal-controls-2026-edition/`
-
-## Latest snapshot
-
-- **Position:** 15.8 (slipped)
-- **Clicks:** 3 (rose)
-- **Impressions:** 802 (fell)
-- **CTR:** 0.37%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

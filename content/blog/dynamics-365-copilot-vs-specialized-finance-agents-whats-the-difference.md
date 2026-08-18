@@ -23,18 +23,4 @@ snapshots:
     position: 17.18
 ---
 
-# Dynamics 365 Copilot vs Specialized Finance Agents Whats the Difference
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/dynamics-365-copilot-vs-specialized-finance-agents-whats-the-difference/`
-
-## Latest snapshot
-
-- **Position:** 17.2 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 49 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

@@ -23,18 +23,4 @@ snapshots:
     position: 14.32
 ---
 
-# Working Capital Optimization AI Cash Flow
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/working-capital-optimization-ai-cash-flow/`
-
-## Latest snapshot
-
-- **Position:** 14.3 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 56 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

@@ -23,18 +23,4 @@ snapshots:
     position: 24.21
 ---
 
-# AI Powered Journal Entry Automation Guide
-
-Tracked page in the **Solutions** cluster.
-`https://chatfin.ai/solutions/ai-powered-journal-entry-automation-guide/`
-
-## Latest snapshot
-
-- **Position:** 24.2 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 34 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

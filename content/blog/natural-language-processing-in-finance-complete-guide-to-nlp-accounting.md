@@ -23,18 +23,4 @@ snapshots:
     position: 24.73
 ---
 
-# Natural Language Processing in Finance Complete Guide to NLP Accounting
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/natural-language-processing-in-finance-complete-guide-to-nlp-accounting/`
-
-## Latest snapshot
-
-- **Position:** 24.7 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 377 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

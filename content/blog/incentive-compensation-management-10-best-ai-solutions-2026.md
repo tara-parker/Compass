@@ -23,18 +23,4 @@ snapshots:
     position: 12.01
 ---
 
-# Incentive Compensation Management 10 Best AI Solutions 2026
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/incentive-compensation-management-10-best-ai-solutions-2026/`
-
-## Latest snapshot
-
-- **Position:** 12.0 (slipped)
-- **Clicks:** 3 (rose)
-- **Impressions:** 141 (fell)
-- **CTR:** 2.13%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

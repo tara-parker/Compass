@@ -23,18 +23,4 @@ snapshots:
     position: 8.4
 ---
 
-# AI CFO Software 2026 Buyers Guide to Autonomous Finance Readiness
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/ai-cfo-software-2026-buyers-guide-to-autonomous-finance-readiness/`
-
-## Latest snapshot
-
-- **Position:** 8.4 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 25 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

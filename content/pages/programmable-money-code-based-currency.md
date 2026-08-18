@@ -23,18 +23,4 @@ snapshots:
     position: 29.71
 ---
 
-# Programmable Money Code Based Currency
-
-Tracked page in the **Pages** cluster.
-`https://chatfin.ai/programmable-money-code-based-currency/`
-
-## Latest snapshot
-
-- **Position:** 29.7 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 48 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

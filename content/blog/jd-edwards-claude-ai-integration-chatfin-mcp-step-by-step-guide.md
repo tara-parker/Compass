@@ -23,18 +23,4 @@ snapshots:
     position: 6.4
 ---
 
-# Jd Edwards Claude AI Integration ChatFin Mcp Step By Step Guide
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/jd-edwards-claude-ai-integration-chatfin-mcp-step-by-step-guide/`
-
-## Latest snapshot
-
-- **Position:** 6.4 (slipped)
-- **Clicks:** 2 (held steady)
-- **Impressions:** 10 (fell)
-- **CTR:** 20.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

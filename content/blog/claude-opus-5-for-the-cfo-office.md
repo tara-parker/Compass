@@ -23,18 +23,4 @@ snapshots:
     position: 6.38
 ---
 
-# Claude Opus 5 for the CFO Office
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/claude-opus-5-for-the-cfo-office/`
-
-## Latest snapshot
-
-- **Position:** 6.4 (improved)
-- **Clicks:** 0 (fell)
-- **Impressions:** 16 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

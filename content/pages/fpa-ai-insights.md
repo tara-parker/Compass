@@ -15,18 +15,4 @@ snapshots:
     position: 12.36
 ---
 
-# FP&A AI Insights
-
-Tracked page in the **Pages** cluster.
-`https://chatfin.ai/fpa-ai-insights/`
-
-## Latest snapshot
-
-- **Position:** 12.4 (first reading)
-- **Clicks:** 0 ()
-- **Impressions:** 11 ()
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

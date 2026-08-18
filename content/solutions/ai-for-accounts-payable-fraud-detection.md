@@ -15,18 +15,4 @@ snapshots:
     position: 19.38
 ---
 
-# AI for Accounts Payable Fraud Detection
-
-Tracked page in the **Solutions** cluster.
-`https://chatfin.ai/solutions/ai-for-accounts-payable-fraud-detection/`
-
-## Latest snapshot
-
-- **Position:** 19.4 (first reading)
-- **Clicks:** 0 ()
-- **Impressions:** 16 ()
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

@@ -15,18 +15,4 @@ snapshots:
     position: 5.52
 ---
 
-# Claude in Excel for Finance Models Formulas Variance
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/claude-in-excel-for-finance-models-formulas-variance/`
-
-## Latest snapshot
-
-- **Position:** 5.5 (first reading)
-- **Clicks:** 1 ()
-- **Impressions:** 27 ()
-- **CTR:** 3.70%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

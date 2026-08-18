@@ -23,18 +23,4 @@ snapshots:
     position: 42.4
 ---
 
-# Best AI Tools for CFOs Finance Platform
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/best-ai-tools-for-cfos-finance-platform/`
-
-## Latest snapshot
-
-- **Position:** 42.4 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 62 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

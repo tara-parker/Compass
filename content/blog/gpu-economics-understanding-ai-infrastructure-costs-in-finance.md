@@ -23,18 +23,4 @@ snapshots:
     position: 12.31
 ---
 
-# Gpu Economics Understanding AI Infrastructure Costs in Finance
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/gpu-economics-understanding-ai-infrastructure-costs-in-finance/`
-
-## Latest snapshot
-
-- **Position:** 12.3 (improved)
-- **Clicks:** 1 (rose)
-- **Impressions:** 100 (fell)
-- **CTR:** 1.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

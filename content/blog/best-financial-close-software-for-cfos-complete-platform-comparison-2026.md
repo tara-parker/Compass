@@ -23,18 +23,4 @@ snapshots:
     position: 7.24
 ---
 
-# Best Financial Close Software for CFOs Complete Platform Comparison 2026
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/best-financial-close-software-for-cfos-complete-platform-comparison-2026/`
-
-## Latest snapshot
-
-- **Position:** 7.2 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 263 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

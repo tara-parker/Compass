@@ -23,18 +23,4 @@ snapshots:
     position: 7.23
 ---
 
-# Capex vs Opex AI Agents That Classify Spend Automatically
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/capex-vs-opex-ai-agents-that-classify-spend-automatically/`
-
-## Latest snapshot
-
-- **Position:** 7.2 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 30 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

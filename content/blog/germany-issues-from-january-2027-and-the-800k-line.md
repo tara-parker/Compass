@@ -23,18 +23,4 @@ snapshots:
     position: 7.23
 ---
 
-# Germany Issues From January 2027 and the 800k Line
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/germany-issues-from-january-2027-and-the-800k-line/`
-
-## Latest snapshot
-
-- **Position:** 7.2 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 22 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

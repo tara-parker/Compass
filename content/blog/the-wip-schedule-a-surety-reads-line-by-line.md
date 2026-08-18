@@ -15,18 +15,4 @@ snapshots:
     position: 13.91
 ---
 
-# The Wip Schedule a Surety Reads Line By Line
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/the-wip-schedule-a-surety-reads-line-by-line/`
-
-## Latest snapshot
-
-- **Position:** 13.9 (first reading)
-- **Clicks:** 0 ()
-- **Impressions:** 45 ()
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

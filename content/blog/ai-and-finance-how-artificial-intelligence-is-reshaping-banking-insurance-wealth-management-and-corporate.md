@@ -23,18 +23,4 @@ snapshots:
     position: 8.22
 ---
 
-# AI and Finance How Artificial Intelligence Is Reshaping Banking Insurance Wealth Management and Corporate
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/ai-and-finance-how-artificial-intelligence-is-reshaping-banking-insurance-wealth-management-and-corporate/`
-
-## Latest snapshot
-
-- **Position:** 8.2 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 9 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

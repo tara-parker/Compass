@@ -23,18 +23,4 @@ snapshots:
     position: 10.31
 ---
 
-# Account Reconciliation AI Agents Real Time Balance Matching
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/account-reconciliation-ai-agents-real-time-balance-matching/`
-
-## Latest snapshot
-
-- **Position:** 10.3 (slipped)
-- **Clicks:** 1 (rose)
-- **Impressions:** 32 (fell)
-- **CTR:** 3.12%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

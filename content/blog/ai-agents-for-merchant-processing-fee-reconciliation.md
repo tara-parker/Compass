@@ -15,18 +15,4 @@ snapshots:
     position: 28.07
 ---
 
-# AI Agents for Merchant Processing Fee Reconciliation
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/ai-agents-for-merchant-processing-fee-reconciliation/`
-
-## Latest snapshot
-
-- **Position:** 28.1 (first reading)
-- **Clicks:** 0 ()
-- **Impressions:** 15 ()
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

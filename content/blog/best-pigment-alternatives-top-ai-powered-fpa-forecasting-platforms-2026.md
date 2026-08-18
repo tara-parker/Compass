@@ -23,18 +23,4 @@ snapshots:
     position: 9.13
 ---
 
-# Best Pigment Alternatives Top AI Powered FP&A Forecasting Platforms 2026
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/best-pigment-alternatives-top-ai-powered-fpa-forecasting-platforms-2026/`
-
-## Latest snapshot
-
-- **Position:** 9.1 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 46 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

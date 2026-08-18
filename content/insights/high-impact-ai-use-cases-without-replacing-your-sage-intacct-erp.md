@@ -15,18 +15,4 @@ snapshots:
     position: 8.5
 ---
 
-# High Impact AI Use Cases Without Replacing Your Sage Intacct ERP
-
-Tracked page in the **Insights** cluster.
-`https://chatfin.ai/insights/high-impact-ai-use-cases-without-replacing-your-sage-intacct-erp/`
-
-## Latest snapshot
-
-- **Position:** 8.5 (first reading)
-- **Clicks:** 1 ()
-- **Impressions:** 2 ()
-- **CTR:** 50.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

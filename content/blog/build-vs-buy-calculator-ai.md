@@ -23,18 +23,4 @@ snapshots:
     position: 6.41
 ---
 
-# Build vs Buy Calculator AI
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/build-vs-buy-calculator-ai/`
-
-## Latest snapshot
-
-- **Position:** 6.4 (improved)
-- **Clicks:** 1 (held steady)
-- **Impressions:** 17 (rose)
-- **CTR:** 5.88%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

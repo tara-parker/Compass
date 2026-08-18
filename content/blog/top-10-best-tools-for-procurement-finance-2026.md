@@ -15,18 +15,4 @@ snapshots:
     position: 27.18
 ---
 
-# Top 10 Best Tools for Procurement Finance 2026
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/top-10-best-tools-for-procurement-finance-2026/`
-
-## Latest snapshot
-
-- **Position:** 27.2 (first reading)
-- **Clicks:** 0 ()
-- **Impressions:** 11 ()
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

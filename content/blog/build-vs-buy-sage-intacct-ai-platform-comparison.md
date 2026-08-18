@@ -23,18 +23,4 @@ snapshots:
     position: 9.18
 ---
 
-# Build vs Buy Sage Intacct AI Platform Comparison
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/build-vs-buy-sage-intacct-ai-platform-comparison/`
-
-## Latest snapshot
-
-- **Position:** 9.2 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 28 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

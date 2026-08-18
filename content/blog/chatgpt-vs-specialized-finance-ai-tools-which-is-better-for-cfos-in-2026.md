@@ -23,18 +23,4 @@ snapshots:
     position: 9.72
 ---
 
-# Chatgpt vs Specialized Finance AI Tools Which Is Better for CFOs in 2026
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/chatgpt-vs-specialized-finance-ai-tools-which-is-better-for-cfos-in-2026/`
-
-## Latest snapshot
-
-- **Position:** 9.7 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 86 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

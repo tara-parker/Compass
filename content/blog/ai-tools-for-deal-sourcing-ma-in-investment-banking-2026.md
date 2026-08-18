@@ -23,18 +23,4 @@ snapshots:
     position: 18.48
 ---
 
-# AI Tools for Deal Sourcing Ma in Investment Banking 2026
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/ai-tools-for-deal-sourcing-ma-in-investment-banking-2026/`
-
-## Latest snapshot
-
-- **Position:** 18.5 (slipped)
-- **Clicks:** 2 (held steady)
-- **Impressions:** 252 (fell)
-- **CTR:** 0.79%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

@@ -23,18 +23,4 @@ snapshots:
     position: 17.8
 ---
 
-# AI Finance Terminology Glossary 2026 Machine Learning Automation Terms
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/ai-finance-terminology-glossary-2026-machine-learning-automation-terms/`
-
-## Latest snapshot
-
-- **Position:** 17.8 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 15 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

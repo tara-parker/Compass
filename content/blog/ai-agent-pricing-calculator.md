@@ -23,18 +23,4 @@ snapshots:
     position: 7.54
 ---
 
-# AI Agent Pricing Calculator
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/ai-agent-pricing-calculator/`
-
-## Latest snapshot
-
-- **Position:** 7.5 (improved)
-- **Clicks:** 3 (rose)
-- **Impressions:** 78 (rose)
-- **CTR:** 3.85%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

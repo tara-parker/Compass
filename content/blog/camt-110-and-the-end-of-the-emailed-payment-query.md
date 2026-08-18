@@ -23,18 +23,4 @@ snapshots:
     position: 8.15
 ---
 
-# Camt 110 and the End of the Emailed Payment Query
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/camt-110-and-the-end-of-the-emailed-payment-query/`
-
-## Latest snapshot
-
-- **Position:** 8.2 (improved)
-- **Clicks:** 1 (rose)
-- **Impressions:** 33 (rose)
-- **CTR:** 3.03%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

@@ -23,18 +23,4 @@ snapshots:
     position: 10.74
 ---
 
-# Section 263a Wants a Number You Do Not Track
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/section-263a-wants-a-number-you-do-not-track/`
-
-## Latest snapshot
-
-- **Position:** 10.7 (slipped)
-- **Clicks:** 1 (rose)
-- **Impressions:** 38 (rose)
-- **CTR:** 2.63%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

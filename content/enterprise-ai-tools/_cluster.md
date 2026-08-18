@@ -15,13 +15,4 @@ snapshots:
     position: 13.0
 ---
 
-# Enterprise AI Tools cluster
-
-1 tracked pages.
-
-## Cluster totals (latest)
-
-- **Clicks:** 0 ()
-- **Impressions:** 12 ()
-- **Avg position:** 13.0 ()
-- **CTR:** 0.00%
+_Editable notes for the Enterprise AI Tools cluster._

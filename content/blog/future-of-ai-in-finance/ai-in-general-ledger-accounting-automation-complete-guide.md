@@ -23,18 +23,4 @@ snapshots:
     position: 13.11
 ---
 
-# AI in General Ledger Accounting Automation Complete Guide
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/future-of-ai-in-finance/ai-in-general-ledger-accounting-automation-complete-guide/`
-
-## Latest snapshot
-
-- **Position:** 13.1 (slipped)
-- **Clicks:** 1 (fell)
-- **Impressions:** 93 (fell)
-- **CTR:** 1.08%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

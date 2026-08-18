@@ -23,18 +23,4 @@ snapshots:
     position: 6.0
 ---
 
-# Predictive Forecasting AI Top FP&A Planning Software 2026
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/predictive-forecasting-ai-top-fpa-planning-software-2026/`
-
-## Latest snapshot
-
-- **Position:** 6.0 (improved)
-- **Clicks:** 1 (held steady)
-- **Impressions:** 8 (fell)
-- **CTR:** 12.50%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

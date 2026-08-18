@@ -23,18 +23,4 @@ snapshots:
     position: 9.21
 ---
 
-# Best AI Tools for Finance Accounting Teams in 2026
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/best-ai-tools-for-finance-accounting-teams-in-2026/`
-
-## Latest snapshot
-
-- **Position:** 9.2 (slipped)
-- **Clicks:** 2 (held steady)
-- **Impressions:** 245 (fell)
-- **CTR:** 0.82%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

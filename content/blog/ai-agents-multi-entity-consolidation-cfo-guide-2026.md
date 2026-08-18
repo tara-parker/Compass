@@ -23,18 +23,4 @@ snapshots:
     position: 14.93
 ---
 
-# AI Agents Multi Entity Consolidation CFO Guide 2026
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/ai-agents-multi-entity-consolidation-cfo-guide-2026/`
-
-## Latest snapshot
-
-- **Position:** 14.9 (slipped)
-- **Clicks:** 1 (held steady)
-- **Impressions:** 75 (fell)
-- **CTR:** 1.33%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

@@ -23,18 +23,4 @@ snapshots:
     position: 17.65
 ---
 
-# AI FP&A Software 2026 Best Financial Planning and Analysis Platforms Compared
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/ai-fpa-software-2026-best-financial-planning-and-analysis-platforms-compared/`
-
-## Latest snapshot
-
-- **Position:** 17.6 (slipped)
-- **Clicks:** 0 (fell)
-- **Impressions:** 1307 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

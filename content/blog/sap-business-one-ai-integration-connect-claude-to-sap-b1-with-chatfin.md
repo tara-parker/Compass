@@ -15,18 +15,4 @@ snapshots:
     position: 5.67
 ---
 
-# SAP Business One AI Integration Connect Claude to SAP b1 with ChatFin
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/sap-business-one-ai-integration-connect-claude-to-sap-b1-with-chatfin/`
-
-## Latest snapshot
-
-- **Position:** 5.7 (first reading)
-- **Clicks:** 1 ()
-- **Impressions:** 6 ()
-- **CTR:** 16.67%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

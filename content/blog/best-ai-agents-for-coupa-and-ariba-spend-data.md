@@ -15,18 +15,4 @@ snapshots:
     position: 7.16
 ---
 
-# Best AI Agents for Coupa and Ariba Spend Data
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/best-ai-agents-for-coupa-and-ariba-spend-data/`
-
-## Latest snapshot
-
-- **Position:** 7.2 (first reading)
-- **Clicks:** 0 ()
-- **Impressions:** 32 ()
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

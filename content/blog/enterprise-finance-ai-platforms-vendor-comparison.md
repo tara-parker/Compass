@@ -23,18 +23,4 @@ snapshots:
     position: 24.07
 ---
 
-# Enterprise Finance AI Platforms Vendor Comparison
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/enterprise-finance-ai-platforms-vendor-comparison/`
-
-## Latest snapshot
-
-- **Position:** 24.1 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 153 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

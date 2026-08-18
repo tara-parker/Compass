@@ -23,18 +23,4 @@ snapshots:
     position: 12.51
 ---
 
-# Workiva Alternatives for Reporting and Disclosure 2026
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/workiva-alternatives-for-reporting-and-disclosure-2026/`
-
-## Latest snapshot
-
-- **Position:** 12.5 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 88 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

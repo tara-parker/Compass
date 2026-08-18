@@ -15,18 +15,4 @@ snapshots:
     position: 20.24
 ---
 
-# AI Cash Application Automation Match Payments to Invoices at 98 Accuracy
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/ai-cash-application-automation-match-payments-to-invoices-at-98-accuracy/`
-
-## Latest snapshot
-
-- **Position:** 20.2 (first reading)
-- **Clicks:** 0 ()
-- **Impressions:** 21 ()
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

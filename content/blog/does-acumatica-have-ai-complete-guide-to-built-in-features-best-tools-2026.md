@@ -23,18 +23,4 @@ snapshots:
     position: 15.5
 ---
 
-# Does Acumatica Have AI Complete Guide to Built in Features Best Tools 2026
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/does-acumatica-have-ai-complete-guide-to-built-in-features-best-tools-2026/`
-
-## Latest snapshot
-
-- **Position:** 15.5 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 103 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

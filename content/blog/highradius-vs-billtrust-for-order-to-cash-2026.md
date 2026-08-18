@@ -23,18 +23,4 @@ snapshots:
     position: 8.05
 ---
 
-# Highradius vs Billtrust for Order to Cash 2026
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/highradius-vs-billtrust-for-order-to-cash-2026/`
-
-## Latest snapshot
-
-- **Position:** 8.1 (slipped)
-- **Clicks:** 0 (fell)
-- **Impressions:** 58 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

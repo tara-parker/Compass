@@ -23,18 +23,4 @@ snapshots:
     position: 12.09
 ---
 
-# AI Powered Invoice Capture Tools 99 Accuracy Solutions 2026
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/ai-powered-invoice-capture-tools-99-accuracy-solutions-2026/`
-
-## Latest snapshot
-
-- **Position:** 12.1 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 45 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

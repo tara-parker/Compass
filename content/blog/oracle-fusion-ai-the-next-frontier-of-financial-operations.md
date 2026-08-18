@@ -15,18 +15,4 @@ snapshots:
     position: 18.42
 ---
 
-# Oracle Fusion AI the Next Frontier of Financial Operations
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/oracle-fusion-ai-the-next-frontier-of-financial-operations/`
-
-## Latest snapshot
-
-- **Position:** 18.4 (first reading)
-- **Clicks:** 0 ()
-- **Impressions:** 12 ()
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

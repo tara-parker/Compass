@@ -23,18 +23,4 @@ snapshots:
     position: 59.5
 ---
 
-# What Is an AI Agent in Finance
-
-Tracked page in the **Glossary** cluster.
-`https://chatfin.ai/glossary/what-is-an-ai-agent-in-finance/`
-
-## Latest snapshot
-
-- **Position:** 59.5 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 26 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

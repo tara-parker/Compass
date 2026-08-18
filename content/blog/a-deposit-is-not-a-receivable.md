@@ -23,18 +23,4 @@ snapshots:
     position: 6.53
 ---
 
-# A Deposit Is Not a Receivable
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/a-deposit-is-not-a-receivable/`
-
-## Latest snapshot
-
-- **Position:** 6.5 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 15 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

@@ -23,18 +23,4 @@ snapshots:
     position: 12.0
 ---
 
-# Materiality Thresholds Set in 2019
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/materiality-thresholds-set-in-2019/`
-
-## Latest snapshot
-
-- **Position:** 12.0 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 12 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

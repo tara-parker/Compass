@@ -23,18 +23,4 @@ snapshots:
     position: 12.9
 ---
 
-# CFO Thought Leaders on Linkedin Finance Innovation Strategic Wisdom
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/cfo-thought-leaders-on-linkedin-finance-innovation-strategic-wisdom/`
-
-## Latest snapshot
-
-- **Position:** 12.9 (slipped)
-- **Clicks:** 1 (rose)
-- **Impressions:** 30 (rose)
-- **CTR:** 3.33%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

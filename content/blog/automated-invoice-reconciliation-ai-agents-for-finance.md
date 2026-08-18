@@ -15,18 +15,4 @@ snapshots:
     position: 16.36
 ---
 
-# Automated Invoice Reconciliation AI Agents for Finance
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/automated-invoice-reconciliation-ai-agents-for-finance/`
-
-## Latest snapshot
-
-- **Position:** 16.4 (first reading)
-- **Clicks:** 0 ()
-- **Impressions:** 11 ()
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

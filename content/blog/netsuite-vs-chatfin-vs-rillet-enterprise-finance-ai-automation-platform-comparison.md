@@ -15,18 +15,4 @@ snapshots:
     position: 7.56
 ---
 
-# NetSuite vs ChatFin vs Rillet Enterprise Finance AI Automation Platform Comparison
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/netsuite-vs-chatfin-vs-rillet-enterprise-finance-ai-automation-platform-comparison/`
-
-## Latest snapshot
-
-- **Position:** 7.6 (first reading)
-- **Clicks:** 0 ()
-- **Impressions:** 9 ()
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

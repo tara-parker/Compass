@@ -23,18 +23,4 @@ snapshots:
     position: 7.25
 ---
 
-# Become a Tech Partner
-
-Tracked page in the **Pages** cluster.
-`https://chatfin.ai/become-a-tech-partner/`
-
-## Latest snapshot
-
-- **Position:** 7.2 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 16 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

@@ -23,18 +23,4 @@ snapshots:
     position: 7.5
 ---
 
-# Claude Opus 4 8 vs GPT 5 6 for Finance Teams 2026
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/claude-opus-4-8-vs-gpt-5-6-for-finance-teams-2026/`
-
-## Latest snapshot
-
-- **Position:** 7.5 (slipped)
-- **Clicks:** 1 (fell)
-- **Impressions:** 339 (rose)
-- **CTR:** 0.29%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

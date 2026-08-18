@@ -23,18 +23,4 @@ snapshots:
     position: 10.53
 ---
 
-# Automated AI Chargeback Disputes Management Fraud Recovery
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/automated-ai-chargeback-disputes-management-fraud-recovery/`
-
-## Latest snapshot
-
-- **Position:** 10.5 (improved)
-- **Clicks:** 1 (held steady)
-- **Impressions:** 405 (fell)
-- **CTR:** 0.25%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

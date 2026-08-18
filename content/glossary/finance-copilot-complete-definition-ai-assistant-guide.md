@@ -15,18 +15,4 @@ snapshots:
     position: 13.81
 ---
 
-# Finance Copilot Complete Definition AI Assistant Guide
-
-Tracked page in the **Glossary** cluster.
-`https://chatfin.ai/glossary/finance-copilot-complete-definition-ai-assistant-guide/`
-
-## Latest snapshot
-
-- **Position:** 13.8 (first reading)
-- **Clicks:** 0 ()
-- **Impressions:** 16 ()
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

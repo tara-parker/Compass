@@ -23,18 +23,4 @@ snapshots:
     position: 9.17
 ---
 
-# Why Controllers Are Turning to AI for Real Time Close Automation
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/why-controllers-are-turning-to-ai-for-real-time-close-automation/`
-
-## Latest snapshot
-
-- **Position:** 9.2 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 12 (held steady)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

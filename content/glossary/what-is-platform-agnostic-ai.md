@@ -23,18 +23,4 @@ snapshots:
     position: 6.0
 ---
 
-# What Is Platform Agnostic AI
-
-Tracked page in the **Glossary** cluster.
-`https://chatfin.ai/glossary/what-is-platform-agnostic-ai/`
-
-## Latest snapshot
-
-- **Position:** 6.0 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 1285 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

@@ -23,18 +23,4 @@ snapshots:
     position: 26.26
 ---
 
-# Dynamics 365 Finance and Operations AI Agents Enterprise Finance Automation
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/dynamics-365-finance-and-operations-ai-agents-enterprise-finance-automation/`
-
-## Latest snapshot
-
-- **Position:** 26.3 (slipped)
-- **Clicks:** 0 (fell)
-- **Impressions:** 19 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

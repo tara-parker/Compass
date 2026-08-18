@@ -23,18 +23,4 @@ snapshots:
     position: 6.32
 ---
 
-# Openai How Agents Are Transforming Work Finance Implications
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/openai-how-agents-are-transforming-work-finance-implications/`
-
-## Latest snapshot
-
-- **Position:** 6.3 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 38 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

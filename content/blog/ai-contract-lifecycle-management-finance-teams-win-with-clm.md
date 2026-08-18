@@ -23,18 +23,4 @@ snapshots:
     position: 15.69
 ---
 
-# AI Contract Lifecycle Management Finance Teams Win with Clm
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/ai-contract-lifecycle-management-finance-teams-win-with-clm/`
-
-## Latest snapshot
-
-- **Position:** 15.7 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 88 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

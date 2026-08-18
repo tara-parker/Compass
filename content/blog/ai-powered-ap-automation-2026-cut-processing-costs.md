@@ -23,18 +23,4 @@ snapshots:
     position: 10.65
 ---
 
-# AI Powered AP Automation 2026 Cut Processing Costs
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/ai-powered-ap-automation-2026-cut-processing-costs/`
-
-## Latest snapshot
-
-- **Position:** 10.7 (slipped)
-- **Clicks:** 0 (fell)
-- **Impressions:** 293 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

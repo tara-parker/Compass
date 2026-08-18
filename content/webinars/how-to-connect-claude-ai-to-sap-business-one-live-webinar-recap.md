@@ -23,18 +23,4 @@ snapshots:
     position: 13.97
 ---
 
-# How to Connect Claude AI to SAP Business One Live Webinar Recap
-
-Tracked page in the **Webinars** cluster.
-`https://chatfin.ai/webinars/how-to-connect-claude-ai-to-sap-business-one-live-webinar-recap/`
-
-## Latest snapshot
-
-- **Position:** 14.0 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 30 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

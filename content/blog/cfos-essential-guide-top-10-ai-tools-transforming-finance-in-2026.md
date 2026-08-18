@@ -23,18 +23,4 @@ snapshots:
     position: 9.27
 ---
 
-# CFOs Essential Guide Top 10 AI Tools Transforming Finance in 2026
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/cfos-essential-guide-top-10-ai-tools-transforming-finance-in-2026/`
-
-## Latest snapshot
-
-- **Position:** 9.3 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 442 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

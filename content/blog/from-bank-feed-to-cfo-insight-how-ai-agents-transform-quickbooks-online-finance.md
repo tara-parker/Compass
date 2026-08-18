@@ -15,18 +15,4 @@ snapshots:
     position: 7.5
 ---
 
-# From Bank Feed to CFO Insight How AI Agents Transform QuickBooks Online Finance
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/from-bank-feed-to-cfo-insight-how-ai-agents-transform-quickbooks-online-finance/`
-
-## Latest snapshot
-
-- **Position:** 7.5 (first reading)
-- **Clicks:** 1 ()
-- **Impressions:** 2 ()
-- **CTR:** 50.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

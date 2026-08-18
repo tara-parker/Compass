@@ -15,18 +15,4 @@ snapshots:
     position: 44.29
 ---
 
-# AI for Vendor Master Data Management
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/ai-for-vendor-master-data-management/`
-
-## Latest snapshot
-
-- **Position:** 44.3 (first reading)
-- **Clicks:** 0 ()
-- **Impressions:** 14 ()
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

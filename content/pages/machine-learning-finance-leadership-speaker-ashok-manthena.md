@@ -15,18 +15,4 @@ snapshots:
     position: 10.59
 ---
 
-# Machine Learning Finance Leadership Speaker Ashok Manthena
-
-Tracked page in the **Pages** cluster.
-`https://chatfin.ai/machine-learning-finance-leadership-speaker-ashok-manthena/`
-
-## Latest snapshot
-
-- **Position:** 10.6 (first reading)
-- **Clicks:** 0 ()
-- **Impressions:** 17 ()
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

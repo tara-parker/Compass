@@ -23,18 +23,4 @@ snapshots:
     position: 20.0
 ---
 
-# Predictive Cash Flow Management with AI
-
-Tracked page in the **Glossary** cluster.
-`https://chatfin.ai/glossary/predictive-cash-flow-management-with-ai/`
-
-## Latest snapshot
-
-- **Position:** 20.0 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 22 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

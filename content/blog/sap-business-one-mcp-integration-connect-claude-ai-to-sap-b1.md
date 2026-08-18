@@ -23,18 +23,4 @@ snapshots:
     position: 8.43
 ---
 
-# SAP Business One Mcp Integration Connect Claude AI to SAP b1
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/sap-business-one-mcp-integration-connect-claude-ai-to-sap-b1/`
-
-## Latest snapshot
-
-- **Position:** 8.4 (slipped)
-- **Clicks:** 3 (fell)
-- **Impressions:** 388 (fell)
-- **CTR:** 0.77%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

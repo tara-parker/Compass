@@ -23,18 +23,4 @@ snapshots:
     position: 8.42
 ---
 
-# Best AI Finance Tools for CFO Success Complete 2026 Comparison
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/best-ai-finance-tools-for-cfo-success-complete-2026-comparison/`
-
-## Latest snapshot
-
-- **Position:** 8.4 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 55 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

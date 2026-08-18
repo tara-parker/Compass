@@ -23,18 +23,4 @@ snapshots:
     position: 30.96
 ---
 
-# AI Agents That Work with Microsoft Dynamics 365
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/ai-agents-that-work-with-microsoft-dynamics-365/`
-
-## Latest snapshot
-
-- **Position:** 31.0 (improved)
-- **Clicks:** 1 (rose)
-- **Impressions:** 85 (fell)
-- **CTR:** 1.18%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

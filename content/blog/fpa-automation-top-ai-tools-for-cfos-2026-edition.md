@@ -15,18 +15,4 @@ snapshots:
     position: 3.0
 ---
 
-# FP&A Automation Top AI Tools for CFOs 2026 Edition
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/fpa-automation-top-ai-tools-for-cfos-2026-edition/`
-
-## Latest snapshot
-
-- **Position:** 3.0 (first reading)
-- **Clicks:** 0 ()
-- **Impressions:** 12 ()
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

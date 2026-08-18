@@ -23,13 +23,4 @@ snapshots:
     position: 11.32
 ---
 
-# Finance AI Playbook cluster
-
-1 tracked pages.
-
-## Cluster totals (latest)
-
-- **Clicks:** 1 (rose)
-- **Impressions:** 31 (fell)
-- **Avg position:** 11.3 (slipped)
-- **CTR:** 3.23%
+_Editable notes for the Finance AI Playbook cluster._

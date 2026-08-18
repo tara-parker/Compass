@@ -23,18 +23,4 @@ snapshots:
     position: 8.62
 ---
 
-# NetSuite Next Arrives Whether You Planned for IT
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/netsuite-next-arrives-whether-you-planned-for-it/`
-
-## Latest snapshot
-
-- **Position:** 8.6 (slipped)
-- **Clicks:** 1 (rose)
-- **Impressions:** 87 (rose)
-- **CTR:** 1.15%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

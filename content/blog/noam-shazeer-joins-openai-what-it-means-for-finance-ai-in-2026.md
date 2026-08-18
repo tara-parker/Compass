@@ -23,18 +23,4 @@ snapshots:
     position: 6.64
 ---
 
-# Noam Shazeer Joins Openai What IT Means for Finance AI in 2026
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/noam-shazeer-joins-openai-what-it-means-for-finance-ai-in-2026/`
-
-## Latest snapshot
-
-- **Position:** 6.6 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 25 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

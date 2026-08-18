@@ -23,18 +23,4 @@ snapshots:
     position: 3.12
 ---
 
-# Form 941 Versus the General Ledger
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/form-941-versus-the-general-ledger/`
-
-## Latest snapshot
-
-- **Position:** 3.1 (improved)
-- **Clicks:** 1 (held steady)
-- **Impressions:** 8 (fell)
-- **CTR:** 12.50%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

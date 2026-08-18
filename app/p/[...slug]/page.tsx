@@ -1,10 +1,10 @@
-import Link from "next/link";
 import { notFound } from "next/navigation";
 import { getPageByRoute, delta } from "@/lib/content";
 import { num, pos, pct } from "@/lib/format";
 import { StatCard, Card } from "../../components/StatCard";
 import { Sparkline } from "../../components/Charts";
 import { DeltaBadge } from "../../components/Delta";
+import { Breadcrumbs, type Crumb } from "../../components/Breadcrumbs";
 import MarkdownRenderer from "../../components/MarkdownRenderer";
 
 export async function generateMetadata({
@@ -30,20 +30,34 @@ export default async function PageDetail({
   const l = d.latest;
   const snaps = page.snapshots;
 
+  // Breadcrumbs that mirror the nested folder depth of this page.
+  const crumbs: Crumb[] = [{ label: "Overview", href: "/" }];
+  page.routeSlug.forEach((seg, i) => {
+    const isLast = i === page.routeSlug.length - 1;
+    if (i === 0) {
+      crumbs.push({ label: seg, href: `/c/${seg}` });
+    } else if (isLast) {
+      crumbs.push({ label: page.title });
+    } else {
+      crumbs.push({
+        label: seg,
+        href: `/content/${page.routeSlug.slice(0, i + 1).join("/")}`,
+      });
+    }
+  });
+
   return (
     <div className="space-y-6">
-      <div>
-        <Link href={`/c/${page.cluster}`} className="text-xs text-brand-soft hover:underline">
-          ← {page.cluster} cluster
-        </Link>
-        <h1 className="mt-1 text-xl font-semibold tracking-tight text-white sm:text-2xl">
+      <div className="space-y-2">
+        <Breadcrumbs items={crumbs} />
+        <h1 className="text-xl font-semibold text-white sm:text-2xl">
           {page.title}
         </h1>
         <a
           href={page.url}
           target="_blank"
           rel="noreferrer"
-          className="mt-1 inline-block break-all text-xs text-slate-400 hover:text-brand-soft"
+          className="inline-block break-all text-xs text-flat transition hover:text-brand-soft"
         >
           {page.url} ↗
         </a>

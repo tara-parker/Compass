@@ -23,18 +23,4 @@ snapshots:
     position: 14.57
 ---
 
-# Step By Step Guide to Building AI Agents for Chargeback Management
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/step-by-step-guide-to-building-ai-agents-for-chargeback-management/`
-
-## Latest snapshot
-
-- **Position:** 14.6 (improved)
-- **Clicks:** 0 (fell)
-- **Impressions:** 65 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

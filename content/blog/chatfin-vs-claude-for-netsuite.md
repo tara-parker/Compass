@@ -15,18 +15,4 @@ snapshots:
     position: 8.14
 ---
 
-# ChatFin vs Claude for NetSuite
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/chatfin-vs-claude-for-netsuite/`
-
-## Latest snapshot
-
-- **Position:** 8.1 (first reading)
-- **Clicks:** 0 ()
-- **Impressions:** 14 ()
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

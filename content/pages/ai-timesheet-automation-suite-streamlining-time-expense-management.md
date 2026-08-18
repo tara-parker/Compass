@@ -23,18 +23,4 @@ snapshots:
     position: 64.38
 ---
 
-# AI Timesheet Automation Suite Streamlining Time Expense Management
-
-Tracked page in the **Pages** cluster.
-`https://chatfin.ai/ai-timesheet-automation-suite-streamlining-time-expense-management/`
-
-## Latest snapshot
-
-- **Position:** 64.4 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 21 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

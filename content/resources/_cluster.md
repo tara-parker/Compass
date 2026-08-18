@@ -23,13 +23,4 @@ snapshots:
     position: 13.64
 ---
 
-# Resources cluster
-
-1 tracked pages.
-
-## Cluster totals (latest)
-
-- **Clicks:** 0 (fell)
-- **Impressions:** 47 (fell)
-- **Avg position:** 13.6 (slipped)
-- **CTR:** 0.00%
+_Editable notes for the Resources cluster._

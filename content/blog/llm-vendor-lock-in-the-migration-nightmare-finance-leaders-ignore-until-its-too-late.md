@@ -23,18 +23,4 @@ snapshots:
     position: 8.68
 ---
 
-# LLM Vendor Lock in the Migration Nightmare Finance Leaders Ignore Until Its Too Late
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/llm-vendor-lock-in-the-migration-nightmare-finance-leaders-ignore-until-its-too-late/`
-
-## Latest snapshot
-
-- **Position:** 8.7 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 77 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

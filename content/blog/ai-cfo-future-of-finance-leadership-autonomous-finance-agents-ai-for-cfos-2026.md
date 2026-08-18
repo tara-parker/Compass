@@ -23,18 +23,4 @@ snapshots:
     position: 24.79
 ---
 
-# AI CFO Future of Finance Leadership Autonomous Finance Agents AI for CFOs 2026
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/ai-cfo-future-of-finance-leadership-autonomous-finance-agents-ai-for-cfos-2026/`
-
-## Latest snapshot
-
-- **Position:** 24.8 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 34 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

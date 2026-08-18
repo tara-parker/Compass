@@ -23,18 +23,4 @@ snapshots:
     position: 14.21
 ---
 
-# Document Workflow Automation Claude Cowork for Finance
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/document-workflow-automation-claude-cowork-for-finance/`
-
-## Latest snapshot
-
-- **Position:** 14.2 (slipped)
-- **Clicks:** 1 (rose)
-- **Impressions:** 52 (rose)
-- **CTR:** 1.92%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

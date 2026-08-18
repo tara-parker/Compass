@@ -23,18 +23,4 @@ snapshots:
     position: 10.0
 ---
 
-# AI Finance Failures 7 Things That Go Wrong and How to Avoid Them
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/ai-finance-failures-7-things-that-go-wrong-and-how-to-avoid-them/`
-
-## Latest snapshot
-
-- **Position:** 10.0 (slipped)
-- **Clicks:** 1 (held steady)
-- **Impressions:** 9 (held steady)
-- **CTR:** 11.11%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

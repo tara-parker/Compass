@@ -23,18 +23,4 @@ snapshots:
     position: 23.62
 ---
 
-# Intelligent Finance Platforms for CFOs AI Driven Insights 2026
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/intelligent-finance-platforms-for-cfos-ai-driven-insights-2026/`
-
-## Latest snapshot
-
-- **Position:** 23.6 (slipped)
-- **Clicks:** 0 (fell)
-- **Impressions:** 37 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

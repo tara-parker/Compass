@@ -23,18 +23,4 @@ snapshots:
     position: 9.36
 ---
 
-# Approval Limits Set for a Smaller Company
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/approval-limits-set-for-a-smaller-company/`
-
-## Latest snapshot
-
-- **Position:** 9.4 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 58 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

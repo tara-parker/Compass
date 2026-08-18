@@ -23,18 +23,4 @@ snapshots:
     position: 63.38
 ---
 
-# The Autonomous Treasury 2026 Real Time Liquidity AI Fx Hedging
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/the-autonomous-treasury-2026-real-time-liquidity-ai-fx-hedging/`
-
-## Latest snapshot
-
-- **Position:** 63.4 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 21 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

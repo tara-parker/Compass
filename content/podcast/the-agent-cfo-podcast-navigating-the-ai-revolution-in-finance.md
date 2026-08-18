@@ -23,18 +23,4 @@ snapshots:
     position: 22.22
 ---
 
-# The Agent CFO Podcast Navigating the AI Revolution in Finance
-
-Tracked page in the **Podcast** cluster.
-`https://chatfin.ai/podcast/the-agent-cfo-podcast-navigating-the-ai-revolution-in-finance/`
-
-## Latest snapshot
-
-- **Position:** 22.2 (slipped)
-- **Clicks:** 1 (held steady)
-- **Impressions:** 9 (rose)
-- **CTR:** 11.11%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

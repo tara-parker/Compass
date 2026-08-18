@@ -15,13 +15,4 @@ snapshots:
     position: 4.47
 ---
 
-# Insights cluster
-
-2 tracked pages.
-
-## Cluster totals (latest)
-
-- **Clicks:** 1 ()
-- **Impressions:** 17 ()
-- **Avg position:** 4.5 ()
-- **CTR:** 5.88%
+_Editable notes for the Insights cluster._

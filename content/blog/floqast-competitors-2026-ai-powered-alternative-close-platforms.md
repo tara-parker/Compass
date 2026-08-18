@@ -23,18 +23,4 @@ snapshots:
     position: 7.33
 ---
 
-# FloQast Competitors 2026 AI Powered Alternative Close Platforms
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/floqast-competitors-2026-ai-powered-alternative-close-platforms/`
-
-## Latest snapshot
-
-- **Position:** 7.3 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 192 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

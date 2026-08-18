@@ -23,18 +23,4 @@ snapshots:
     position: 14.83
 ---
 
-# Treasury Financial Services AI Risk Management Framework Explained
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/treasury-financial-services-ai-risk-management-framework-explained/`
-
-## Latest snapshot
-
-- **Position:** 14.8 (improved)
-- **Clicks:** 1 (rose)
-- **Impressions:** 83 (rose)
-- **CTR:** 1.20%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

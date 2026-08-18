@@ -23,13 +23,4 @@ snapshots:
     position: 21.62
 ---
 
-# Guide cluster
-
-23 tracked pages.
-
-## Cluster totals (latest)
-
-- **Clicks:** 25 (rose)
-- **Impressions:** 4463 (fell)
-- **Avg position:** 21.6 (slipped)
-- **CTR:** 0.56%
+_Editable notes for the Guide cluster._

@@ -15,18 +15,4 @@ snapshots:
     position: 20.75
 ---
 
-# Build an AI Agent for Bank Reconciliation Step By Step
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/build-an-ai-agent-for-bank-reconciliation-step-by-step/`
-
-## Latest snapshot
-
-- **Position:** 20.8 (first reading)
-- **Clicks:** 2 ()
-- **Impressions:** 4 ()
-- **CTR:** 50.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

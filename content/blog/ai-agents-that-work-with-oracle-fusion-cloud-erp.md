@@ -23,18 +23,4 @@ snapshots:
     position: 11.49
 ---
 
-# AI Agents That Work with Oracle Fusion Cloud ERP
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/ai-agents-that-work-with-oracle-fusion-cloud-erp/`
-
-## Latest snapshot
-
-- **Position:** 11.5 (slipped)
-- **Clicks:** 1 (rose)
-- **Impressions:** 69 (rose)
-- **CTR:** 1.45%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

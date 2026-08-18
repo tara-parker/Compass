@@ -23,18 +23,4 @@ snapshots:
     position: 7.23
 ---
 
-# 2026 Finance AI Spending CFO Strategies for Autonomous Agent Deployment
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/2026-finance-ai-spending-cfo-strategies-for-autonomous-agent-deployment/`
-
-## Latest snapshot
-
-- **Position:** 7.2 (slipped)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 62 (rose)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

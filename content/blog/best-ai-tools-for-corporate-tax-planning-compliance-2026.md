@@ -15,18 +15,4 @@ snapshots:
     position: 12.17
 ---
 
-# Best AI Tools for Corporate Tax Planning Compliance 2026
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/best-ai-tools-for-corporate-tax-planning-compliance-2026/`
-
-## Latest snapshot
-
-- **Position:** 12.2 (first reading)
-- **Clicks:** 0 ()
-- **Impressions:** 12 ()
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

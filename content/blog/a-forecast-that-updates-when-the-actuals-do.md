@@ -15,18 +15,4 @@ snapshots:
     position: 19.3
 ---
 
-# A Forecast That Updates When the Actuals Do
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/a-forecast-that-updates-when-the-actuals-do/`
-
-## Latest snapshot
-
-- **Position:** 19.3 (first reading)
-- **Clicks:** 0 ()
-- **Impressions:** 10 ()
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

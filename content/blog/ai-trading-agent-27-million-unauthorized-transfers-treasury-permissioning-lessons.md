@@ -15,18 +15,4 @@ snapshots:
     position: 4.29
 ---
 
-# AI Trading Agent 27 Million Unauthorized Transfers Treasury Permissioning Lessons
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/ai-trading-agent-27-million-unauthorized-transfers-treasury-permissioning-lessons/`
-
-## Latest snapshot
-
-- **Position:** 4.3 (first reading)
-- **Clicks:** 1 ()
-- **Impressions:** 7 ()
-- **CTR:** 14.29%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

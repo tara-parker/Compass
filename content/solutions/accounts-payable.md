@@ -23,18 +23,4 @@ snapshots:
     position: 78.88
 ---
 
-# Accounts Payable
-
-Tracked page in the **Solutions** cluster.
-`https://chatfin.ai/solutions/accounts-payable/`
-
-## Latest snapshot
-
-- **Position:** 78.9 (improved)
-- **Clicks:** 1 (rose)
-- **Impressions:** 1198 (fell)
-- **CTR:** 0.08%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

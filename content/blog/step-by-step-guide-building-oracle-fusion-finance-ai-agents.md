@@ -23,18 +23,4 @@ snapshots:
     position: 15.39
 ---
 
-# Step By Step Guide Building Oracle Fusion Finance AI Agents
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/step-by-step-guide-building-oracle-fusion-finance-ai-agents/`
-
-## Latest snapshot
-
-- **Position:** 15.4 (improved)
-- **Clicks:** 2 (rose)
-- **Impressions:** 61 (fell)
-- **CTR:** 3.28%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

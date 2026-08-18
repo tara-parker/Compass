@@ -23,18 +23,4 @@ snapshots:
     position: 3.0
 ---
 
-# Top 10 AI Finance Tools for Retail and Ecommerce Finance 2026
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/top-10-ai-finance-tools-for-retail-and-ecommerce-finance-2026/`
-
-## Latest snapshot
-
-- **Position:** 3.0 (slipped)
-- **Clicks:** 1 (rose)
-- **Impressions:** 12 (rose)
-- **CTR:** 8.33%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

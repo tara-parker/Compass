@@ -15,18 +15,4 @@ snapshots:
     position: 6.58
 ---
 
-# AI Agents Respect Acumatica Roles Row Level Security Approval Maps
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/ai-agents-respect-acumatica-roles-row-level-security-approval-maps/`
-
-## Latest snapshot
-
-- **Position:** 6.6 (first reading)
-- **Clicks:** 0 ()
-- **Impressions:** 12 ()
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

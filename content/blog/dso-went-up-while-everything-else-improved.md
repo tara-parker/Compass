@@ -15,18 +15,4 @@ snapshots:
     position: 13.27
 ---
 
-# Dso Went Up While Everything Else Improved
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/dso-went-up-while-everything-else-improved/`
-
-## Latest snapshot
-
-- **Position:** 13.3 (first reading)
-- **Clicks:** 0 ()
-- **Impressions:** 26 ()
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

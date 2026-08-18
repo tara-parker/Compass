@@ -15,18 +15,4 @@ snapshots:
     position: 7.73
 ---
 
-# Over Billing Gets a Call Under Billing Gets Nothing
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/over-billing-gets-a-call-under-billing-gets-nothing/`
-
-## Latest snapshot
-
-- **Position:** 7.7 (first reading)
-- **Clicks:** 0 ()
-- **Impressions:** 15 ()
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

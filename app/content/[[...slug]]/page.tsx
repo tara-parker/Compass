@@ -2,30 +2,10 @@ import Link from "next/link";
 import { notFound } from "next/navigation";
 import { browse } from "@/lib/browse";
 import { Card } from "../../components/StatCard";
+import { Breadcrumbs, type Crumb } from "../../components/Breadcrumbs";
 import MarkdownRenderer from "../../components/MarkdownRenderer";
 
 export const metadata = { title: "Content · Compass" };
-
-function Breadcrumbs({ slug }: { slug: string[] }) {
-  const crumbs = [{ label: "content", href: "/content" }];
-  let acc = "";
-  for (const s of slug) {
-    acc += "/" + s;
-    crumbs.push({ label: s, href: "/content" + acc });
-  }
-  return (
-    <nav className="flex flex-wrap items-center gap-1 text-sm text-slate-400">
-      {crumbs.map((c, i) => (
-        <span key={c.href} className="flex items-center gap-1">
-          {i > 0 && <span className="text-flat">/</span>}
-          <Link href={c.href} className="hover:text-brand-soft">
-            {c.label}
-          </Link>
-        </span>
-      ))}
-    </nav>
-  );
-}
 
 export default async function ContentPage({
   params,
@@ -37,12 +17,21 @@ export default async function ContentPage({
 
   if (res.kind === "missing") notFound();
 
+  const crumbs: Crumb[] = [{ label: "content", href: "/content" }];
+  slug.forEach((s, i) => {
+    const isLast = i === slug.length - 1;
+    crumbs.push({
+      label: s,
+      href: isLast ? undefined : "/content/" + slug.slice(0, i + 1).join("/"),
+    });
+  });
+
   return (
     <div className="space-y-5">
-      <div>
-        <Breadcrumbs slug={slug} />
-        <p className="mt-2 text-xs text-flat">
-          Raw markdown content tree — the source of truth for every tracked page.
+      <div className="space-y-2">
+        <Breadcrumbs items={crumbs} />
+        <p className="text-xs text-flat">
+          Nested markdown content tree — the source of truth for every tracked page.
         </p>
       </div>
 
@@ -78,12 +67,14 @@ export default async function ContentPage({
         </Card>
       ) : (
         <Card>
-          <div className="mb-4 rounded-xl border border-ink-line bg-black/20 p-3">
-            <div className="text-xs uppercase tracking-wide text-flat">Frontmatter</div>
+          <details className="mb-4 rounded-xl border border-ink-line bg-black/20 p-3">
+            <summary className="cursor-pointer text-xs font-medium uppercase tracking-wide text-flat">
+              Frontmatter
+            </summary>
             <pre className="mt-2 overflow-x-auto text-xs text-slate-300">
               {JSON.stringify(res.data, null, 2)}
             </pre>
-          </div>
+          </details>
           <MarkdownRenderer>{res.content}</MarkdownRenderer>
         </Card>
       )}

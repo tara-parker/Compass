@@ -23,18 +23,4 @@ snapshots:
     position: 41.33
 ---
 
-# Top 10 Best Cash Flow Management Tools for CFOs
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/top-10-best-cash-flow-management-tools-for-cfos/`
-
-## Latest snapshot
-
-- **Position:** 41.3 (improved)
-- **Clicks:** 0 (held steady)
-- **Impressions:** 12 (fell)
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._

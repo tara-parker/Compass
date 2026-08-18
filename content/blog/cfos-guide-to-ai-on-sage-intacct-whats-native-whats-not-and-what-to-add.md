@@ -15,18 +15,4 @@ snapshots:
     position: 6.25
 ---
 
-# CFOs Guide to AI on Sage Intacct Whats Native Whats Not and What to Add
-
-Tracked page in the **Blog** cluster.
-`https://chatfin.ai/blog/cfos-guide-to-ai-on-sage-intacct-whats-native-whats-not-and-what-to-add/`
-
-## Latest snapshot
-
-- **Position:** 6.2 (first reading)
-- **Clicks:** 0 ()
-- **Impressions:** 63 ()
-- **CTR:** 0.00%
-
-## Notes
-
-_Add manual observations here. This file is the source of truth for this page and is safe to edit; ingest only rewrites the frontmatter snapshots._
+_No notes yet. Edit this file to add observations for this page._
