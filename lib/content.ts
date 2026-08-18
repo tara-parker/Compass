@@ -361,3 +361,77 @@ export function recentlyUpdated(limit = 12): PageDoc[] {
     )
     .slice(0, limit);
 }
+
+// --------------------------------------------------------------------------- //
+// manually tracked "pages updated on this date" lists
+// --------------------------------------------------------------------------- //
+export type UpdatedKeyword = { keyword: string; position: number | null };
+
+export type UpdatedPage = {
+  title: string;
+  url: string;
+  batch: string;
+  /** null until the page shows up in a Search Console export. */
+  position: number | null;
+  clicks: number | null;
+  impressions: number | null;
+  window: string | null;
+  keywordCount: number;
+  keywordBest: number | null;
+  keywords: UpdatedKeyword[];
+};
+
+export type UpdatedDay = {
+  date: string;
+  count: number;
+  withData: number;
+  awaitingData: number;
+  pages: UpdatedPage[];
+};
+
+const numOrNull = (v: unknown) =>
+  v === null || v === undefined || v === "" ? null : Number(v);
+
+export function getUpdatedPages(): UpdatedDay[] {
+  const f = allFiles().find((x) => x.rel === "_updated.md");
+  const d = (f?.data ?? {}) as Record<string, unknown>;
+  const log = Array.isArray(d.log) ? (d.log as Record<string, unknown>[]) : [];
+
+  return log.map((day) => {
+    const pages = Array.isArray(day.pages)
+      ? (day.pages as Record<string, unknown>[])
+      : [];
+    return {
+      date: String(day.date ?? ""),
+      count: Number(day.count ?? pages.length),
+      withData: Number(day.with_data ?? 0),
+      awaitingData: Number(day.awaiting_data ?? 0),
+      pages: pages.map((p) => ({
+        title: String(p.title ?? ""),
+        url: String(p.url ?? ""),
+        batch: String(p.batch ?? ""),
+        position: numOrNull(p.position),
+        clicks: numOrNull(p.clicks),
+        impressions: numOrNull(p.impressions),
+        window: p.window == null ? null : String(p.window),
+        keywordCount: Number(p.keyword_count ?? 0),
+        keywordBest: numOrNull(p.keyword_best),
+        keywords: Array.isArray(p.keywords)
+          ? (p.keywords as Record<string, unknown>[]).map((k) => ({
+              keyword: String(k.keyword ?? ""),
+              position: numOrNull(k.position),
+            }))
+          : [],
+      })),
+    };
+  });
+}
+
+/** Map a live chatfin.ai URL back to its Compass page route, when tracked. */
+export function routeForUrl(url: string): string | null {
+  const norm = (u: string) =>
+    u.replace(/^https?:\/\//, "").replace("www.", "").replace(/\/+$/, "").toLowerCase();
+  const target = norm(url);
+  const hit = getAllPages().find((p) => norm(p.url) === target);
+  return hit ? `/p/${hit.routeSlug.join("/")}` : null;
+}

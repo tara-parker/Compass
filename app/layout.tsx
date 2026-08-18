@@ -12,9 +12,9 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Compass — ChatFin rank tracker",
+  title: "Compass — ChatFin pages tracking",
   description:
-    "Markdown-first SEO rank tracker: cluster, main and sub pages tracked over time.",
+    "ChatFin pages tracking: cluster, main and sub pages tracked over time.",
 };
 
 const NAV = [
@@ -22,7 +22,7 @@ const NAV = [
   { href: "/clusters", label: "Clusters" },
   { href: "/pages", label: "Pages" },
   { href: "/keywords", label: "Keywords" },
-  { href: "/updates", label: "Updates" },
+  { href: "/updated", label: "Updated" },
   { href: "/content", label: "Content" },
 ];
 
@@ -37,58 +37,41 @@ export default function RootLayout({
     <html lang="en" className={poppins.variable}>
       <body>
         <div className="mx-auto flex min-h-screen max-w-7xl flex-col px-5 sm:px-8">
-          <header className="flex flex-wrap items-center gap-x-6 gap-y-3 py-5">
-            <Link href="/" className="flex items-center gap-2.5">
-              <span className="grid h-8 w-8 place-items-center rounded-lg bg-brand/15 text-brand ring-1 ring-brand/30">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-                  <circle
-                    cx="12"
-                    cy="12"
-                    r="9"
-                    stroke="currentColor"
-                    strokeWidth="1.6"
-                  />
-                  <path
-                    d="M12 4v3M12 17v3M4 12h3M17 12h3"
-                    stroke="currentColor"
-                    strokeWidth="1.6"
-                    strokeLinecap="round"
-                  />
-                  <path
-                    d="M15 9l-2.2 3.8L9 15l2.2-3.8L15 9z"
-                    fill="currentColor"
-                  />
-                </svg>
-              </span>
-              <span className="text-lg font-semibold tracking-tight text-white">
-                Compass
-              </span>
-              <span className="hidden text-xs text-flat sm:inline">
-                ChatFin rank tracker
-              </span>
-            </Link>
-            <nav className="flex flex-wrap items-center gap-1 text-sm">
+          <header className="py-4 sm:py-5">
+            {/* brand + latest window share one row; nav scrolls sideways on phones */}
+            <div className="flex items-center justify-between gap-3">
+              <Link href="/" className="flex items-baseline gap-2.5">
+                <span className="text-lg font-semibold tracking-tight text-white">
+                  Compass
+                </span>
+                <span className="hidden text-xs text-flat sm:inline">
+                  ChatFin pages tracking
+                </span>
+              </Link>
+              {latest && (
+                <span className="shrink-0 rounded-full border border-ink-line bg-ink-soft px-2.5 py-1 text-[11px] text-slate-400 sm:px-3 sm:text-xs">
+                  <span className="hidden sm:inline">Latest: </span>
+                  <span className="text-slate-200">{latest.label}</span>
+                </span>
+              )}
+            </div>
+            <nav className="-mx-5 mt-2 flex items-center gap-1 overflow-x-auto px-5 pb-1 text-sm [scrollbar-width:none] sm:mx-0 sm:mt-3 sm:flex-wrap sm:overflow-visible sm:px-0">
               {NAV.map((n) => (
                 <Link
                   key={n.href}
                   href={n.href}
-                  className="rounded-lg px-3 py-1.5 text-slate-300 transition hover:bg-white/5 hover:text-white"
+                  className="shrink-0 rounded-lg px-3 py-1.5 text-slate-300 transition hover:bg-white/5 hover:text-white"
                 >
                   {n.label}
                 </Link>
               ))}
             </nav>
-            {latest && (
-              <span className="ml-auto rounded-full border border-ink-line bg-ink-soft px-3 py-1 text-xs text-slate-400">
-                Latest: <span className="text-slate-200">{latest.label}</span>
-              </span>
-            )}
           </header>
 
           <main className="flex-1 pb-16">{children}</main>
 
           <footer className="border-t border-ink-line py-6 text-xs text-flat">
-            Compass · markdown-first rank tracker · data from Google Search
+            Compass · ChatFin pages tracking · data from Google Search
             Console exports. Re-run{" "}
             <code className="rounded bg-ink-soft px-1.5 py-0.5 text-slate-300">
               npm run ingest

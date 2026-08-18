@@ -29,6 +29,29 @@ A date is the close of a Search Console window, so an entry means the page's
 tracked metrics changed as of that date. Movement in position is the headline
 signal; entries fall back to `changed` when only click or impression volume moved.
 
+### Recording pages you published or updated
+
+Search Console cannot tell us when a page was actually edited, so that part is
+hand-maintained. Add a dated file under `data/updated/`:
+
+```
+data/updated/2026-08-18.md
+```
+
+with one line per page, grouped under any `##` batch headings you like:
+
+```markdown
+## Acumatica
+
+- [Acumatica AI Agents for Finance Operations](https://chatfin.ai/blog/acumatica-ai-agents-for-finance-operations/)
+```
+
+Ingest reads every `data/updated/*.md`, keys it by the filename date, de-dupes
+repeated URLs, and joins each one to whatever page and keyword data exists.
+Pages with no export coverage yet come through as `null` rather than being
+dropped, so their position starts being tracked from the first window that
+includes them. The result renders at `/updated`.
+
 ## How it works
 
 ```

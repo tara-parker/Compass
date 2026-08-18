@@ -40,7 +40,7 @@ export function Card({
   className?: string;
 }) {
   return (
-    <section className={`rounded-2xl border border-ink-line bg-ink-soft/40 p-5 ${className}`}>
+    <section className={`min-w-0 rounded-2xl border border-ink-line bg-ink-soft/40 p-4 sm:p-5 ${className}`}>
       {(title || right) && (
         <div className="mb-4 flex items-center justify-between">
           {title && <h2 className="text-sm font-semibold text-slate-200">{title}</h2>}

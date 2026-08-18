@@ -29,7 +29,7 @@ export default function KeywordsPage() {
       {summary.length > 0 && (
         <Card title="Keywords ChatFin ranks for">
           <div className="overflow-x-auto">
-            <table className="w-full min-w-[640px] text-sm">
+            <table className="w-full text-sm sm:min-w-[640px]">
               <thead className="text-left text-xs text-slate-400">
                 <tr className="border-b border-ink-line">
                   <th className="px-2 py-2 font-medium">Keyword</th>
@@ -57,7 +57,7 @@ export default function KeywordsPage() {
 
       <Card title={`Full tracked list (${kw.tracked.length})`}>
         <div className="overflow-x-auto">
-          <table className="w-full min-w-[640px] text-sm">
+          <table className="w-full text-sm sm:min-w-[640px]">
             <thead className="text-left text-xs text-slate-400">
               <tr className="border-b border-ink-line">
                 <th className="px-2 py-2 font-medium">Keyword</th>

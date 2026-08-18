@@ -112,18 +112,20 @@ export default function PagesExplorer({
       </div>
 
       <div className="overflow-x-auto rounded-xl border border-ink-line">
-        <table className="w-full min-w-[720px] text-sm">
+        <table className="w-full text-sm sm:min-w-[720px]">
           <thead className="bg-ink-soft/70 text-left text-xs">
             <tr>
               <th className="px-3 py-2 font-medium text-slate-400">Page</th>
               {showCluster && (
-                <th className="px-3 py-2 font-medium text-slate-400">Cluster</th>
+                <th className="hidden px-3 py-2 font-medium text-slate-400 md:table-cell">
+                  Cluster
+                </th>
               )}
               <Th k="position" label="Pos" cls="text-right" />
-              <Th k="dPosition" label="Δ Pos" cls="text-right" />
+              <Th k="dPosition" label="Δ Pos" cls="hidden text-right sm:table-cell" />
               <Th k="clicks" label="Clicks" cls="text-right" />
-              <Th k="dClicks" label="Δ Clk" cls="text-right" />
-              <Th k="impressions" label="Impr" cls="text-right" />
+              <Th k="dClicks" label="Δ Clk" cls="hidden text-right sm:table-cell" />
+              <Th k="impressions" label="Impr" cls="hidden text-right md:table-cell" />
             </tr>
           </thead>
           <tbody>
@@ -132,13 +134,13 @@ export default function PagesExplorer({
                 key={r.href + i}
                 className="border-t border-ink-line/70 hover:bg-white/[0.03]"
               >
-                <td className="max-w-[340px] px-3 py-2">
+                <td className="max-w-[180px] px-3 py-2 sm:max-w-[340px]">
                   <Link href={r.href} className="text-slate-200 hover:text-brand-soft">
                     <span className="line-clamp-1">{r.title}</span>
                   </Link>
                 </td>
                 {showCluster && (
-                  <td className="px-3 py-2">
+                  <td className="hidden px-3 py-2 md:table-cell">
                     <Link
                       href={`/c/${r.cluster}`}
                       className="rounded-md bg-white/5 px-2 py-0.5 text-xs text-slate-300 hover:text-white"
@@ -150,16 +152,16 @@ export default function PagesExplorer({
                 <td className="px-3 py-2 text-right tabular-nums text-slate-200">
                   {r.position == null ? "—" : r.position.toFixed(1)}
                 </td>
-                <td className="px-3 py-2 text-right">
+                <td className="hidden px-3 py-2 text-right sm:table-cell">
                   <DeltaBadge value={r.dPosition} invert digits={1} isNew={r.isNew} />
                 </td>
                 <td className="px-3 py-2 text-right tabular-nums text-slate-200">
                   {r.clicks ?? 0}
                 </td>
-                <td className="px-3 py-2 text-right">
+                <td className="hidden px-3 py-2 text-right sm:table-cell">
                   <DeltaBadge value={r.dClicks} isNew={r.isNew} />
                 </td>
-                <td className="px-3 py-2 text-right tabular-nums text-slate-400">
+                <td className="hidden px-3 py-2 text-right tabular-nums text-slate-400 md:table-cell">
                   {(r.impressions ?? 0).toLocaleString()}
                 </td>
               </tr>

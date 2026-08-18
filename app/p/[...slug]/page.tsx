@@ -75,7 +75,7 @@ export default async function PageDetail({
       <div className="grid gap-4 lg:grid-cols-3">
         <Card title="Snapshots over time" className="lg:col-span-2">
           <div className="overflow-x-auto">
-            <table className="w-full min-w-[520px] text-sm">
+            <table className="w-full text-sm sm:min-w-[520px]">
               <thead className="text-left text-xs text-slate-400">
                 <tr className="border-b border-ink-line">
                   <th className="px-2 py-2 font-medium">Window</th>
@@ -119,7 +119,7 @@ export default async function PageDetail({
       <Card
         title="Update history"
         right={
-          <Link href="/updates" className="text-xs text-flat transition hover:text-brand-soft">
+          <Link href="/updated" className="text-xs text-flat transition hover:text-brand-soft">
             All updates →
           </Link>
         }

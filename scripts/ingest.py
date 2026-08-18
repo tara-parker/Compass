@@ -406,6 +406,11 @@ def main():
     with open(os.path.join(DATA, "keywords.json"), "w", encoding="utf-8") as f:
         json.dump(keywords, f, indent=2)
 
+    # --------------------------------------------------------- updated pages
+    updated_lists = load_updated_lists()
+    ufront2, ubody2 = build_updated_page(updated_lists, periods, keywords)
+    write_md(os.path.join(CONTENT, "_updated.md"), ufront2, ubody2)
+
     # ------------------------------------------------------------------ meta
     meta = {
         "periods": [{"id": p["id"], "label": p["label"],
@@ -420,6 +425,11 @@ def main():
     n_events = sum(len(r.get("events", [])) for r in hist["pages"].values())
     print(f"Wrote {n_pages} page files across {len(cluster_pages)} clusters.")
     print(f"Update log: {n_events} events across {len(hist['periods'])} dates.")
+    for day in updated_lists:
+        have = sum(1 for e in day["entries"]
+                   if norm_url(e["url"]) in {norm_url(u) for p in periods for u in p["pages"]})
+        print(f"Updated {day['date']}: {len(day['entries'])} pages "
+              f"({have} with GSC data, {len(day['entries']) - have} awaiting)")
     print(f"Keywords: {len(keywords.get('summary', []))} summarized, "
           f"{len(keywords.get('tracked', []))} tracked.")
 
@@ -678,6 +688,113 @@ def build_updates_page(hist, top_n=40):
     body = ("_Which tracked page moved, and when. Dates are the close of each "
             "Search Console window, so an entry means the page's tracked "
             "metrics changed as of that date._")
+    return front, body
+
+
+# ------------------------------------------------------- manually updated log
+# data/updated/<YYYY-MM-DD>.md holds hand-maintained "these pages were published
+# or updated on this date" lists, written as `- [Title](url)` lines. We join each
+# URL to whatever Search Console / keyword data exists so positions can be
+# tracked from the day the page shipped. No data yet simply means null.
+
+UPDATED_DIR = os.path.join(ROOT, "data", "updated")
+LINK_RE = re.compile(r"^\s*-\s*\[(?P<title>[^\]]+)\]\((?P<url>https?://[^)\s]+)\)")
+H2_RE = re.compile(r"^##\s+(?P<batch>.+?)\s*$")
+
+
+def norm_url(u):
+    """Compare URLs ignoring scheme, www and trailing slash."""
+    if not u:
+        return ""
+    u = u.strip().split("#")[0].split("?")[0]
+    u = re.sub(r"^https?://", "", u).replace("www.", "")
+    return u.rstrip("/").lower()
+
+
+def load_updated_lists():
+    """[{date, entries: [{title, url, batch}]}] newest first."""
+    out = []
+    for fp in sorted(glob.glob(os.path.join(UPDATED_DIR, "*.md")), reverse=True):
+        date = os.path.splitext(os.path.basename(fp))[0]
+        if not re.match(r"^\d{4}-\d{2}-\d{2}$", date):
+            continue
+        entries, batch, seen = [], "", set()
+        with open(fp, "r", encoding="utf-8") as fh:
+            for line in fh:
+                mh = H2_RE.match(line)
+                if mh:
+                    batch = mh.group("batch")
+                    continue
+                m = LINK_RE.match(line)
+                if not m:
+                    continue
+                key = norm_url(m.group("url"))
+                if key in seen:          # same page listed twice in one day
+                    continue
+                seen.add(key)
+                entries.append({"title": m.group("title").strip(),
+                                "url": m.group("url").strip(), "batch": batch})
+        if entries:
+            out.append({"date": date, "entries": entries})
+    return out
+
+
+def build_updated_page(updated_lists, periods, keywords):
+    """content/_updated.md — pages shipped per date, joined to any known stats."""
+    # latest GSC stats per normalized url
+    stats = {}
+    for p in periods:
+        for url, st in p["pages"].items():
+            stats[norm_url(url)] = {
+                "period": p["label"],
+                "position": num(st.get("position")),
+                "clicks": int(num(st.get("clicks")) or 0),
+                "impressions": int(num(st.get("impressions")) or 0),
+            }
+    # keywords that point at a url
+    kw_by_url = defaultdict(list)
+    for t in keywords.get("tracked", []):
+        if str(t.get("url", "")).startswith("http"):
+            kw_by_url[norm_url(t["url"])].append(t)
+
+    front = ["title: Updated pages", "type: updated",
+             f"dates: {len(updated_lists)}", "log:"]
+    for day in updated_lists:
+        ents = day["entries"]
+        with_data = sum(1 for e in ents if norm_url(e["url"]) in stats)
+        front.append(f"  - date: {yq(day['date'])}")
+        front.append(f"    count: {len(ents)}")
+        front.append(f"    with_data: {with_data}")
+        front.append(f"    awaiting_data: {len(ents) - with_data}")
+        front.append("    pages:")
+        for e in ents:
+            k = norm_url(e["url"])
+            st = stats.get(k)
+            kws = kw_by_url.get(k, [])
+            front.append(f"      - title: {yq(e['title'])}")
+            front.append(f"        url: {yq(e['url'])}")
+            front.append(f"        batch: {yq(e['batch'])}")
+            front.append(f"        position: {yq(st['position']) if st else 'null'}")
+            front.append(f"        clicks: {yq(st['clicks']) if st else 'null'}")
+            front.append(f"        impressions: {yq(st['impressions']) if st else 'null'}")
+            front.append(f"        window: {yq(st['period']) if st else 'null'}")
+            if kws:
+                best = min((k2['position'] for k2 in kws
+                            if k2.get('position')), default=None)
+                front.append(f"        keyword_count: {len(kws)}")
+                front.append(f"        keyword_best: {yq(best) if best else 'null'}")
+                front.append("        keywords:")
+                for k2 in kws[:8]:
+                    front.append(f"          - keyword: {yq(k2['keyword'])}")
+                    front.append(f"            position: {yq(k2.get('position')) if k2.get('position') else 'null'}")
+            else:
+                front.append("        keyword_count: 0")
+                front.append("        keyword_best: null")
+
+    body = ("_Pages published or updated on each date, joined to whatever Search "
+            "Console and keyword data exists. `null` means the page has not "
+            "appeared in an export yet, so its position starts being tracked "
+            "from the first window that includes it._")
     return front, body
 
 
