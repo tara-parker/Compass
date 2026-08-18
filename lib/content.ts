@@ -104,6 +104,7 @@ function pageFromFile(f: Parsed): PageDoc {
     snapshots: asSnapshots(d.snapshots),
     body: f.content,
     routeSlug,
+    raw: d,
   };
 }
 
@@ -261,4 +262,102 @@ export function getKeywords(): KeywordData {
   } catch {
     return { summary: [], tracked: [], ahrefs: [] };
   }
+}
+
+// --------------------------------------------------------------------------- //
+// update log — which page changed, and when
+// --------------------------------------------------------------------------- //
+export type PageUpdate = {
+  date: string;
+  period: string;
+  kind: "added" | "improved" | "declined" | "changed";
+  detail: string;
+};
+
+export type Mover2 = {
+  slug: string;
+  title: string;
+  cluster: string;
+  kind: PageUpdate["kind"];
+  clicks: number;
+  position: number | null;
+  detail: string;
+};
+
+export type UpdateDay = {
+  date: string;
+  pagesChanged: number;
+  added: number;
+  improved: number;
+  declined: number;
+  changed: number;
+  movers: Mover2[];
+};
+
+export type UpdateLog = {
+  datesTracked: number;
+  pagesTracked: number;
+  topN: number;
+  days: UpdateDay[];
+};
+
+/** Per-page update history, straight off the page's own frontmatter. */
+export function pageUpdates(p: PageDoc): PageUpdate[] {
+  const v = (p.raw?.updates ?? []) as unknown;
+  if (!Array.isArray(v)) return [];
+  return v.map((u) => {
+    const o = u as Record<string, unknown>;
+    return {
+      date: String(o.date ?? ""),
+      period: String(o.period ?? ""),
+      kind: String(o.kind ?? "changed") as PageUpdate["kind"],
+      detail: String(o.detail ?? ""),
+    };
+  });
+}
+
+export function getUpdateLog(): UpdateLog {
+  const f = allFiles().find((x) => x.rel === "_updates.md");
+  const d = (f?.data ?? {}) as Record<string, unknown>;
+  const rawLog = Array.isArray(d.log) ? (d.log as Record<string, unknown>[]) : [];
+
+  const days: UpdateDay[] = rawLog.map((day) => {
+    const movers = Array.isArray(day.movers)
+      ? (day.movers as Record<string, unknown>[])
+      : [];
+    return {
+      date: String(day.date ?? ""),
+      pagesChanged: Number(day.pages_changed ?? 0),
+      added: Number(day.added ?? 0),
+      improved: Number(day.improved ?? 0),
+      declined: Number(day.declined ?? 0),
+      changed: Number(day.changed ?? 0),
+      movers: movers.map((m) => ({
+        slug: String(m.slug ?? ""),
+        title: String(m.title ?? ""),
+        cluster: String(m.cluster ?? ""),
+        kind: String(m.kind ?? "changed") as PageUpdate["kind"],
+        clicks: Number(m.clicks ?? 0),
+        position: m.position == null ? null : Number(m.position),
+        detail: String(m.detail ?? ""),
+      })),
+    };
+  });
+
+  return {
+    datesTracked: Number(d.dates_tracked ?? days.length),
+    pagesTracked: Number(d.pages_tracked ?? 0),
+    topN: Number(d.top_n ?? 0),
+    days,
+  };
+}
+
+/** Pages whose metrics moved most recently, newest first. */
+export function recentlyUpdated(limit = 12): PageDoc[] {
+  return getAllPages()
+    .filter((p) => p.raw?.last_updated)
+    .sort((a, b) =>
+      String(b.raw?.last_updated).localeCompare(String(a.raw?.last_updated)),
+    )
+    .slice(0, limit);
 }

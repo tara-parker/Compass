@@ -26,6 +26,8 @@ export type PageDoc = {
   snapshots: Snapshot[];
   body: string;
   routeSlug: string[];
+  /** Raw frontmatter, for fields the typed shape does not cover (e.g. updates). */
+  raw?: Record<string, unknown>;
 };
 
 export type ClusterDoc = {

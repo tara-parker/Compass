@@ -1,5 +1,6 @@
+import Link from "next/link";
 import { notFound } from "next/navigation";
-import { getPageByRoute, delta } from "@/lib/content";
+import { getPageByRoute, delta, pageUpdates } from "@/lib/content";
 import { num, pos, pct } from "@/lib/format";
 import { StatCard, Card } from "../../components/StatCard";
 import { Sparkline } from "../../components/Charts";
@@ -29,6 +30,7 @@ export default async function PageDetail({
   const d = delta(page.snapshots);
   const l = d.latest;
   const snaps = page.snapshots;
+  const updates = pageUpdates(page);
 
   // Breadcrumbs that mirror the nested folder depth of this page.
   const crumbs: Crumb[] = [{ label: "Overview", href: "/" }];
@@ -113,6 +115,44 @@ export default async function PageDetail({
           </div>
         </Card>
       </div>
+
+      <Card
+        title="Update history"
+        right={
+          <Link href="/updates" className="text-xs text-flat transition hover:text-brand-soft">
+            All updates →
+          </Link>
+        }
+      >
+        {updates.length === 0 ? (
+          <p className="text-sm text-flat">No changes recorded yet.</p>
+        ) : (
+          <ol className="relative space-y-3 pl-4">
+            {[...updates].reverse().map((u, i) => (
+              <li key={u.period + i} className="relative">
+                <span
+                  className={`absolute -left-4 top-1.5 h-2 w-2 rounded-full ${
+                    u.kind === "improved"
+                      ? "bg-up"
+                      : u.kind === "declined"
+                        ? "bg-down"
+                        : u.kind === "added"
+                          ? "bg-brand"
+                          : "bg-flat"
+                  }`}
+                />
+                <div className="flex flex-wrap items-baseline gap-2">
+                  <span className="text-sm text-slate-200">{u.date}</span>
+                  <span className="text-xs uppercase tracking-wide text-flat">
+                    {u.kind}
+                  </span>
+                </div>
+                <p className="mt-0.5 text-xs text-flat">{u.detail}</p>
+              </li>
+            ))}
+          </ol>
+        )}
+      </Card>
 
       <Card title="Notes">
         <MarkdownRenderer>{page.body}</MarkdownRenderer>

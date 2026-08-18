@@ -13,6 +13,22 @@ at three levels:
 Because the data lives in git-tracked markdown, history is diffable and the notes
 on each page are hand-editable.
 
+## Update tracker
+
+Compass also records **which page changed on what date**. Every ingest folds the
+new window into a persistent ledger (`data/history.json`), which survives the
+content rebuild, and writes:
+
+- **per page** — `first_seen`, `last_updated`, `update_count` and a full
+  `updates:` list in that page's own frontmatter, rendered as a timeline on the
+  page's detail view.
+- **site-wide** — `content/_updates.md`, a dated digest (added / improved /
+  declined counts plus that date's biggest movers), shown at `/updates`.
+
+A date is the close of a Search Console window, so an entry means the page's
+tracked metrics changed as of that date. Movement in position is the headline
+signal; entries fall back to `changed` when only click or impression volume moved.
+
 ## How it works
 
 ```

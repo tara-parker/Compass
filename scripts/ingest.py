@@ -26,7 +26,7 @@ import json
 import os
 import re
 import datetime
-from collections import defaultdict
+from collections import defaultdict, Counter
 from urllib.parse import urlparse
 
 try:
@@ -320,6 +320,9 @@ def main():
         }
         cluster_pages[cluster].append(url)
 
+    # fold this run into the persistent update ledger (survives content wipe)
+    hist = record_updates(page_index, periods, home_url)
+
     # ----------------------------------------------------------------- pages
     n_pages = 0
     for url, info in page_index.items():
@@ -338,6 +341,7 @@ def main():
             f"slug: {yq(info['slug'])}",
         ]
         front += emit_snapshot_list("snapshots", snaps)
+        front += emit_updates_front(hist["pages"].get(url))
 
         body = build_page_body(info, snaps, latest, prev)
         rel = os.path.join(info["cluster"], *info["parts"]) + ".md"
@@ -393,6 +397,10 @@ def main():
     body = build_root_body(root_snaps, cluster_pages, periods)
     write_md(os.path.join(CONTENT, "_root.md"), front, body)
 
+    # --------------------------------------------------------------- updates
+    ufront, ubody = build_updates_page(hist)
+    write_md(os.path.join(CONTENT, "_updates.md"), ufront, ubody)
+
     # -------------------------------------------------------------- keywords
     keywords = load_keywords()
     with open(os.path.join(DATA, "keywords.json"), "w", encoding="utf-8") as f:
@@ -409,7 +417,9 @@ def main():
     with open(os.path.join(DATA, "meta.json"), "w", encoding="utf-8") as f:
         json.dump(meta, f, indent=2)
 
+    n_events = sum(len(r.get("events", [])) for r in hist["pages"].values())
     print(f"Wrote {n_pages} page files across {len(cluster_pages)} clusters.")
+    print(f"Update log: {n_events} events across {len(hist['periods'])} dates.")
     print(f"Keywords: {len(keywords.get('summary', []))} summarized, "
           f"{len(keywords.get('tracked', []))} tracked.")
 
@@ -498,6 +508,177 @@ def load_keywords():
 
     wb.close()
     return out
+
+
+
+
+# ---------------------------------------------------------------- update log
+# The content/ tree is wiped and regenerated on every ingest, so update history
+# lives in a persistent JSON ledger under data/. Each ingest appends new events
+# and never rewrites past ones, which makes the log durable across rebuilds.
+
+HISTORY_PATH = os.path.join(ROOT, "data", "history.json")
+
+# Fields we treat as meaningful movement for a page.
+TRACKED_FIELDS = ("position", "clicks", "impressions")
+
+
+def load_history():
+    try:
+        with open(HISTORY_PATH, "r", encoding="utf-8") as fh:
+            data = json.load(fh)
+    except (FileNotFoundError, ValueError):
+        return {"pages": {}, "periods": []}
+    data.setdefault("pages", {})
+    data.setdefault("periods", [])
+    return data
+
+
+def save_history(hist):
+    os.makedirs(os.path.dirname(HISTORY_PATH), exist_ok=True)
+    with open(HISTORY_PATH, "w", encoding="utf-8") as fh:
+        json.dump(hist, fh, indent=2, sort_keys=True)
+        fh.write("\n")
+
+
+def _round(v, nd=2):
+    return None if v is None else round(float(v), nd)
+
+
+def classify(prev, cur):
+    """Describe what changed between two consecutive snapshots of one page."""
+    if prev is None:
+        return "added", "first tracked"
+    def i(v):
+        return int(v or 0)
+
+    bits = []
+    dp = (cur["position"] or 0) - (prev["position"] or 0)
+    if abs(dp) >= 0.05:
+        bits.append(("improved" if dp < 0 else "declined",
+                     f"position {_round(prev['position'], 1)} to {_round(cur['position'], 1)}"))
+    if i(cur["clicks"]) != i(prev["clicks"]):
+        bits.append((None, f"clicks {i(prev['clicks'])} to {i(cur['clicks'])}"))
+    if i(cur["impressions"]) != i(prev["impressions"]):
+        bits.append((None, f"impressions {i(prev['impressions'])} to {i(cur['impressions'])}"))
+    if not bits:
+        return None, None
+    # Position is the headline signal for a rank tracker; fall back to "changed"
+    # when only click/impression volume moved.
+    kind = next((k for k, _ in bits if k), "changed")
+    return kind, "; ".join(t for _, t in bits)
+
+
+def record_updates(page_index, periods, home_url):
+    """Fold this run's periods into the persistent ledger, returning it."""
+    hist = load_history()
+    seen_periods = {p["id"] for p in hist["periods"]}
+    for p in periods:
+        if p["id"] not in seen_periods:
+            hist["periods"].append({"id": p["id"], "label": p["label"],
+                                    "start": p["start"], "end": p["end"]})
+    hist["periods"].sort(key=lambda x: x["end"])
+
+    targets = dict(page_index)
+    if home_url:
+        targets[home_url] = {"slug": "", "cluster": "", "title": "ChatFin — Site Overview"}
+
+    for url, info in targets.items():
+        rec = hist["pages"].setdefault(url, {"events": [], "first_seen": None})
+        logged = {e["period"] for e in rec["events"]}
+        prev = None
+        for p in periods:
+            stats = p["pages"].get(url)
+            if not stats:
+                continue
+            cur = {"position": num(stats.get("position")),
+                   "clicks": num(stats.get("clicks")),
+                   "impressions": num(stats.get("impressions"))}
+            if rec["first_seen"] is None:
+                rec["first_seen"] = p["end"]
+            if p["id"] not in logged:
+                kind, detail = classify(prev, cur)
+                if kind:
+                    rec["events"].append({
+                        "date": p["end"], "period": p["id"], "label": p["label"],
+                        "kind": kind, "detail": detail,
+                        "position": _round(cur["position"], 2),
+                        "clicks": int(cur["clicks"] or 0),
+                        "impressions": int(cur["impressions"] or 0),
+                    })
+            prev = cur
+        rec["events"].sort(key=lambda e: e["date"])
+        rec["slug"] = info.get("slug", "")
+        rec["cluster"] = info.get("cluster", "")
+        rec["title"] = info.get("title", "")
+
+    save_history(hist)
+    return hist
+
+
+def emit_updates_front(rec):
+    """Frontmatter lines describing a page's update history."""
+    if not rec:
+        return []
+    events = rec.get("events", [])
+    out = []
+    if rec.get("first_seen"):
+        out.append(f"first_seen: {yq(rec['first_seen'])}")
+    if events:
+        out.append(f"last_updated: {yq(events[-1]['date'])}")
+        out.append(f"update_count: {len(events)}")
+        out.append("updates:")
+        for e in events:
+            out.append(f"  - date: {yq(e['date'])}")
+            out.append(f"    period: {yq(e['period'])}")
+            out.append(f"    kind: {yq(e['kind'])}")
+            out.append(f"    detail: {yq(e['detail'])}")
+    return out
+
+
+def build_updates_page(hist, top_n=40):
+    """Timeline digest: what changed on each date, plus that date's top movers.
+
+    Every page keeps its own full history in its own frontmatter, so this file
+    stays a readable digest rather than a dump of every event.
+    """
+    by_date = defaultdict(list)
+    for url, rec in hist["pages"].items():
+        for e in rec.get("events", []):
+            by_date[e["date"]].append((rec.get("slug") or "(home)", rec.get("title") or url,
+                                       rec.get("cluster", ""), e))
+
+    def impact(row):
+        e = row[3]
+        return (e.get("clicks") or 0, e.get("impressions") or 0)
+
+    front = ["title: Update log", "type: updates",
+             f"dates_tracked: {len(by_date)}",
+             f"pages_tracked: {len(hist['pages'])}",
+             f"top_n: {top_n}", "log:"]
+    for date in sorted(by_date, reverse=True):
+        rows = by_date[date]
+        counts = Counter(e["kind"] for _, _, _, e in rows)
+        front.append(f"  - date: {yq(date)}")
+        front.append(f"    pages_changed: {len(rows)}")
+        front.append(f"    added: {counts.get('added', 0)}")
+        front.append(f"    improved: {counts.get('improved', 0)}")
+        front.append(f"    declined: {counts.get('declined', 0)}")
+        front.append(f"    changed: {counts.get('changed', 0)}")
+        front.append("    movers:")
+        for slug, title, cluster, e in sorted(rows, key=impact, reverse=True)[:top_n]:
+            front.append(f"      - slug: {yq(slug)}")
+            front.append(f"        title: {yq(title)}")
+            front.append(f"        cluster: {yq(cluster)}")
+            front.append(f"        kind: {yq(e['kind'])}")
+            front.append(f"        clicks: {yq(e.get('clicks'))}")
+            front.append(f"        position: {yq(e.get('position'))}")
+            front.append(f"        detail: {yq(e['detail'])}")
+
+    body = ("_Which tracked page moved, and when. Dates are the close of each "
+            "Search Console window, so an entry means the page's tracked "
+            "metrics changed as of that date._")
+    return front, body
 
 
 if __name__ == "__main__":

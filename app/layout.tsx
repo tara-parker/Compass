@@ -22,6 +22,7 @@ const NAV = [
   { href: "/clusters", label: "Clusters" },
   { href: "/pages", label: "Pages" },
   { href: "/keywords", label: "Keywords" },
+  { href: "/updates", label: "Updates" },
   { href: "/content", label: "Content" },
 ];
 
