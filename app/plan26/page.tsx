@@ -11,23 +11,31 @@ const TIER_TONE: Record<string, string> = {
   B: "text-up",
   C: "text-amber-300",
   D: "text-flat",
-  E: "text-down",
+  E: "text-slate-400",
 };
 
 export default function Plan26Page() {
   const plan = getPlan();
   const t = plan.totals;
-  const live = t.KEEP + t.UPDATE;
-  const cut = t.MERGE + t.DELETE;
+  const m = plan.method;
+  const survives = t.KEEP + t.UPDATE;
+
+  // Reasons grouped under the action they produce, for the breakdown table.
+  const REASON_BY_ACTION: Record<string, string[]> = {
+    KEEP: ["backlinked-earning", "earns-clicks", "striking-distance", "unique-untested"],
+    UPDATE: ["backlinked-idle", "indexed-weak", "canonical", "crowded"],
+    MERGE: ["dup-signal", "dup-untested"],
+    DELETE: ["dup-dead", "dark-after-trial"],
+  };
 
   return (
     <div className="space-y-6">
       <header>
         <h1 className="text-2xl font-semibold tracking-tight text-white">Plan26</h1>
         <p className="mt-1 max-w-3xl text-sm text-slate-400">
-          Every live URL sorted by what it actually earns, then given an action. The site has{" "}
-          {num(t.urls)} URLs and the search traffic of a site with about 500. Prune first, then
-          build.
+          What to do with each of the {num(t.urls)} live URLs. Nothing is removed for merely
+          lacking traffic — {num(m.untestedUrls)} pages have never had a fair trial. Removal
+          requires positive evidence.
         </p>
         <p className="mt-1 text-xs text-flat">
           Generated {plan.generated} · window {plan.window}
@@ -54,15 +62,76 @@ export default function Plan26Page() {
         <div className="mt-4">
           <ActionBar counts={t} total={t.urls} />
           <p className="mt-2 text-xs text-flat">
-            <span className="text-slate-200">{num(live)}</span> pages survive and get worked on.{" "}
-            <span className="text-slate-200">{num(cut)}</span> are merged or removed. Endpoint is
-            roughly 1,200 to 1,500 real pages, not {num(t.urls)}.
+            <span className="text-slate-200">{num(survives)}</span> pages stay on the site.{" "}
+            <span className="text-slate-200">{num(t.MERGE)}</span> fold into a stronger
+            near-duplicate and <span className="text-slate-200">{num(t.DELETE)}</span> come off.
           </p>
         </div>
       </Card>
 
-      {/* ---- tier table: why each page got its action ---- */}
-      <Card title="How each page was tiered">
+      {/* ---- the correction, stated up front ---- */}
+      <Card title="Why DELETE is small">
+        <p className="mb-3 text-[13px] text-slate-300">
+          An earlier cut of this plan marked 3,255 URLs for deletion because they drew no Search
+          Console impressions. That was wrong, for two reasons that are properties of the data
+          rather than of the pages.
+        </p>
+        <ol className="space-y-2.5 text-[13px] text-slate-300">
+          {plan.whyDeleteIsSmall.map((w, i) => (
+            <li key={w} className="flex gap-2.5">
+              <span className="mt-px shrink-0 font-mono text-[11px] text-brand">{i + 1}</span>
+              <span>{w}</span>
+            </li>
+          ))}
+        </ol>
+        <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
+          <Fact label="Never had a fair trial" value={num(m.untestedUrls)} />
+          <Fact label="Near-duplicate groups" value={num(m.duplicateGroups)} />
+          <Fact label="URLs in those groups" value={num(m.duplicateUrls)} />
+          <Fact label="Crowded-topic URLs" value={num(m.crowdedUrls)} />
+        </div>
+      </Card>
+
+      {/* ---- why each page got what it got ---- */}
+      <Card title="Why each page got its action">
+        <div className="space-y-4">
+          {ACTION_ORDER.map((a) => (
+            <div key={a}>
+              <div className="mb-1.5 flex items-center gap-2">
+                <span className={`h-2 w-2 rounded-full ${ACTION_STYLE[a].dot}`} />
+                <span className="text-[11px] font-semibold uppercase tracking-wide text-slate-200">
+                  {a}
+                </span>
+                <span className="text-[11px] tabular-nums text-flat">{num(t[a])}</span>
+              </div>
+              <div className="space-y-1">
+                {REASON_BY_ACTION[a].map((key) => {
+                  const count = plan.reasonCounts[key] ?? 0;
+                  if (!count) return null;
+                  return (
+                    <div
+                      key={key}
+                      className="flex items-baseline justify-between gap-3 border-b border-ink-line/40 pb-1 last:border-0"
+                    >
+                      <span className="text-[12.5px] text-slate-300">{plan.reasons[key]}</span>
+                      <span className="shrink-0 tabular-nums text-[12px] text-slate-400">
+                        {num(count)}
+                      </span>
+                    </div>
+                  );
+                })}
+              </div>
+            </div>
+          ))}
+        </div>
+      </Card>
+
+      {/* ---- tiers: the measurement lens, separate from the action ---- */}
+      <Card title="What the traffic data alone says">
+        <p className="mb-3 text-[13px] text-slate-400">
+          Tiers describe measured performance only. They inform the action but no longer decide
+          it, because tier E mixes genuinely dead pages with pages that were never measured.
+        </p>
         <div className="overflow-x-auto">
           <table className="w-full min-w-[620px] text-sm">
             <thead>
@@ -106,9 +175,10 @@ export default function Plan26Page() {
           </table>
         </div>
         <p className="mt-3 text-xs text-flat">
-          Tiers A and B are {num(plan.tiers[0].urls + plan.tiers[1].urls)} pages, under 11% of the
-          site, and hold {num(plan.tiers[0].clicks + plan.tiers[1].clicks)} of {num(t.clicks)}{" "}
-          clicks. Tiers C, D and E hold 89% of the site and zero clicks.
+          Tiers A and B are {num(plan.tiers[0].urls + plan.tiers[1].urls)} pages holding{" "}
+          {num(plan.tiers[0].clicks + plan.tiers[1].clicks)} of {num(t.clicks)} clicks. Tier E is{" "}
+          {num(plan.tiers[4].urls)} pages, of which {num(m.untestedUrls)} were published or
+          modified inside the measurement window.
         </p>
       </Card>
 
@@ -128,12 +198,21 @@ export default function Plan26Page() {
           <li className="flex gap-2">
             <span className="text-flat">·</span>
             <span>
-              The redirect export on hand holds 25 rows, not the ~1,800 live in the plugin. Redirect
-              classification is blocked until a full export exists. Nothing else is.
+              The redirect export on hand holds 25 rows, not the ~1,800 live in the plugin.
+              Redirect classification is blocked until a full export exists. Nothing else is.
             </span>
           </li>
         </ul>
       </Card>
+    </div>
+  );
+}
+
+function Fact({ label, value }: { label: string; value: string }) {
+  return (
+    <div className="rounded-lg border border-ink-line bg-black/20 p-2.5">
+      <div className="text-lg font-semibold tabular-nums text-white">{value}</div>
+      <div className="text-[10.5px] leading-snug text-flat">{label}</div>
     </div>
   );
 }

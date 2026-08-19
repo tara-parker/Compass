@@ -6,11 +6,13 @@ export type PlanPage = {
   /** path */ p: string;
   /** title */ t: string;
   /** action */ s: PlanAction;
+  /** reason key, see Plan.reasons */ r: string;
   /** tier A–E */ k: string;
   /** clicks */ c: number;
   /** impressions */ i: number;
   /** avg position */ o: number | null;
   /** backlinked */ b: number;
+  /** in a duplicate group */ d: number;
 };
 
 export type PlanCounts = Record<PlanAction, number>;
@@ -41,10 +43,24 @@ export type PlanTier = {
   impressions: number;
 };
 
+export type PlanMethod = {
+  fairTrialBefore: string;
+  tight: number;
+  loose: number;
+  crowdMin: number;
+  duplicateGroups: number;
+  duplicateUrls: number;
+  duplicateSurplus: number;
+  crowdedUrls: number;
+  untestedUrls: number;
+};
+
 export type Plan = {
   generated: string;
   window: string;
+  method: PlanMethod;
   source: Record<string, string>;
+  whyDeleteIsSmall: string[];
   caveats: string[];
   totals: PlanCounts & {
     urls: number;
@@ -53,6 +69,8 @@ export type Plan = {
     backlinked: number;
   };
   actions: Record<PlanAction, string>;
+  reasons: Record<string, string>;
+  reasonCounts: Record<string, number>;
   tiers: PlanTier[];
   clusters: PlanCluster[];
 };

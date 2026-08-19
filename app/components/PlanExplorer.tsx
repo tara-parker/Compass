@@ -1,6 +1,6 @@
 "use client";
 
-import { useMemo, useState } from "react";
+import { createContext, useContext, useMemo, useState } from "react";
 import Link from "next/link";
 import {
   ACTION_ORDER,
@@ -14,6 +14,9 @@ import {
 } from "@/lib/plan";
 
 const PAGE_LIMIT = 60;
+
+/** Reason lookup, so every page row can say why it got its action. */
+const ReasonCtx = createContext<Record<string, string>>({});
 
 function n(v: number | null | undefined) {
   return v == null ? "—" : v.toLocaleString("en-US");
@@ -60,6 +63,7 @@ function CountStrip({ counts }: { counts: PlanCounts }) {
 }
 
 function PageRow({ pg, depth }: { pg: PlanPage; depth: number }) {
+  const reason = useContext(ReasonCtx)[pg.r];
   return (
     <div
       className="grid grid-cols-[1fr_auto] items-start gap-2 border-t border-ink-line/50 py-2 sm:grid-cols-[1fr_72px_78px_58px_84px] sm:items-center"
@@ -75,6 +79,14 @@ function PageRow({ pg, depth }: { pg: PlanPage; depth: number }) {
               LINK
             </span>
           )}
+          {pg.d === 1 && (
+            <span
+              className="shrink-0 rounded bg-amber-400/15 px-1 py-px text-[9px] font-semibold text-amber-300"
+              title="Member of a near-duplicate group"
+            >
+              DUP
+            </span>
+          )}
           <span className="truncate text-[13px] text-slate-200">{pg.t}</span>
         </div>
         <a
@@ -85,6 +97,7 @@ function PageRow({ pg, depth }: { pg: PlanPage; depth: number }) {
         >
           {pg.p}
         </a>
+        {reason && <div className="truncate text-[10.5px] italic text-flat/80">{reason}</div>}
       </div>
       <div className="sm:hidden">
         <ActionChip action={pg.s} />
@@ -276,6 +289,7 @@ export default function PlanExplorer({ plan }: { plan: Plan }) {
   const filtering = action !== "all" || tier !== "all" || linkedOnly || q.trim() !== "";
 
   return (
+    <ReasonCtx.Provider value={plan.reasons}>
     <div className="space-y-4">
       <div className="flex flex-wrap items-center gap-2">
         <input
@@ -359,5 +373,6 @@ export default function PlanExplorer({ plan }: { plan: Plan }) {
         )}
       </div>
     </div>
+    </ReasonCtx.Provider>
   );
 }
