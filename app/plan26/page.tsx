@@ -51,7 +51,9 @@ export default function Plan26Page() {
           <ActionBar counts={t} total={t.urls} />
         </div>
         <p className="mt-2 text-xs text-flat">
-          All {num(t.clicks)} clicks and all {num(t.backlinked)} backlinked pages sit in KEEP.
+          All {num(t.clicks)} clicks and all {num(t.backlinked)} backlinked pages sit in KEEP. A page with
+          backlinks or clicks can never be assigned DELETE — the bucket is filled from the bottom
+          of the ranking skipping those pages, so it holds whatever the scoring does.
         </p>
       </Card>
 

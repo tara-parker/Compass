@@ -471,14 +471,37 @@ def main():
          for u in urls),
         key=lambda x: (-x[0], x[1]),
     )
-    quota_action = {}
+    # A page that has external backlinks, or that earns clicks, is never
+    # deleted. This is enforced by construction rather than left to the scoring
+    # margin: DELETE is filled from the BOTTOM of the ranking, skipping any
+    # protected page, so a protected page cannot land there however badly it
+    # scores. The surviving buckets then fill from the top in score order.
+    protected = {u["path"] for u in urls
+                 if u["path"] in backlinked or clicks(u["path"]) > 0}
+
+    delete_quota = len(scored) - sum(size for _, size in QUOTAS)
+    if delete_quota > len(scored) - len(protected):
+        raise SystemExit(
+            f"cannot honour the quotas: {delete_quota} to delete but only "
+            f"{len(scored) - len(protected)} unprotected pages exist"
+        )
+
+    to_delete = set()
+    for _, path in reversed(scored):           # weakest first
+        if len(to_delete) >= delete_quota:
+            break
+        if path not in protected:
+            to_delete.add(path)
+
+    quota_action = {path: "DELETE" for path in to_delete}
     cursor = 0
+    survivors = [path for _, path in scored if path not in to_delete]
     for name, size in QUOTAS:
-        for _, path in scored[cursor:cursor + size]:
+        for path in survivors[cursor:cursor + size]:
             quota_action[path] = name
         cursor += size
-    for _, path in scored[cursor:]:
-        quota_action[path] = "DELETE"
+
+    assert not (protected & to_delete), "a protected page was assigned DELETE"
 
     pages = []
     for u in urls:
@@ -512,6 +535,7 @@ def main():
             action in ("MERGE", "UPDATE")
             and g[0] == 0 and g[1] == 0
             and p not in backlinked
+            and g[0] == 0
             and reason != "canonical"
             and len(strikes) >= 1
         )
@@ -679,6 +703,21 @@ def main():
         "clusters": clusters,
     }
 
+    # ---- invariants: fail loudly rather than ship a plan that deletes equity --
+    deleted = {pg["p"] for pg in pages if pg["s"] == "DELETE"}
+    watched = {pg["p"] for pg in pages if pg["w"] == 1}
+    violations = []
+    for label, offenders in (
+        ("backlinked page in DELETE", backlinked & deleted),
+        ("backlinked page on the watchlist", backlinked & watched),
+        ("page with clicks in DELETE", {p for p in deleted if clicks(p) > 0}),
+        ("page with clicks on the watchlist", {p for p in watched if clicks(p) > 0}),
+    ):
+        if offenders:
+            violations.append(f"{label}: {len(offenders)} e.g. {sorted(offenders)[:3]}")
+    if violations:
+        raise SystemExit("INVARIANT FAILED\n  " + "\n  ".join(violations))
+
     os.makedirs(os.path.dirname(OUT), exist_ok=True)
     with open(OUT, "w") as fh:
         json.dump(doc, fh, separators=(",", ":"))
@@ -688,6 +727,7 @@ def main():
     print("  " + "  ".join(f"{k}={v}" for k, v in totals.items()))
     print(f"  duplicate groups {len(dup_groups)} covering {sum(dup_groups)} URLs")
     print(f"  untested (no fair trial yet) {untested}")
+    print(f"  invariants OK: no backlinked or earning page in DELETE or watchlist")
     print(f"  watchlist {watch_count} -> DELETE now {totals['DELETE']} + watch "
           f"{watch_count} = {totals['DELETE'] + watch_count}")
 
