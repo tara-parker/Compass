@@ -119,6 +119,13 @@ BACKLINK_XLSX = os.path.join(BL, "chatfin-backlinked-redirects.xlsx")
 # Without this the plan bins work that was just done.
 REWRITTEN = os.path.join(HOME, "Desktop", "chatfin", "blogs", "plan26", "update",
                          "updated-pages.json")
+# Per-ERP do-not-redirect lists. These name pages that were rewritten in place
+# and must keep their URL: redirecting one destroys the rewrite. The SAP B1 list
+# holds the 37 rewritten pages, none of which appear in updated-pages.json,
+# so without this the plan marks 10 of them MERGE or DELETE. One sits at
+# position 4.6.
+DO_NOT_REDIRECT = os.path.join(HOME, "Desktop", "chatfin", "blogs", "redirect",
+                               "*", "07-do-not-redirect.txt")
 
 BACKLINK_XLSX_SHEETS = [                 # column 0 only, never the target column
     "FINAL - all 98 resolved",
@@ -240,10 +247,20 @@ def build_topics(pages):
         hits = [p for p in pages if any(k in p["p"] for k in keys)]
         if not hits:
             continue
-        # a hub is a page outside /blog/; blog posts never count as a pillar
-        hubs = [p for p in hits if not p["p"].startswith("/blog/")]
-        hubs.sort(key=lambda x: (-x["i"], len(x["p"])))
+        # A pillar is a hub-shaped url: root level, or under solutions, ai-erp
+        # or integrations. Articles are never pillars, however well they rank,
+        # because nothing can be organised underneath them.
+        def is_hub(x):
+            u = x["p"]
+            if u.startswith(("/blog/", "/glossary/", "/guide/", "/webinars/", "/insights/")):
+                return False
+            return u.count("/") == 2 or u.startswith(("/solutions/", "/ai-erp/", "/integrations/"))
+
+        hubs = sorted([p for p in hits if is_hub(p)], key=lambda x: (-x["i"], len(x["p"])))
         hub = hubs[0] if hubs else None
+        # three states, not two: a hub that earns, a hub that earns nothing, and
+        # no hub at all with an article standing in its place.
+        hub_state = "none" if hub is None else ("earning" if hub["i"] > 0 else "empty")
         counts = {"KEEP": 0, "UPDATE": 0, "MERGE": 0, "DELETE": 0}
         for p in hits:
             counts[p["s"]] += 1
@@ -260,6 +277,7 @@ def build_topics(pages):
             "counts": counts,
             "hub": hub["p"] if hub else "",
             "hubImpressions": hub["i"] if hub else 0,
+            "hubState": hub_state,
             "opportunities": [{"p": p["p"], "t": p["t"], "i": p["i"], "o": p["o"]} for p in best],
         })
     out.sort(key=lambda t: -t["impressions"])
@@ -344,6 +362,17 @@ def load_not_indexed():
         n = _norm_path(r[0] if r else None)
         if n:
             out.add(n)
+    return out
+
+
+def load_do_not_redirect():
+    """URLs rewritten in place. Their URL must not move, so never merge or delete."""
+    out = set()
+    for f in glob.glob(DO_NOT_REDIRECT):
+        for m in re.findall(r"https://chatfin\.ai[^\s]*", open(f, errors="ignore").read()):
+            n = _norm_path(m)
+            if n:
+                out.add(n)
     return out
 
 
@@ -527,7 +556,8 @@ def main():
     meta = {u["path"]: u for u in urls}
     gsc = load_gsc()
     crawled = load_crawled()
-    rewritten = load_rewritten()
+    no_redirect = load_do_not_redirect()
+    rewritten = load_rewritten() | no_redirect
     not_indexed = load_not_indexed()
     ref_domains = load_ref_domains()
     backlinked = load_backlinked()
@@ -680,6 +710,20 @@ def main():
         cursor += size
 
     assert not (protected & to_delete), "a protected page was assigned DELETE"
+
+    # MERGE also moves a URL, because folding a page in means 301ing it. A page
+    # on a do-not-redirect list was rewritten in place and must keep its URL, so
+    # it cannot sit in MERGE either. Swap any that landed there with the weakest
+    # unprotected page in UPDATE, which keeps every quota the same size.
+    stuck = [p for p in survivors if quota_action.get(p) == "MERGE" and p in no_redirect]
+    if stuck:
+        swappable = [p for p in reversed(survivors)
+                     if quota_action.get(p) == "UPDATE" and p not in no_redirect]
+        for a, b in zip(stuck, swappable):
+            quota_action[a], quota_action[b] = "UPDATE", "MERGE"
+        log_swaps = len(stuck)
+    else:
+        log_swaps = 0
 
     pages = []
     for u in urls:
@@ -903,6 +947,8 @@ def main():
         ("page with clicks in DELETE", {p for p in deleted if clicks(p) > 0}),
         ("page with clicks on the watchlist", {p for p in watched if clicks(p) > 0}),
         ("already-rewritten page in DELETE", rewritten & deleted),
+        ("do-not-redirect page in MERGE or DELETE",
+         no_redirect & ({pg["p"] for pg in pages if pg["s"] in ("MERGE", "DELETE")})),
         ("already-rewritten page on the watchlist", rewritten & watched),
     ):
         if offenders:
@@ -926,6 +972,8 @@ def main():
     print(f"  duplicate groups {len(dup_groups)} covering {sum(dup_groups)} URLs")
     print(f"  untested (no fair trial yet) {untested}")
     print(f"  invariants OK: no backlinked or earning page in DELETE or watchlist")
+    if log_swaps:
+        print(f"  moved {log_swaps} do-not-redirect pages out of MERGE into UPDATE")
     print(f"  watchlist {watch_count} -> DELETE now {totals['DELETE']} + watch "
           f"{watch_count} = {totals['DELETE'] + watch_count}")
 
