@@ -92,19 +92,19 @@ GSC_GLOB = os.path.join(HOME, "Desktop", "chatfin", "code", "cf-platform", "*Per
 SEO = os.path.join(HOME, "Desktop", "chatfin", "seo", "redirects")
 BL = os.path.join(HOME, "Desktop", "chatfin", "blogs", "backlinks")
 
-# Every file in the workspace that names a URL carrying external backlinks. One
-# list is not enough: all-backlinked.txt holds 234 paths, but the backlink
-# recovery workbook and the status tables between them name others, and pages
-# missing from the union have been assigned DELETE in the past. Column-precise
-# on purpose — the redirect tables also carry TARGET urls, which are not
-# themselves backlinked and must not be pulled in.
+# What counts as backlinked: a URL that AHREFS reports as carrying links from
+# external domains. Nothing else. REVIVED-LINKS.txt is deliberately NOT a source
+# — it is the record of an August redirect job, listing URLs whose redirects
+# were removed, which is a history of what was done rather than current evidence
+# that a link exists today. Where those pages do still hold links, Ahrefs lists
+# them anyway and they are protected on that basis.
+#
+# Column-precise on purpose: the redirect tables also carry TARGET urls, which
+# are not themselves backlinked and must not be pulled in.
 BACKLINK_LISTS = [                       # every line is a backlinked path
     os.path.join(SEO, "all-backlinked.txt"),
     os.path.join(SEO, "live-backlinked.txt"),
     os.path.join(BL, "live-backlinked.txt"),
-]
-BACKLINK_URLS = [                        # free text, scrape chatfin.ai urls
-    os.path.join(BL, "REVIVED-LINKS.txt"),
 ]
 BACKLINK_TSV_COL0 = [                    # column 0 is the backlinked url
     os.path.join(SEO, "backlinked-redirects.tsv"),
@@ -233,10 +233,6 @@ def load_backlinked():
             for line in open(f, errors="ignore"):
                 if line.strip() and not line.startswith("#"):
                     add(line)
-    for f in BACKLINK_URLS:
-        if os.path.exists(f):
-            for m in re.findall(r"https?://chatfin\.ai[^\s]*", open(f, errors="ignore").read()):
-                add(m)
     for f in BACKLINK_TSV_COL0:
         if os.path.exists(f):
             for line in open(f, errors="ignore"):
@@ -734,7 +730,7 @@ def main():
         "source": {
             "sitemap": "chatfin-all-urls.json",
             "gsc": "GSC page exports, 1,000-row cap each",
-            "backlinks": "Ahrefs best-by-links plus the backlink recovery workbook and status tables, unioned",
+            "backlinks": "Ahrefs: best-by-links exports and referring-domain tables, unioned",
         },
         "whyDeleteIsSmall": [
             "GSC's export stops at 1,000 rows and the weakest page in each export had "
