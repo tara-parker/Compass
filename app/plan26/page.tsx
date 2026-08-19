@@ -25,7 +25,7 @@ export default function Plan26Page() {
     KEEP: ["backlinked-earning", "earns-clicks", "striking-distance", "unique-untested"],
     UPDATE: ["backlinked-idle", "indexed-weak", "canonical", "crowded"],
     MERGE: ["dup-signal", "dup-untested"],
-    DELETE: ["dup-dead", "dark-after-trial"],
+    DELETE: ["dup-redundant", "padded-variant", "dup-dead", "dark-after-trial"],
   };
 
   return (
@@ -72,9 +72,10 @@ export default function Plan26Page() {
       {/* ---- the correction, stated up front ---- */}
       <Card title="Why DELETE is small">
         <p className="mb-3 text-[13px] text-slate-300">
-          An earlier cut of this plan marked 3,255 URLs for deletion because they drew no Search
-          Console impressions. That was wrong, for two reasons that are properties of the data
-          rather than of the pages.
+          An earlier cut marked 3,255 URLs for deletion because they drew no Search Console
+          impressions. That was wrong, for two reasons that are properties of the data rather
+          than of the pages. Removal now needs positive evidence, which is why the number is a
+          fraction of that — and why the evidence for each of the {num(t.DELETE)} is named below.
         </p>
         <ol className="space-y-2.5 text-[13px] text-slate-300">
           {plan.whyDeleteIsSmall.map((w, i) => (
@@ -84,11 +85,13 @@ export default function Plan26Page() {
             </li>
           ))}
         </ol>
-        <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-4">
+        <div className="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-6">
           <Fact label="Never had a fair trial" value={num(m.untestedUrls)} />
           <Fact label="Near-duplicate groups" value={num(m.duplicateGroups)} />
           <Fact label="URLs in those groups" value={num(m.duplicateUrls)} />
           <Fact label="Crowded-topic URLs" value={num(m.crowdedUrls)} />
+          <Fact label="Padded variants" value={num(m.paddedVariants)} />
+          <Fact label="Orphans (no links in)" value={num(m.orphanUrls)} />
         </div>
       </Card>
 
@@ -182,6 +185,60 @@ export default function Plan26Page() {
         </p>
       </Card>
 
+      {/* ---- what the decision is and is not built on ---- */}
+      <Card title="What this is decided on">
+        <div className="overflow-x-auto">
+          <table className="w-full min-w-[560px] text-sm">
+            <thead>
+              <tr className="border-b border-ink-line text-[10px] uppercase tracking-wide text-flat">
+                <th className="px-2 py-2 text-left font-medium">Source</th>
+                <th className="px-2 py-2 text-left font-medium">What it contributes</th>
+                <th className="px-2 py-2 text-left font-medium">State</th>
+              </tr>
+            </thead>
+            <tbody>
+              <Source
+                name="Search Console"
+                gives="Clicks, impressions and position per page. Decides KEEP and the strength ranking."
+                state="In use"
+                tone="text-up"
+              />
+              <Source
+                name="Ahrefs backlinks"
+                gives={`${num(t.backlinked)} URLs with external links, and referring-domain counts where known. A backlinked page can never be deleted and always takes the canonical slot in its duplicate group.`}
+                state="In use"
+                tone="text-up"
+              />
+              <Source
+                name="Ahrefs Site Audit crawl"
+                gives={`${num(m.crawledUrls)} pages a crawler can actually reach. The other ${num(m.orphanUrls)} are orphans with no internal links pointing in, which ranks them below reachable pages of equal strength.`}
+                state="In use"
+                tone="text-up"
+              />
+              <Source
+                name="Sitemap"
+                gives="The full URL set and lastmod, which is what establishes whether a page has had a fair trial."
+                state="In use"
+                tone="text-up"
+              />
+              <Source
+                name="Google Analytics"
+                gives="Sessions, engagement time and conversions per landing page. Would separate pages that get clicks but bounce from pages that actually convert, which no other source here can see."
+                state="Not supplied"
+                tone="text-down"
+              />
+            </tbody>
+          </table>
+        </div>
+        <p className="mt-3 text-xs text-flat">
+          There is no GA export in the workspace, so nothing here is decided on engagement or
+          conversion. The only on-site behavioural file is a form-submit audit with no landing-page
+          column, so it cannot attribute a lead back to the page that earned it. Export GA4
+          Landing page + sessions, engagement rate and conversions for the last 12 months, and
+          the same pages can be re-cut on whether they produce anything.
+        </p>
+      </Card>
+
       {/* ---- the nested tree ---- */}
       <Card title="Clusters, sub-clusters and pages">
         <PlanExplorer plan={plan} />
@@ -205,6 +262,26 @@ export default function Plan26Page() {
         </ul>
       </Card>
     </div>
+  );
+}
+
+function Source({
+  name,
+  gives,
+  state,
+  tone,
+}: {
+  name: string;
+  gives: string;
+  state: string;
+  tone: string;
+}) {
+  return (
+    <tr className="border-b border-ink-line/50 last:border-0">
+      <td className="whitespace-nowrap px-2 py-2 font-medium text-slate-200">{name}</td>
+      <td className="px-2 py-2 text-[12.5px] text-slate-400">{gives}</td>
+      <td className={`whitespace-nowrap px-2 py-2 text-[12px] font-medium ${tone}`}>{state}</td>
+    </tr>
   );
 }
 

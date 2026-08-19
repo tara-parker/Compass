@@ -18,6 +18,20 @@ const PAGE_LIMIT = 60;
 /** Reason lookup, so every page row can say why it got its action. */
 const ReasonCtx = createContext<Record<string, string>>({});
 
+/** "action" lists KEEP first then UPDATE, MERGE, DELETE. "strength" is pure rank. */
+export type SortMode = "action" | "strength";
+const SortCtx = createContext<SortMode>("action");
+
+const ACTION_RANK: Record<PlanAction, number> = { KEEP: 0, UPDATE: 1, MERGE: 2, DELETE: 3 };
+
+function sortPages(pages: PlanPage[], mode: SortMode): PlanPage[] {
+  return [...pages].sort((a, b) =>
+    mode === "strength"
+      ? a.n - b.n
+      : ACTION_RANK[a.s] - ACTION_RANK[b.s] || a.n - b.n,
+  );
+}
+
 function n(v: number | null | undefined) {
   return v == null ? "—" : v.toLocaleString("en-US");
 }
@@ -77,6 +91,15 @@ function PageRow({ pg, depth }: { pg: PlanPage; depth: number }) {
               title="Has external backlinks — never delete"
             >
               LINK
+              {pg.rd > 0 && <span className="ml-0.5 opacity-80">{pg.rd}</span>}
+            </span>
+          )}
+          {pg.x === 1 && (
+            <span
+              className="shrink-0 rounded bg-down/10 px-1 py-px text-[9px] font-semibold text-down/90"
+              title="Orphan — in the sitemap but no internal links point to it, so a crawler cannot reach it"
+            >
+              ORPH
             </span>
           )}
           {pg.d === 1 && (
@@ -87,6 +110,12 @@ function PageRow({ pg, depth }: { pg: PlanPage; depth: number }) {
               DUP
             </span>
           )}
+          <span
+            className="shrink-0 font-mono text-[10px] tabular-nums text-flat/70"
+            title="Rank by measured strength within this list"
+          >
+            #{pg.n}
+          </span>
           <span className="truncate text-[13px] text-slate-200">{pg.t}</span>
         </div>
         <a
@@ -120,6 +149,8 @@ function PageRow({ pg, depth }: { pg: PlanPage; depth: number }) {
 
 function PageList({ pages, depth }: { pages: PlanPage[]; depth: number }) {
   const [limit, setLimit] = useState(PAGE_LIMIT);
+  const mode = useContext(SortCtx);
+  const ordered = useMemo(() => sortPages(pages, mode), [pages, mode]);
   if (!pages.length) return null;
   return (
     <div>
@@ -127,13 +158,13 @@ function PageList({ pages, depth }: { pages: PlanPage[]; depth: number }) {
         className="hidden grid-cols-[1fr_72px_78px_58px_84px] gap-2 border-t border-ink-line/50 pb-1 pt-2 text-[10px] uppercase tracking-wide text-flat sm:grid"
         style={{ paddingLeft: `${depth * 12}px` }}
       >
-        <span>Page</span>
+        <span>Rank · page</span>
         <span className="text-right">Clicks</span>
         <span className="text-right">Impr</span>
         <span className="text-right">Pos</span>
         <span className="text-right">Status</span>
       </div>
-      {pages.slice(0, limit).map((pg) => (
+      {ordered.slice(0, limit).map((pg) => (
         <PageRow key={pg.p} pg={pg} depth={depth} />
       ))}
       {pages.length > limit && (
@@ -257,6 +288,8 @@ export default function PlanExplorer({ plan }: { plan: Plan }) {
   const [action, setAction] = useState<PlanAction | "all">("all");
   const [tier, setTier] = useState<string>("all");
   const [linkedOnly, setLinkedOnly] = useState(false);
+  const [sortMode, setSortMode] = useState<SortMode>("action");
+  const [orphanOnly, setOrphanOnly] = useState(false);
 
   const clusters = useMemo(() => {
     const needle = q.trim().toLowerCase();
@@ -264,6 +297,7 @@ export default function PlanExplorer({ plan }: { plan: Plan }) {
       (action === "all" || pg.s === action) &&
       (tier === "all" || pg.k === tier) &&
       (!linkedOnly || pg.b === 1) &&
+      (!orphanOnly || pg.x === 1) &&
       (!needle || pg.p.toLowerCase().includes(needle) || pg.t.toLowerCase().includes(needle));
 
     return plan.clusters
@@ -275,7 +309,7 @@ export default function PlanExplorer({ plan }: { plan: Plan }) {
           .filter((s) => s.pages.length > 0),
       }))
       .filter((c) => c.pages.length > 0 || c.subs.length > 0);
-  }, [plan, q, action, tier, linkedOnly]);
+  }, [plan, q, action, tier, linkedOnly, orphanOnly]);
 
   const matched = useMemo(
     () =>
@@ -286,10 +320,12 @@ export default function PlanExplorer({ plan }: { plan: Plan }) {
     [clusters],
   );
 
-  const filtering = action !== "all" || tier !== "all" || linkedOnly || q.trim() !== "";
+  const filtering =
+    action !== "all" || tier !== "all" || linkedOnly || orphanOnly || q.trim() !== "";
 
   return (
     <ReasonCtx.Provider value={plan.reasons}>
+    <SortCtx.Provider value={sortMode}>
     <div className="space-y-4">
       <div className="flex flex-wrap items-center gap-2">
         <input
@@ -336,6 +372,25 @@ export default function PlanExplorer({ plan }: { plan: Plan }) {
           ))}
         </select>
 
+        <div className="flex overflow-hidden rounded-lg border border-ink-line">
+          {(["action", "strength"] as SortMode[]).map((mo) => (
+            <button
+              key={mo}
+              onClick={() => setSortMode(mo)}
+              className={`px-2.5 py-1 text-[11px] transition ${
+                sortMode === mo ? "bg-brand/15 text-white" : "text-slate-300 hover:text-white"
+              }`}
+              title={
+                mo === "action"
+                  ? "KEEP first, then UPDATE, MERGE, DELETE"
+                  : "Strongest pages first, regardless of action"
+              }
+            >
+              {mo === "action" ? "By action" : "By strength"}
+            </button>
+          ))}
+        </div>
+
         <button
           onClick={() => setLinkedOnly(!linkedOnly)}
           className={`rounded-lg border px-2.5 py-1 text-[11px] transition ${
@@ -345,6 +400,18 @@ export default function PlanExplorer({ plan }: { plan: Plan }) {
           }`}
         >
           Backlinked only
+        </button>
+
+        <button
+          onClick={() => setOrphanOnly(!orphanOnly)}
+          className={`rounded-lg border px-2.5 py-1 text-[11px] transition ${
+            orphanOnly
+              ? "border-down/40 bg-down/10 text-down"
+              : "border-ink-line text-slate-300 hover:text-white"
+          }`}
+          title="In the sitemap but not reachable by Ahrefs' crawler"
+        >
+          Orphans only
         </button>
       </div>
 
@@ -373,6 +440,7 @@ export default function PlanExplorer({ plan }: { plan: Plan }) {
         )}
       </div>
     </div>
+    </SortCtx.Provider>
     </ReasonCtx.Provider>
   );
 }

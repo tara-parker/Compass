@@ -13,6 +13,9 @@ export type PlanPage = {
   /** avg position */ o: number | null;
   /** backlinked */ b: number;
   /** in a duplicate group */ d: number;
+  /** 1-based rank by measured strength within its list */ n: number;
+  /** orphan: in the sitemap but not reachable by Ahrefs' crawler */ x: number;
+  /** referring domains, where Ahrefs gave a number */ rd: number;
 };
 
 export type PlanCounts = Record<PlanAction, number>;
@@ -52,6 +55,9 @@ export type PlanMethod = {
   duplicateUrls: number;
   duplicateSurplus: number;
   crowdedUrls: number;
+  paddedVariants: number;
+  crawledUrls: number;
+  orphanUrls: number;
   untestedUrls: number;
 };
 

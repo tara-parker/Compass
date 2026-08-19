@@ -5,7 +5,7 @@ Build data/plan26.json — the 2026 prune-and-build plan.
 Every live URL gets one of four actions: KEEP, UPDATE, MERGE or DELETE.
 Output is nested cluster -> sub-cluster -> page so the UI mirrors the site.
 
-WHY DELETE IS DELIBERATELY SMALL
+WHY DELETE IS NOT THE WHOLE TAIL
 --------------------------------
 An earlier cut of this plan marked 3,255 URLs for deletion on the grounds that
 they drew no Search Console impressions. That was wrong, for two reasons that
@@ -36,14 +36,34 @@ Checked in order, first match wins:
   UPDATE  backlinked but earning nothing  |  indexed but not converting
           |  canonical of a duplicate group  |  crowded topic needing
              differentiation
-  MERGE   near-duplicate of a stronger page, but has signal or is too new
-  DELETE  near-duplicate with no signal after a fair trial  |  no signal at
-          all after a fair trial
+  MERGE   near-duplicate that has signal  |  near-duplicate whose whole group
+          is still unmeasured, so the best member cannot be picked yet
+  DELETE  near-duplicate of a page that ALREADY earns  |  qualifier-padded
+          variant of a shorter page  |  near-duplicate with no signal after a
+          fair trial  |  no signal at all after a fair trial
+
+Two things separate DELETE from MERGE. Age defends a unique page but not a
+duplicate: a new unique page might yet rank, whereas a near-duplicate of a page
+that already earns will not, because Google has already picked between them.
+And there is nothing to fold in — the canonical carries the same content — nor
+anything to pass, since these have no links and no traffic. Per the redirect
+rules, a 301 is only worth adding when the source has signal to pass.
 
 Duplicate detection is Jaccard similarity over normalised slug tokens, union
 -found into groups. Tight (>=0.6) marks true duplicates; loose (>=0.35, groups
-of 3+) marks crowded topic neighbourhoods. Slug similarity is a proxy — the
-real test is body-text hashing, which is what the SAP B1 audit used.
+of 3+) marks crowded topic neighbourhoods. Separately, a page whose tokens are
+a strict SUPERSET of a shorter page's is a qualifier-padded variant of it
+("accrual-automation-software-for-month-end-close" off
+"accrual-automation-software"), which Jaccard misses because the padding drags
+similarity down. Slug similarity is a proxy throughout — the real test is
+body-text hashing, which is what the SAP B1 audit used.
+
+ORDERING
+--------
+Pages are listed KEEP, UPDATE, MERGE, DELETE, and ranked by measured strength
+inside each action (clicks, then impressions, then position). Every page also
+carries `n`, its rank by strength within its list, so the UI can re-sort by
+strength alone without recomputing.
 
 Sources (read-only, outside the repo):
   ~/Downloads/chatfin-all-urls.json                     live sitemap
@@ -69,6 +89,12 @@ HOME = os.path.expanduser("~")
 SITEMAP = os.path.join(HOME, "Downloads", "chatfin-all-urls.json")
 GSC_GLOB = os.path.join(HOME, "Desktop", "chatfin", "code", "cf-platform", "*Performance*.xlsx")
 BACKLINKS = os.path.join(HOME, "Desktop", "chatfin", "seo", "redirects", "all-backlinked.txt")
+# Ahrefs Site Audit crawl: the pages a crawler can actually reach by following
+# links. Sitemap URLs missing from it are orphans with no internal links in.
+AHREFS_CRAWL = os.path.join(HOME, "Desktop", "chatfin", "keywords", "seo",
+                            "cf-pages-indexed-by-ahref.md")
+# Ahrefs referring-domain counts, where known.
+REF_DOMAINS = os.path.join(HOME, "Desktop", "chatfin", "seo", "redirects", "protect-list.tsv")
 
 GENERATED = "2026-08-19"
 WINDOW = "3-17 Aug 2026 (2 weeks)"
@@ -79,6 +105,11 @@ FAIR_TRIAL_BEFORE = "2026-06"
 TIGHT = 0.6    # near-duplicate
 LOOSE = 0.35   # crowded neighbourhood
 CROWD_MIN = 3
+
+# Pages are listed in this sequence, and ranked by measured strength inside it,
+# so the work reads top to bottom: what you protect, then what you fix, then
+# what you fold in, then what you cut.
+ACTION_RANK = {"KEEP": 0, "UPDATE": 1, "MERGE": 2, "DELETE": 3}
 
 ACTIONS = {
     "KEEP":   "Leave alone. Either earning, or nothing argues against it.",
@@ -97,7 +128,9 @@ REASONS = {
     "canonical":          "Canonical of a duplicate group — absorb the others",
     "crowded":            "Crowded topic neighbourhood, needs differentiation",
     "dup-signal":         "Near-duplicate of a stronger page, but has signal",
-    "dup-untested":       "Near-duplicate, too new to judge — review before cutting",
+    "dup-untested":       "Near-duplicate, but its group is unmeasured — review before cutting",
+    "dup-redundant":      "Near-duplicate of a page that already earns — it cannot outrank it",
+    "padded-variant":     "Qualifier-padded variant of a shorter page, no signal of its own",
     "dup-dead":           "Near-duplicate, no signal after a fair trial",
     "dark-after-trial":   "No signal at all after a fair trial",
 }
@@ -125,6 +158,30 @@ def load_gsc():
             c, i, p = gsc.get(u, (0, 0, []))
             gsc[u] = (c + (r[1] or 0), i + (r[2] or 0), p + [r[4]])
     return gsc
+
+
+def load_crawled():
+    """Paths Ahrefs could reach. Absent = orphaned, no internal links pointing in."""
+    if not os.path.exists(AHREFS_CRAWL):
+        return set()
+    raw = open(AHREFS_CRAWL).read()
+    out = set()
+    for m in re.findall(r"https://chatfin\.ai[^ )\]]*", raw):
+        p = m.replace("https://chatfin.ai", "") or "/"
+        out.add(p if p.endswith("/") else p + "/")
+    return out
+
+
+def load_ref_domains():
+    """Referring-domain counts per URL, where Ahrefs gave a number."""
+    out = {}
+    if not os.path.exists(REF_DOMAINS):
+        return out
+    for line in open(REF_DOMAINS):
+        f = line.rstrip("\n").split("\t")
+        if len(f) >= 4 and f[3].isdigit():
+            out[f[0]] = int(f[3])
+    return out
 
 
 def titleise(slug):
@@ -179,10 +236,65 @@ def group_at(paths, toks, inv, threshold):
     return g
 
 
+def padded_variants(paths, toks, inv, has_signal):
+    """
+    Find qualifier-padded variants: pages whose slug tokens are a strict
+    SUPERSET of a shorter, substantive page's tokens.
+
+    "accrual-automation-software-for-month-end-close" is a superset of
+    "accrual-automation-software", so it is a padded variant of it. This is the
+    signature of batch-generated bloat, and Jaccard misses it because the extra
+    qualifiers drag similarity below the threshold.
+
+    Only pages with no signal of their own are considered — a padded slug that
+    actually earns is a real page.
+    """
+    variant = {}
+    for path in paths:
+        t = toks[path]
+        if len(t) < 3 or has_signal(path):
+            continue
+        rare = min(t, key=lambda w: len(inv[w]))
+        for other in inv[rare]:
+            if other == path:
+                continue
+            to = toks[other]
+            if to and len(to) >= 2 and to < t:      # strict subset = the base page
+                variant[path] = other
+                break
+    return variant
+
+
+def order_pages(pages):
+    """
+    Sort by action sequence, then by measured strength inside each action.
+
+    Strength is clicks, then impressions, then position (lower is better, and
+    unranked sorts last). Each page also gets `n`, its 1-based rank by strength
+    within this list, so a row can show where it sits regardless of the sort.
+    """
+    by_strength = sorted(
+        pages,
+        key=lambda x: (
+            -x["c"],                                    # clicks first
+            -x["i"],                                    # then impressions
+            x["o"] if x["o"] is not None else 9e9,       # then position, unranked last
+            -x.get("rd", 0),                             # then referring domains
+            x.get("x", 0),                               # reachable above orphaned
+            x["p"],
+        ),
+    )
+    for rank, pg in enumerate(by_strength, 1):
+        pg["n"] = rank
+    return sorted(pages, key=lambda x: (ACTION_RANK[x["s"]], x["n"]))
+
+
 def main():
     urls = json.load(open(SITEMAP))
     meta = {u["path"]: u for u in urls}
     gsc = load_gsc()
+    crawled = load_crawled()
+    ref_domains = load_ref_domains()
     backlinked = {l.strip() for l in open(BACKLINKS)
                   if l.strip() and not l.startswith("#")}
 
@@ -216,6 +328,26 @@ def main():
     loose = group_at(paths, toks, inv, LOOSE)
     crowded = {paths[i] for v in loose.values() if len(v) >= CROWD_MIN for i in v}
 
+    # which canonical each non-canonical page defers to, and whether that
+    # canonical has actually demonstrated anything
+    defers_to = {}
+    for members in tight.values():
+        linked = [i for i in members if paths[i] in backlinked]
+        head = linked[0] if linked else members[0]
+        for i in members:
+            if i != head:
+                defers_to[paths[i]] = paths[head]
+
+    def has_signal(p):
+        return p in backlinked or clicks(p) > 0 or impressions(p) > 0
+
+    tok_by_path = {paths[i]: toks[i] for i in range(len(paths))}
+    inv_by_path = collections.defaultdict(list)
+    for path, t in tok_by_path.items():
+        for w in t:
+            inv_by_path[w].append(path)
+    variants = padded_variants(paths, tok_by_path, inv_by_path, has_signal)
+
     def had_fair_trial(p):
         return (meta[p].get("lastmod") or "")[:7] <= FAIR_TRIAL_BEFORE
 
@@ -236,15 +368,24 @@ def main():
         if p in non_canonical:
             if i > 0:
                 return "MERGE", "dup-signal"
-            if not old:
-                return "MERGE", "dup-untested"
-            return "DELETE", "dup-dead"
+            if old:
+                return "DELETE", "dup-dead"
+            # Age defends a unique page, not a duplicate. A new page might yet
+            # rank; a near-duplicate of a page that ALREADY earns will not,
+            # because Google picks one of them and has already picked. There is
+            # nothing to fold in either — the canonical carries the content.
+            if has_signal(defers_to.get(p, "")):
+                return "DELETE", "dup-redundant"
+            # whole group unmeasured: cannot tell which member is best yet
+            return "MERGE", "dup-untested"
         if i > 0:
             return "UPDATE", "indexed-weak"
         if p in canonical:
             return "UPDATE", "canonical"
         if old:
             return "DELETE", "dark-after-trial"
+        if p in variants:
+            return "DELETE", "padded-variant"
         if p in crowded:
             return "UPDATE", "crowded"
         return "KEEP", "unique-untested"
@@ -287,6 +428,9 @@ def main():
             "o": round(sum(g[2]) / len(g[2]), 1) if g[2] else None,
             "b": 1 if p in backlinked else 0,
             "d": 1 if (p in canonical or p in non_canonical) else 0,
+            # orphan: in the sitemap but not reachable by Ahrefs' crawler
+            "x": 0 if (not crawled or p in crawled) else 1,
+            "rd": ref_domains.get(p, 0),
             "_cluster": cluster,
             "_sub": sub,
         })
@@ -323,7 +467,7 @@ def main():
                 "sub": sname, "title": titleise(sname), "urls": len(spages),
                 "counts": sc, "tiers": st, "clicks": scl, "impressions": sim,
                 "backlinked": sbk,
-                "pages": sorted(spages, key=lambda x: (-x["c"], -x["i"], x["p"])),
+                "pages": order_pages(spages),
             })
         sub_out.sort(key=lambda s: -s["urls"])
 
@@ -331,7 +475,7 @@ def main():
             "cluster": cname, "title": titleise(cname), "urls": len(cpages),
             "counts": counts, "tiers": tiers, "clicks": cl, "impressions": im,
             "backlinked": bkl, "subs": sub_out,
-            "pages": sorted(direct, key=lambda x: (-x["c"], -x["i"], x["p"])),
+            "pages": order_pages(direct),
         })
     clusters.sort(key=lambda c: -c["urls"])
 
@@ -353,6 +497,7 @@ def main():
         tier_clicks[pg["k"]] += pg["c"]
         tier_impr[pg["k"]] += pg["i"]
 
+    orphan_count = sum(1 for pg in pages if pg["x"] == 1)
     untested = sum(1 for pg in pages
                    if not had_fair_trial(pg["p"]) and pg["p"] not in gsc)
 
@@ -368,6 +513,9 @@ def main():
             "duplicateUrls": sum(dup_groups),
             "duplicateSurplus": sum(dup_groups) - len(dup_groups),
             "crowdedUrls": len(crowded),
+            "paddedVariants": len(variants),
+            "crawledUrls": len(crawled),
+            "orphanUrls": orphan_count,
             "untestedUrls": untested,
         },
         "source": {
