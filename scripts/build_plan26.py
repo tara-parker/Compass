@@ -89,7 +89,37 @@ OUT = os.path.join(REPO, "data", "plan26.json")
 HOME = os.path.expanduser("~")
 SITEMAP = os.path.join(HOME, "Downloads", "chatfin-all-urls.json")
 GSC_GLOB = os.path.join(HOME, "Desktop", "chatfin", "code", "cf-platform", "*Performance*.xlsx")
-BACKLINKS = os.path.join(HOME, "Desktop", "chatfin", "seo", "redirects", "all-backlinked.txt")
+SEO = os.path.join(HOME, "Desktop", "chatfin", "seo", "redirects")
+BL = os.path.join(HOME, "Desktop", "chatfin", "blogs", "backlinks")
+
+# Every file in the workspace that names a URL carrying external backlinks. One
+# list is not enough: all-backlinked.txt holds 234 paths, but the backlink
+# recovery workbook and the status tables between them name others, and pages
+# missing from the union have been assigned DELETE in the past. Column-precise
+# on purpose — the redirect tables also carry TARGET urls, which are not
+# themselves backlinked and must not be pulled in.
+BACKLINK_LISTS = [                       # every line is a backlinked path
+    os.path.join(SEO, "all-backlinked.txt"),
+    os.path.join(SEO, "live-backlinked.txt"),
+    os.path.join(BL, "live-backlinked.txt"),
+]
+BACKLINK_URLS = [                        # free text, scrape chatfin.ai urls
+    os.path.join(BL, "REVIVED-LINKS.txt"),
+]
+BACKLINK_TSV_COL0 = [                    # column 0 is the backlinked url
+    os.path.join(SEO, "backlinked-redirects.tsv"),
+    os.path.join(SEO, "protect-list.tsv"),
+    os.path.join(SEO, "uncrawled-backlinked.tsv"),
+    os.path.join(BL, "final-status.tsv"),
+]
+BACKLINK_XLSX = os.path.join(BL, "chatfin-backlinked-redirects.xlsx")
+BACKLINK_XLSX_SHEETS = [                 # column 0 only, never the target column
+    "FINAL - all 98 resolved",
+    "PROTECT - live backlinked",
+    "REMOVE these redirects",
+    "KEEP - no page behind",
+    "KEEP - slash normalisation",
+]
 # Ahrefs Site Audit crawl: the pages a crawler can actually reach by following
 # links. Sitemap URLs missing from it are orphans with no internal links in.
 AHREFS_CRAWL = os.path.join(HOME, "Desktop", "chatfin", "keywords", "seo",
@@ -177,6 +207,51 @@ def load_gsc():
             c, i, p = gsc.get(u, (0, 0, []))
             gsc[u] = (c + (r[1] or 0), i + (r[2] or 0), p + [r[4]])
     return gsc
+
+
+def _norm_path(v):
+    if not isinstance(v, str):
+        return None
+    v = v.replace("https://chatfin.ai", "").replace("http://chatfin.ai", "").strip()
+    v = v.split("?")[0].split("#")[0].split(" ")[0]
+    if not v.startswith("/"):
+        return None
+    return v if v.endswith("/") else v + "/"
+
+
+def load_backlinked():
+    """Union of every source that names a URL holding external backlinks."""
+    out = set()
+
+    def add(v):
+        n = _norm_path(v)
+        if n:
+            out.add(n)
+
+    for f in BACKLINK_LISTS:
+        if os.path.exists(f):
+            for line in open(f, errors="ignore"):
+                if line.strip() and not line.startswith("#"):
+                    add(line)
+    for f in BACKLINK_URLS:
+        if os.path.exists(f):
+            for m in re.findall(r"https?://chatfin\.ai[^\s]*", open(f, errors="ignore").read()):
+                add(m)
+    for f in BACKLINK_TSV_COL0:
+        if os.path.exists(f):
+            for line in open(f, errors="ignore"):
+                if line.startswith("#") or line.startswith("url\t"):
+                    continue
+                add(line.split("\t")[0])
+    if os.path.exists(BACKLINK_XLSX):
+        import openpyxl
+        wb = openpyxl.load_workbook(BACKLINK_XLSX, read_only=True)
+        for name in BACKLINK_XLSX_SHEETS:
+            if name in wb.sheetnames:
+                for r in wb[name].iter_rows(values_only=True):
+                    if r:
+                        add(r[0])
+    return out
 
 
 def load_crawled():
@@ -356,8 +431,7 @@ def main():
     gsc = load_gsc()
     crawled = load_crawled()
     ref_domains = load_ref_domains()
-    backlinked = {l.strip() for l in open(BACKLINKS)
-                  if l.strip() and not l.startswith("#")}
+    backlinked = load_backlinked()
 
     paths = [u["path"] for u in urls]
     toks = [tokens(u["slug"]) for u in urls]
@@ -660,7 +734,7 @@ def main():
         "source": {
             "sitemap": "chatfin-all-urls.json",
             "gsc": "GSC page exports, 1,000-row cap each",
-            "backlinks": "Ahrefs best-by-links, page 1",
+            "backlinks": "Ahrefs best-by-links plus the backlink recovery workbook and status tables, unioned",
         },
         "whyDeleteIsSmall": [
             "GSC's export stops at 1,000 rows and the weakest page in each export had "
