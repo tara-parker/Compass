@@ -6,7 +6,7 @@ cluster: blog
 slug: top-ai-tools-for-cfos/top-10-ai-tools-for-cash-flow-forecasting-2026-edition
 snapshots:
   - period: "2026-08-03_2026-08-10"
-    label: Aug 3–10
+    label: Aug 3-10
     start: "2026-08-03"
     end: "2026-08-10"
     clicks: 4
@@ -14,7 +14,7 @@ snapshots:
     ctr: 0.002
     position: 8.91
   - period: "2026-08-10_2026-08-17"
-    label: Aug 10–17
+    label: Aug 10-17
     start: "2026-08-10"
     end: "2026-08-17"
     clicks: 2

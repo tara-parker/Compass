@@ -6,7 +6,7 @@ cluster: blog
 slug: sap-b1-accounting-excellence-ai-finance-automation-platform-2026
 snapshots:
   - period: "2026-08-10_2026-08-17"
-    label: Aug 10–17
+    label: Aug 10-17
     start: "2026-08-10"
     end: "2026-08-17"
     clicks: 0

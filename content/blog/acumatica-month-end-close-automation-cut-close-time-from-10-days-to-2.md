@@ -6,7 +6,7 @@ cluster: blog
 slug: acumatica-month-end-close-automation-cut-close-time-from-10-days-to-2
 snapshots:
   - period: "2026-08-03_2026-08-10"
-    label: Aug 3–10
+    label: Aug 3-10
     start: "2026-08-03"
     end: "2026-08-10"
     clicks: 0

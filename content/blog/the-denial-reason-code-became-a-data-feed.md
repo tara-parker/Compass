@@ -6,7 +6,7 @@ cluster: blog
 slug: the-denial-reason-code-became-a-data-feed
 snapshots:
   - period: "2026-08-10_2026-08-17"
-    label: Aug 10–17
+    label: Aug 10-17
     start: "2026-08-10"
     end: "2026-08-17"
     clicks: 1

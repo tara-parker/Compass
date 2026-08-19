@@ -6,7 +6,7 @@ cluster: blog
 slug: lessons-from-connecting-ai-agents-to-acumatica-what-finance-teams-need-to-know
 snapshots:
   - period: "2026-08-10_2026-08-17"
-    label: Aug 10–17
+    label: Aug 10-17
     start: "2026-08-10"
     end: "2026-08-17"
     clicks: 0

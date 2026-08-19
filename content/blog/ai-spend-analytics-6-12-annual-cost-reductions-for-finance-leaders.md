@@ -6,7 +6,7 @@ cluster: blog
 slug: ai-spend-analytics-6-12-annual-cost-reductions-for-finance-leaders
 snapshots:
   - period: "2026-08-10_2026-08-17"
-    label: Aug 10–17
+    label: Aug 10-17
     start: "2026-08-10"
     end: "2026-08-17"
     clicks: 0

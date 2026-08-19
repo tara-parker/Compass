@@ -1,7 +1,7 @@
 import { arrow, signed } from "@/lib/format";
 
 /**
- * DeltaBadge — small coloured change indicator.
+ * DeltaBadge - small coloured change indicator.
  * `invert` = true for position (lower is better).
  */
 export function DeltaBadge({
@@ -25,7 +25,7 @@ export function DeltaBadge({
     );
   }
   if (value == null) {
-    return <span className="text-[11px] text-flat">—</span>;
+    return <span className="text-[11px] text-flat">-</span>;
   }
   const good = value === 0 ? false : invert ? value < 0 : value > 0;
   const bad = value === 0 ? false : invert ? value > 0 : value < 0;

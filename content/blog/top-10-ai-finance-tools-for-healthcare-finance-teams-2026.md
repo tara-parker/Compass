@@ -6,7 +6,7 @@ cluster: blog
 slug: top-10-ai-finance-tools-for-healthcare-finance-teams-2026
 snapshots:
   - period: "2026-08-03_2026-08-10"
-    label: Aug 3–10
+    label: Aug 3-10
     start: "2026-08-03"
     end: "2026-08-10"
     clicks: 1
@@ -14,7 +14,7 @@ snapshots:
     ctr: 0.0526
     position: 12.0
   - period: "2026-08-10_2026-08-17"
-    label: Aug 10–17
+    label: Aug 10-17
     start: "2026-08-10"
     end: "2026-08-17"
     clicks: 0

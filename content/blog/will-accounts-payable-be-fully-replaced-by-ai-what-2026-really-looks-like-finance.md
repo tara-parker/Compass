@@ -6,7 +6,7 @@ cluster: blog
 slug: will-accounts-payable-be-fully-replaced-by-ai-what-2026-really-looks-like-finance
 snapshots:
   - period: "2026-08-10_2026-08-17"
-    label: Aug 10–17
+    label: Aug 10-17
     start: "2026-08-10"
     end: "2026-08-17"
     clicks: 0

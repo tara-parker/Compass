@@ -1,12 +1,12 @@
 ---
-title: ChatFin — Site Overview
+title: ChatFin - Site Overview
 type: main
 url: "https://chatfin.ai/"
 clusters: 14
 pages_tracked: 1198
 snapshots:
   - period: "2026-08-03_2026-08-10"
-    label: Aug 3–10
+    label: Aug 3-10
     start: "2026-08-03"
     end: "2026-08-10"
     clicks: 510
@@ -14,7 +14,7 @@ snapshots:
     ctr: 0.0048
     position: 16.9
   - period: "2026-08-10_2026-08-17"
-    label: Aug 10–17
+    label: Aug 10-17
     start: "2026-08-10"
     end: "2026-08-17"
     clicks: 378
@@ -23,7 +23,7 @@ snapshots:
     position: 17.32
 homepage:
   - period: "2026-08-03_2026-08-10"
-    label: Aug 3–10
+    label: Aug 3-10
     start: "2026-08-03"
     end: "2026-08-10"
     clicks: 94
@@ -31,7 +31,7 @@ homepage:
     ctr: 0.0523
     position: 14.73
   - period: "2026-08-10_2026-08-17"
-    label: Aug 10–17
+    label: Aug 10-17
     start: "2026-08-10"
     end: "2026-08-17"
     clicks: 74

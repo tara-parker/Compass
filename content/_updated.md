@@ -14,7 +14,7 @@ log:
         position: 1.0
         clicks: 1
         impressions: 1
-        window: Aug 3–10
+        window: Aug 3-10
         keyword_count: 0
         keyword_best: null
       - title: What Does NLP Stand For In Finance? A Clear Answer
@@ -23,7 +23,7 @@ log:
         position: 2.33
         clicks: 1
         impressions: 3
-        window: Aug 3–10
+        window: Aug 3-10
         keyword_count: 0
         keyword_best: null
       - title: Autonomous Finance Agents for Acumatica Close
@@ -32,7 +32,7 @@ log:
         position: 2.5
         clicks: 1
         impressions: 2
-        window: Aug 3–10
+        window: Aug 3-10
         keyword_count: 0
         keyword_best: null
       - title: Snowflake Finance Reconciliation With AI Agents
@@ -41,7 +41,7 @@ log:
         position: 2.5
         clicks: 1
         impressions: 2
-        window: Aug 3–10
+        window: Aug 3-10
         keyword_count: 0
         keyword_best: null
       - title: "ChatFin vs ChatGPT for NetSuite: Honest Comparison"
@@ -50,7 +50,7 @@ log:
         position: 2.6
         clicks: 0
         impressions: 10
-        window: Aug 3–10
+        window: Aug 3-10
         keyword_count: 0
         keyword_best: null
       - title: The Passed Adjustments Log Is Evidence
@@ -59,7 +59,7 @@ log:
         position: 2.73
         clicks: 1
         impressions: 11
-        window: Aug 3–10
+        window: Aug 3-10
         keyword_count: 0
         keyword_best: null
       - title: AI Agents for Flux and Variance Commentary
@@ -68,7 +68,7 @@ log:
         position: 2.8
         clicks: 0
         impressions: 10
-        window: Aug 3–10
+        window: Aug 3-10
         keyword_count: 0
         keyword_best: null
       - title: Manual Finance Is Losing. 49% Stuck. Here Is the Exit
@@ -77,7 +77,7 @@ log:
         position: 3.0
         clicks: 1
         impressions: 2
-        window: Aug 3–10
+        window: Aug 3-10
         keyword_count: 0
         keyword_best: null
       - title: "FP&A Automation: Top AI Tools for CFOs, 2026 Edition"
@@ -86,7 +86,7 @@ log:
         position: 3.0
         clicks: 0
         impressions: 12
-        window: Aug 3–10
+        window: Aug 3-10
         keyword_count: 0
         keyword_best: null
       - title: "Autonomous Enterprise 2026: SAP, Oracle, Microsoft AI"
@@ -95,7 +95,7 @@ log:
         position: 4.62
         clicks: 0
         impressions: 24
-        window: Aug 10–17
+        window: Aug 10-17
         keyword_count: 0
         keyword_best: null
       - title: Top 10 AI Finance Tools for Construction Accounting
@@ -104,7 +104,7 @@ log:
         position: 4.17
         clicks: 0
         impressions: 18
-        window: Aug 10–17
+        window: Aug 10-17
         keyword_count: 0
         keyword_best: null
       - title: 54% of CFOs Made AI Agents a Priority. What Happens Now
@@ -113,7 +113,7 @@ log:
         position: 3.5
         clicks: 0
         impressions: 12
-        window: Aug 3–10
+        window: Aug 3-10
         keyword_count: 0
         keyword_best: null
       - title: Top 10 AI Finance Tools for Manufacturing Finance 2026
@@ -122,7 +122,7 @@ log:
         position: 4.7
         clicks: 0
         impressions: 10
-        window: Aug 10–17
+        window: Aug 10-17
         keyword_count: 0
         keyword_best: null
       - title: Best AI Agent Platforms for JD Edwards EnterpriseOne
@@ -131,7 +131,7 @@ log:
         position: 9.57
         clicks: 0
         impressions: 21
-        window: Aug 10–17
+        window: Aug 10-17
         keyword_count: 0
         keyword_best: null
       - title: "Connect Claude to JD Edwards EnterpriseOne, Step by Step"
@@ -140,7 +140,7 @@ log:
         position: 6.4
         clicks: 2
         impressions: 10
-        window: Aug 10–17
+        window: Aug 10-17
         keyword_count: 0
         keyword_best: null
       - title: "ChatFin Products, AI Agents That Run Finance Work"
@@ -149,7 +149,7 @@ log:
         position: 3.36
         clicks: 1
         impressions: 123
-        window: Aug 10–17
+        window: Aug 10-17
         keyword_count: 0
         keyword_best: null
       - title: About ChatFin. One Platform for Every Finance Function
@@ -158,7 +158,7 @@ log:
         position: 4.03
         clicks: 2
         impressions: 136
-        window: Aug 10–17
+        window: Aug 10-17
         keyword_count: 0
         keyword_best: null
       - title: ChatFin Solutions Partner Program for Consultancies
@@ -167,7 +167,7 @@ log:
         position: 4.29
         clicks: 0
         impressions: 92
-        window: Aug 10–17
+        window: Aug 10-17
         keyword_count: 0
         keyword_best: null
       - title: Become a ChatFin Technology Partner for Finance AI
@@ -176,7 +176,7 @@ log:
         position: 7.25
         clicks: 0
         impressions: 16
-        window: Aug 10–17
+        window: Aug 10-17
         keyword_count: 0
         keyword_best: null
       - title: "Enterprise AI Tools for Finance, Free Calculators"
@@ -185,7 +185,7 @@ log:
         position: 3.5
         clicks: 0
         impressions: 10
-        window: Aug 3–10
+        window: Aug 3-10
         keyword_count: 0
         keyword_best: null
       - title: "How a Tech CFO Rewires for AI: Caitlin Haberberger"
@@ -194,7 +194,7 @@ log:
         position: 3.93
         clicks: 0
         impressions: 15
-        window: Aug 3–10
+        window: Aug 3-10
         keyword_count: 0
         keyword_best: null
       - title: Does Acumatica Have AI? Native Features in 2026
@@ -203,7 +203,7 @@ log:
         position: 15.5
         clicks: 0
         impressions: 103
-        window: Aug 10–17
+        window: Aug 10-17
         keyword_count: 0
         keyword_best: null
       - title: Acumatica vs NetSuite vs Sage Intacct AI
@@ -212,7 +212,7 @@ log:
         position: 7.39
         clicks: 0
         impressions: 18
-        window: Aug 10–17
+        window: Aug 10-17
         keyword_count: 0
         keyword_best: null
       - title: "Acumatica Summit 2026: Every AI Announcement"
@@ -221,7 +221,7 @@ log:
         position: 32.09
         clicks: 0
         impressions: 33
-        window: Aug 10–17
+        window: Aug 10-17
         keyword_count: 0
         keyword_best: null
       - title: Acumatica AI for Manufacturing and Distribution
@@ -230,7 +230,7 @@ log:
         position: 19.79
         clicks: 0
         impressions: 28
-        window: Aug 10–17
+        window: Aug 10-17
         keyword_count: 0
         keyword_best: null
       - title: Deploy ChatFin on Acumatica in Under a Week
@@ -392,7 +392,7 @@ log:
         position: 6.58
         clicks: 0
         impressions: 12
-        window: Aug 3–10
+        window: Aug 3-10
         keyword_count: 0
         keyword_best: null
       - title: AI Agents for Acumatica Finance Teams
@@ -428,7 +428,7 @@ log:
         position: 6.86
         clicks: 0
         impressions: 14
-        window: Aug 10–17
+        window: Aug 10-17
         keyword_count: 0
         keyword_best: null
       - title: AI Finance Controller for Acumatica
@@ -437,7 +437,7 @@ log:
         position: 8.38
         clicks: 0
         impressions: 13
-        window: Aug 10–17
+        window: Aug 10-17
         keyword_count: 0
         keyword_best: null
       - title: AI Finance Operations on Acumatica
@@ -500,7 +500,7 @@ log:
         position: 5.25
         clicks: 0
         impressions: 8
-        window: Aug 10–17
+        window: Aug 10-17
         keyword_count: 0
         keyword_best: null
       - title: AI Stock Visibility and Transfers in Acumatica
@@ -509,7 +509,7 @@ log:
         position: 6.45
         clicks: 0
         impressions: 11
-        window: Aug 10–17
+        window: Aug 10-17
         keyword_count: 0
         keyword_best: null
       - title: AI Trial Balance Analysis in Acumatica
@@ -563,7 +563,7 @@ log:
         position: 5.22
         clicks: 1
         impressions: 9
-        window: Aug 10–17
+        window: Aug 10-17
         keyword_count: 0
         keyword_best: null
       - title: Best AI Agents for Acumatica AP Automation
@@ -581,7 +581,7 @@ log:
         position: 12.35
         clicks: 1
         impressions: 109
-        window: Aug 10–17
+        window: Aug 10-17
         keyword_count: 0
         keyword_best: null
       - title: Best AP Automation Platform for Acumatica
@@ -626,7 +626,7 @@ log:
         position: 6.22
         clicks: 0
         impressions: 9
-        window: Aug 10–17
+        window: Aug 10-17
         keyword_count: 0
         keyword_best: null
       - title: "Claude AI for Acumatica: MCP Setup Guide"
@@ -644,7 +644,7 @@ log:
         position: 7.82
         clicks: 0
         impressions: 11
-        window: Aug 3–10
+        window: Aug 3-10
         keyword_count: 0
         keyword_best: null
       - title: Connect an AI Agent to Acumatica REST
@@ -725,7 +725,7 @@ log:
         position: 6.6
         clicks: 0
         impressions: 10
-        window: Aug 10–17
+        window: Aug 10-17
         keyword_count: 0
         keyword_best: null
       - title: Identify Obsolete Inventory in Acumatica
@@ -743,7 +743,7 @@ log:
         position: 38.84
         clicks: 0
         impressions: 32
-        window: Aug 10–17
+        window: Aug 10-17
         keyword_count: 0
         keyword_best: null
       - title: Lessons From Connecting AI to Acumatica
@@ -752,7 +752,7 @@ log:
         position: 5.22
         clicks: 0
         impressions: 9
-        window: Aug 10–17
+        window: Aug 10-17
         keyword_count: 0
         keyword_best: null
       - title: Match Bank Payments to Invoices in Acumatica
@@ -761,7 +761,7 @@ log:
         position: 7.57
         clicks: 0
         impressions: 14
-        window: Aug 10–17
+        window: Aug 10-17
         keyword_count: 0
         keyword_best: null
       - title: One Finance AI Platform Across Your ERPs
@@ -860,7 +860,7 @@ log:
         position: 7.53
         clicks: 7
         impressions: 266
-        window: Aug 10–17
+        window: Aug 10-17
         keyword_count: 0
         keyword_best: null
       - title: "SAP Business One MCP: Connect Claude AI to SAP B1 (2026)"
@@ -869,7 +869,7 @@ log:
         position: 8.43
         clicks: 3
         impressions: 388
-        window: Aug 10–17
+        window: Aug 10-17
         keyword_count: 0
         keyword_best: null
       - title: "AI Agents for NetSuite: Finance Automation That Posts to the Ledger"
@@ -878,7 +878,7 @@ log:
         position: 10.22
         clicks: 0
         impressions: 134
-        window: Aug 10–17
+        window: Aug 10-17
         keyword_count: 0
         keyword_best: null
       - title: "AI Agents for Dynamics 365 Finance: Automation Beyond Copilot"
@@ -932,7 +932,7 @@ log:
         position: 3.0
         clicks: 0
         impressions: 9
-        window: Aug 10–17
+        window: Aug 10-17
         keyword_count: 0
         keyword_best: null
 ---

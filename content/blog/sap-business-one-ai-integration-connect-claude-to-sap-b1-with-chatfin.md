@@ -6,7 +6,7 @@ cluster: blog
 slug: sap-business-one-ai-integration-connect-claude-to-sap-b1-with-chatfin
 snapshots:
   - period: "2026-08-10_2026-08-17"
-    label: Aug 10–17
+    label: Aug 10-17
     start: "2026-08-10"
     end: "2026-08-17"
     clicks: 1

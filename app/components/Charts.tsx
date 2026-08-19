@@ -1,6 +1,6 @@
 import type { Daily } from "@/lib/types";
 
-/** Sparkline — tiny inline trend line. */
+/** Sparkline - tiny inline trend line. */
 export function Sparkline({
   values,
   width = 88,
@@ -14,7 +14,7 @@ export function Sparkline({
 }) {
   const pts = values.filter((v): v is number => v != null);
   if (pts.length < 2) {
-    return <span className="text-[11px] text-flat">—</span>;
+    return <span className="text-[11px] text-flat">-</span>;
   }
   const min = Math.min(...pts);
   const max = Math.max(...pts);

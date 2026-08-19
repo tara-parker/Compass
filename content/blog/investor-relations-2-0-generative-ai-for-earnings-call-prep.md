@@ -6,7 +6,7 @@ cluster: blog
 slug: investor-relations-2-0-generative-ai-for-earnings-call-prep
 snapshots:
   - period: "2026-08-10_2026-08-17"
-    label: Aug 10–17
+    label: Aug 10-17
     start: "2026-08-10"
     end: "2026-08-17"
     clicks: 0

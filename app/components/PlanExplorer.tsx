@@ -33,7 +33,7 @@ function sortPages(pages: PlanPage[], mode: SortMode): PlanPage[] {
 }
 
 function n(v: number | null | undefined) {
-  return v == null ? "—" : v.toLocaleString("en-US");
+  return v == null ? "-" : v.toLocaleString("en-US");
 }
 
 /** Proportional bar of the four actions. Encodes the mix at a glance. */
@@ -88,7 +88,7 @@ function PageRow({ pg, depth }: { pg: PlanPage; depth: number }) {
           {pg.b === 1 && (
             <span
               className="shrink-0 rounded bg-up/15 px-1 py-px text-[9px] font-semibold text-up"
-              title="Has external backlinks — never delete"
+              title="Has external backlinks, never delete"
             >
               LINK
               {pg.rd > 0 && <span className="ml-0.5 opacity-80">{pg.rd}</span>}
@@ -97,15 +97,23 @@ function PageRow({ pg, depth }: { pg: PlanPage; depth: number }) {
           {pg.w === 1 && (
             <span
               className="shrink-0 rounded bg-amber-400/20 px-1 py-px text-[9px] font-semibold text-amber-200"
-              title={`Watchlist — next DELETE batch if it still shows nothing${pg.wd ? `. Review ${pg.wd}` : ""}`}
+              title={`Watchlist. Next DELETE batch if it still shows nothing${pg.wd ? `. Review ${pg.wd}` : ""}`}
             >
               WATCH
+            </span>
+          )}
+          {pg.r === "not-indexed" && (
+            <span
+              className="shrink-0 rounded bg-down/20 px-1 py-px text-[9px] font-semibold text-down"
+              title="Google crawled this page and refused to index it"
+            >
+              NOIDX
             </span>
           )}
           {pg.x === 1 && (
             <span
               className="shrink-0 rounded bg-down/10 px-1 py-px text-[9px] font-semibold text-down/90"
-              title="Orphan — in the sitemap but no internal links point to it, so a crawler cannot reach it"
+              title="Orphan. In the sitemap but no internal links point to it, so a crawler cannot reach it"
             >
               ORPH
             </span>
@@ -152,7 +160,7 @@ function PageRow({ pg, depth }: { pg: PlanPage; depth: number }) {
         {pg.i ? n(pg.i) : <span className="text-flat">0</span>}
       </div>
       <div className="hidden tabular-nums text-right text-[12px] text-slate-300 sm:block">
-        {pg.o == null ? <span className="text-flat">—</span> : pg.o.toFixed(1)}
+        {pg.o == null ? <span className="text-flat">-</span> : pg.o.toFixed(1)}
       </div>
       <div className="hidden justify-end sm:flex">
         <ActionChip action={pg.s} />

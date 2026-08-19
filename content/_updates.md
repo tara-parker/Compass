@@ -13,7 +13,7 @@ log:
     changed: 15
     movers:
       - slug: (home)
-        title: ChatFin — Site Overview
+        title: ChatFin - Site Overview
         cluster: ""
         kind: improved
         clicks: 74
@@ -300,7 +300,7 @@ log:
     changed: 0
     movers:
       - slug: (home)
-        title: ChatFin — Site Overview
+        title: ChatFin - Site Overview
         cluster: ""
         kind: added
         clicks: 94

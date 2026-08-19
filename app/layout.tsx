@@ -12,7 +12,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Compass — ChatFin pages tracking",
+  title: "Compass - ChatFin pages tracking",
   description:
     "ChatFin pages tracking: cluster, main and sub pages tracked over time.",
 };

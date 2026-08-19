@@ -6,7 +6,7 @@ cluster: blog
 slug: the-month-end-close-gap-53-take-6-days-47-have-moved-to-3-day-cycles
 snapshots:
   - period: "2026-08-10_2026-08-17"
-    label: Aug 10–17
+    label: Aug 10-17
     start: "2026-08-10"
     end: "2026-08-17"
     clicks: 0

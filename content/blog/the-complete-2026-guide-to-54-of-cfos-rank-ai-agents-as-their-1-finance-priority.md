@@ -6,7 +6,7 @@ cluster: blog
 slug: the-complete-2026-guide-to-54-of-cfos-rank-ai-agents-as-their-1-finance-priority
 snapshots:
   - period: "2026-08-03_2026-08-10"
-    label: Aug 3–10
+    label: Aug 3-10
     start: "2026-08-03"
     end: "2026-08-10"
     clicks: 0

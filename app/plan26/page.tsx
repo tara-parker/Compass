@@ -18,8 +18,29 @@ const REASON_BY_ACTION: Record<string, string[]> = {
   KEEP: ["backlinked-earning", "earns-clicks", "striking-distance", "unique-untested"],
   UPDATE: ["backlinked-idle", "indexed-weak", "canonical", "crowded"],
   MERGE: ["dup-signal", "dup-untested"],
-  DELETE: ["dup-redundant", "padded-variant", "dup-dead", "dark-after-trial"],
+  DELETE: ["not-indexed", "dup-redundant", "padded-variant", "dup-dead", "dark-after-trial"],
 };
+
+// The rules the rewrites follow. Kept on the page because a plan nobody can see
+// the rules for gets worked differently by every person who touches it.
+const RULES: [string, string][] = [
+  ["Title and meta are search terms",
+   "Both must read like something a person typed into Google, not like a headline."],
+  ["Never change the slug or the URL",
+   "Change the title, the body and the meta. The URL stays, so nothing needs a redirect."],
+  ["Work the impressions first",
+   "A page with impressions and no clicks is a snippet problem and the fastest fix on the site."],
+  ["One wording for the product",
+   "Finance AI platform. Same phrase every time, so it accumulates instead of splitting."],
+  ["Keep the WP forms",
+   "Do not drop the form when rewriting a page body."],
+  ["Only SAP Business One has a real hub",
+   "Every other topic is a flat pile of posts with nothing to link up to. Build the hub before more posts."],
+  ["Create by intersection, not by volume",
+   "ERP x function x use case. A new page needs a query no existing page answers."],
+  ["Zero impressions is not proof on its own",
+   "Delete only with evidence: not indexed by Google, near-duplicate, padded variant, or dead after 90 days."],
+];
 
 export default function Plan26Page() {
   const plan = getPlan();
@@ -46,6 +67,82 @@ export default function Plan26Page() {
         </div>
         <div className="mt-3">
           <ActionBar counts={t} total={t.urls} />
+        </div>
+      </Card>
+
+      <Card title="Topics: what exists, what it earns, what is missing">
+        <div className="overflow-x-auto">
+          <table className="w-full min-w-[720px] text-sm">
+            <thead>
+              <tr className="border-b border-ink-line text-[10px] uppercase tracking-wide text-flat">
+                <th className="px-2 py-2 text-left font-medium">Topic</th>
+                <th className="px-2 py-2 text-right font-medium">Pages</th>
+                <th className="px-2 py-2 text-right font-medium">Impressions</th>
+                <th className="px-2 py-2 text-right font-medium">Clicks</th>
+                <th className="px-2 py-2 text-right font-medium">Orphans</th>
+                <th className="px-2 py-2 text-left font-medium">Hub</th>
+                <th className="px-2 py-2 text-left font-medium">Keep / Update / Merge / Delete</th>
+              </tr>
+            </thead>
+            <tbody>
+              {plan.topics.map((tp) => {
+                const realHub = tp.hub && !tp.hub.startsWith("/blog/") && tp.hubImpressions > 0;
+                return (
+                  <tr key={tp.topic} className="border-b border-ink-line/50 last:border-0">
+                    <td className="whitespace-nowrap px-2 py-2 font-medium text-slate-200">
+                      {tp.topic}
+                    </td>
+                    <td className="px-2 py-2 text-right tabular-nums text-slate-200">
+                      {num(tp.pages)}
+                    </td>
+                    <td className="px-2 py-2 text-right tabular-nums text-slate-200">
+                      {num(tp.impressions)}
+                    </td>
+                    <td
+                      className={`px-2 py-2 text-right tabular-nums ${
+                        tp.clicks ? "text-up" : "text-flat"
+                      }`}
+                    >
+                      {num(tp.clicks)}
+                    </td>
+                    <td className="px-2 py-2 text-right tabular-nums text-flat">
+                      {num(tp.orphans)}
+                    </td>
+                    <td className="px-2 py-2">
+                      {realHub ? (
+                        <span className="font-mono text-[10.5px] text-slate-400">{tp.hub}</span>
+                      ) : (
+                        <span className="rounded bg-down/15 px-1.5 py-0.5 text-[10px] font-semibold text-down">
+                          NO HUB
+                        </span>
+                      )}
+                    </td>
+                    <td className="px-2 py-2">
+                      <div className="flex items-center gap-2">
+                        <span className="w-24 shrink-0 tabular-nums text-[11px] text-slate-400">
+                          {tp.counts.KEEP}/{tp.counts.UPDATE}/{tp.counts.MERGE}/{tp.counts.DELETE}
+                        </span>
+                        <span className="min-w-[72px] flex-1">
+                          <ActionBar counts={tp.counts} total={tp.pages} />
+                        </span>
+                      </div>
+                    </td>
+                  </tr>
+                );
+              })}
+            </tbody>
+          </table>
+        </div>
+      </Card>
+
+      <Card title="Rules for every rewrite">
+        <div className="grid gap-x-6 gap-y-3 sm:grid-cols-2">
+          {RULES.map(([rule, detail]) => (
+            <div key={rule} className="border-b border-ink-line/40 pb-2 last:border-0">
+              <div className="text-[12.5px] font-semibold text-slate-200">{rule}</div>
+              <div className="text-[12px] leading-snug text-flat">{detail}</div>
+            </div>
+          ))}
         </div>
       </Card>
 

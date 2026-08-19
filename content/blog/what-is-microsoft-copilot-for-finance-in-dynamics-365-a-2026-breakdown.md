@@ -6,7 +6,7 @@ cluster: blog
 slug: what-is-microsoft-copilot-for-finance-in-dynamics-365-a-2026-breakdown
 snapshots:
   - period: "2026-08-03_2026-08-10"
-    label: Aug 3–10
+    label: Aug 3-10
     start: "2026-08-03"
     end: "2026-08-10"
     clicks: 1
@@ -14,7 +14,7 @@ snapshots:
     ctr: 0.0185
     position: 8.17
   - period: "2026-08-10_2026-08-17"
-    label: Aug 10–17
+    label: Aug 10-17
     start: "2026-08-10"
     end: "2026-08-17"
     clicks: 0

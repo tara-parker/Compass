@@ -1,13 +1,13 @@
 /** Action assigned to every live URL by scripts/build_plan26.py. */
 export type PlanAction = "KEEP" | "UPDATE" | "MERGE" | "DELETE";
 
-/** Terse keys keep the client payload small — 4,539 pages ship to the browser. */
+/** Terse keys keep the client payload small. 4,539 pages ship to the browser. */
 export type PlanPage = {
   /** path */ p: string;
   /** title */ t: string;
   /** action */ s: PlanAction;
   /** reason key, see Plan.reasons */ r: string;
-  /** tier A–E */ k: string;
+  /** tier A to E */ k: string;
   /** clicks */ c: number;
   /** impressions */ i: number;
   /** avg position */ o: number | null;
@@ -46,6 +46,19 @@ export type PlanSub = {
 export type PlanCluster = Omit<PlanSub, "sub"> & {
   cluster: string;
   subs: PlanSub[];
+};
+
+export type PlanTopic = {
+  topic: string;
+  pages: number;
+  impressions: number;
+  clicks: number;
+  backlinked: number;
+  orphans: number;
+  counts: PlanCounts;
+  hub: string;
+  hubImpressions: number;
+  opportunities: { p: string; t: string; i: number; o: number | null }[];
 };
 
 export type PlanTier = {
@@ -90,6 +103,7 @@ export type Plan = {
   actions: Record<PlanAction, string>;
   reasons: Record<string, string>;
   reasonCounts: Record<string, number>;
+  topics: PlanTopic[];
   tiers: PlanTier[];
   clusters: PlanCluster[];
 };

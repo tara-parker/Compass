@@ -6,7 +6,7 @@ cluster: blog
 slug: ai-bi-tools-that-actually-work-for-finance-complete-platform-review
 snapshots:
   - period: "2026-08-03_2026-08-10"
-    label: Aug 3–10
+    label: Aug 3-10
     start: "2026-08-03"
     end: "2026-08-10"
     clicks: 2
@@ -14,7 +14,7 @@ snapshots:
     ctr: 0.0018
     position: 13.37
   - period: "2026-08-10_2026-08-17"
-    label: Aug 10–17
+    label: Aug 10-17
     start: "2026-08-10"
     end: "2026-08-17"
     clicks: 0

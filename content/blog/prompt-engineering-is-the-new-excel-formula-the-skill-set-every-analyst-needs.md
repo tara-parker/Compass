@@ -6,7 +6,7 @@ cluster: blog
 slug: prompt-engineering-is-the-new-excel-formula-the-skill-set-every-analyst-needs
 snapshots:
   - period: "2026-08-10_2026-08-17"
-    label: Aug 10–17
+    label: Aug 10-17
     start: "2026-08-10"
     end: "2026-08-17"
     clicks: 0

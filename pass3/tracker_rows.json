@@ -1,0 +1,402 @@
+[
+ {
+  "path": "/blog/the-digital-finance-shift-how-cfos-are-prioritizing-transformation-over-operations/",
+  "url": "https://chatfin.ai/blog/the-digital-finance-shift-how-cfos-are-prioritizing-transformation-over-operations/",
+  "new_title": "Why CFOs Are Shifting to Transformation",
+  "new_meta": "Why CFOs are shifting budget from running finance to changing it, what gets cut to fund that, and which transformations actually stick.",
+  "keyword": "cfo finance transformation",
+  "status": "Live"
+ },
+ {
+  "path": "/blog/building-ai-agents-for-ap-invoice-coding-a-step-by-step-guide/",
+  "url": "https://chatfin.ai/blog/building-ai-agents-for-ap-invoice-coding-a-step-by-step-guide/",
+  "new_title": "How to Build an AP Invoice Coding Agent",
+  "new_meta": "How to build an AP invoice coding agent step by step: the training data it needs, how to test coding accuracy, and where approval must sit.",
+  "keyword": "ap invoice coding agent",
+  "status": "Live"
+ },
+ {
+  "path": "/blog/a-verbal-change-order-is-still-revenue/",
+  "url": "https://chatfin.ai/blog/a-verbal-change-order-is-still-revenue/",
+  "new_title": "Is a Verbal Change Order Still Revenue?",
+  "new_meta": "A verbal change order is still revenue. What that means for recognition, what evidence you need, and how to stop it going unbilled entirely.",
+  "keyword": "verbal change order revenue",
+  "status": "Live"
+ },
+ {
+  "path": "/glossary/capital-asset-pricing-model-capm-definition-guide/",
+  "url": "https://chatfin.ai/glossary/capital-asset-pricing-model-capm-definition-guide/",
+  "new_title": "What Is CAPM? Formula and Meaning",
+  "new_meta": "What the capital asset pricing model is, the CAPM formula, and how to read the result. Includes where its assumptions break in practice.",
+  "keyword": "what is capm",
+  "status": "Live"
+ },
+ {
+  "path": "/glossary/finance-copilot-complete-definition-ai-assistant-guide/",
+  "url": "https://chatfin.ai/glossary/finance-copilot-complete-definition-ai-assistant-guide/",
+  "new_title": "What Is a Finance Copilot?",
+  "new_meta": "What a finance copilot is, how it differs from a finance agent, and what it can and cannot do against live ledger data in your ERP.",
+  "keyword": "what is a finance copilot",
+  "status": "Live"
+ },
+ {
+  "path": "/blog/the-autonomous-finance-agent-a-new-coworker/",
+  "url": "https://chatfin.ai/blog/the-autonomous-finance-agent-a-new-coworker/",
+  "new_title": "What Is an Autonomous Finance Agent?",
+  "new_meta": "What an autonomous finance agent is, which work it takes off a team, and the supervision it still needs before anything reaches the ledger.",
+  "keyword": "autonomous finance agent",
+  "status": "Live"
+ },
+ {
+  "path": "/blog/gaap-compliant-ai-journal-entry-automation/",
+  "url": "https://chatfin.ai/blog/gaap-compliant-ai-journal-entry-automation/",
+  "new_title": "Are AI Journal Entries GAAP Compliant?",
+  "new_meta": "Are AI generated journal entries GAAP compliant? What the standard actually requires, what has to be evidenced, and who signs the entry.",
+  "keyword": "gaap ai journal entry automation",
+  "status": "Live"
+ },
+ {
+  "path": "/blog/driver-based-planning-needs-drivers-you-can-measure/",
+  "url": "https://chatfin.ai/blog/driver-based-planning-needs-drivers-you-can-measure/",
+  "new_title": "How to Pick Drivers for Planning",
+  "new_meta": "How to pick drivers for driver based planning: the test a driver has to pass to be useful, and why most plans fail on unmeasurable ones.",
+  "keyword": "driver based planning",
+  "status": "Live"
+ },
+ {
+  "path": "/blog/sap-business-one-workflow-automation/",
+  "url": "https://chatfin.ai/blog/sap-business-one-workflow-automation/",
+  "new_title": "SAP Business One Workflow Automation",
+  "new_meta": "SAP Business One workflow automation: which finance approvals and postings can be automated, and what stays manual because B1 will not expose it.",
+  "keyword": "sap business one workflow automation",
+  "status": "Live"
+ },
+ {
+  "path": "/blog/top-10-best-finance-tools-for-microsoft-dynamics-365-users/",
+  "url": "https://chatfin.ai/blog/top-10-best-finance-tools-for-microsoft-dynamics-365-users/",
+  "new_title": "Best Finance Tools for Dynamics 365",
+  "new_meta": "The best finance tools for Microsoft Dynamics 365 users, compared on what each adds beyond native functionality and what it costs to run.",
+  "keyword": "finance tools for dynamics 365",
+  "status": "Live"
+ },
+ {
+  "path": "/blog/ai-reconciliation-software-automate-bank-subledger-and-intercompany-rec/",
+  "url": "https://chatfin.ai/blog/ai-reconciliation-software-automate-bank-subledger-and-intercompany-rec/",
+  "new_title": "Best AI Reconciliation Software",
+  "new_meta": "The best AI reconciliation software for bank, subledger and intercompany matching, compared on what clears automatically and what escalates.",
+  "keyword": "ai reconciliation software",
+  "status": "Live"
+ },
+ {
+  "path": "/blog/ai-for-vendor-master-data-management/",
+  "url": "https://chatfin.ai/blog/ai-for-vendor-master-data-management/",
+  "new_title": "How AI Cleans Vendor Master Data",
+  "new_meta": "How AI cleans vendor master data: finding duplicates, catching bank detail changes, and flagging the records that cause payment failures.",
+  "keyword": "vendor master data management ai",
+  "status": "Live"
+ },
+ {
+  "path": "/blog/customer-payment-behavior-intelligence-2026/",
+  "url": "https://chatfin.ai/blog/customer-payment-behavior-intelligence-2026/",
+  "new_title": "How to Predict Customer Payment Behaviour",
+  "new_meta": "How to predict customer payment behaviour from your own AR history, which signals actually forecast a late payment, and what to do about it.",
+  "keyword": "customer payment behaviour prediction",
+  "status": "Live"
+ },
+ {
+  "path": "/blog/oracle-fusion-ai-the-next-frontier-of-financial-operations/",
+  "url": "https://chatfin.ai/blog/oracle-fusion-ai-the-next-frontier-of-financial-operations/",
+  "new_title": "What Does Oracle Fusion AI Do?",
+  "new_meta": "What Oracle Fusion AI does for financial operations today, which features are live rather than roadmap, and where a specialist agent still helps.",
+  "keyword": "oracle fusion ai",
+  "status": "Live"
+ },
+ {
+  "path": "/blog/finance-transformation-leaders-linkedin-cfos-implementing-ai-solutions/",
+  "url": "https://chatfin.ai/blog/finance-transformation-leaders-linkedin-cfos-implementing-ai-solutions/",
+  "new_title": "Finance Leaders Implementing AI",
+  "new_meta": "The finance leaders publishing real AI implementation work, what they are actually running in production, and what they say did not work.",
+  "keyword": "finance transformation leaders ai",
+  "status": "Live"
+ },
+ {
+  "path": "/blog/ai-driven-sap-b1-finance-automated-accounting-workflows-operations-in-2026/",
+  "url": "https://chatfin.ai/blog/ai-driven-sap-b1-finance-automated-accounting-workflows-operations-in-2026/",
+  "new_title": "AI for SAP Business One Accounting",
+  "new_meta": "AI for SAP Business One accounting: which workflows automate cleanly in B1, which need a layer on top, and what each approach costs.",
+  "keyword": "sap business one ai accounting",
+  "status": "Live"
+ },
+ {
+  "path": "/blog/spend-that-never-touched-procurement/",
+  "url": "https://chatfin.ai/blog/spend-that-never-touched-procurement/",
+  "new_title": "How to Find Off Contract Spend",
+  "new_meta": "How to find off contract spend hiding in your AP data, why it never reaches procurement, and what it is quietly costing you each quarter.",
+  "keyword": "off contract spend",
+  "status": "Live"
+ },
+ {
+  "path": "/blog/ai-in-accounts-payable-how-finance-teams-are-cutting-costs-10x/",
+  "url": "https://chatfin.ai/blog/ai-in-accounts-payable-how-finance-teams-are-cutting-costs-10x/",
+  "new_title": "How AI Cuts Accounts Payable Costs",
+  "new_meta": "How AI cuts accounts payable costs: where the cost per invoice actually sits, which steps automate, and what savings survive contact with reality.",
+  "keyword": "ai accounts payable cost reduction",
+  "status": "Live"
+ },
+ {
+  "path": "/blog/sap-b1-accounting-excellence-ai-finance-automation-platform-2026/",
+  "url": "https://chatfin.ai/blog/sap-b1-accounting-excellence-ai-finance-automation-platform-2026/",
+  "new_title": "SAP B1 Finance Automation Software",
+  "new_meta": "SAP B1 finance automation software compared: what connects to Business One natively, what needs middleware, and which route survives upgrades.",
+  "keyword": "sap b1 finance automation software",
+  "status": "Live"
+ },
+ {
+  "path": "/blog/the-remittance-data-you-finally-get-and-cannot-use/",
+  "url": "https://chatfin.ai/blog/the-remittance-data-you-finally-get-and-cannot-use/",
+  "new_title": "Why Remittance Data Is Hard to Use",
+  "new_meta": "Why remittance data arrives in a form you cannot use, what breaks automatic cash application, and how to match payments without clean references.",
+  "keyword": "remittance data cash application",
+  "status": "Live"
+ },
+ {
+  "path": "/glossary/autonomous-accounts-payable-ai-driven-ap-automation-touchless-processing/",
+  "url": "https://chatfin.ai/glossary/autonomous-accounts-payable-ai-driven-ap-automation-touchless-processing/",
+  "new_title": "What Is Touchless AP Processing?",
+  "new_meta": "What touchless AP processing means, what share of invoices realistically qualifies, and which exceptions will always need a person to clear.",
+  "keyword": "touchless ap processing",
+  "status": "Live"
+ },
+ {
+  "path": "/blog/ai-enterprise-risk-management-finance-cfo-2026/",
+  "url": "https://chatfin.ai/blog/ai-enterprise-risk-management-finance-cfo-2026/",
+  "new_title": "How AI Supports Enterprise Risk Management",
+  "new_meta": "How AI supports enterprise risk management in finance: continuous controls testing, exception detection, and what a CFO still has to judge.",
+  "keyword": "ai enterprise risk management",
+  "status": "Live"
+ },
+ {
+  "path": "/blog/a-forecast-that-updates-when-the-actuals-do/",
+  "url": "https://chatfin.ai/blog/a-forecast-that-updates-when-the-actuals-do/",
+  "new_title": "How to Build a Rolling Forecast",
+  "new_meta": "How to build a rolling forecast that updates when the actuals do, what has to be automated for it to work, and where manual overrides belong.",
+  "keyword": "rolling forecast",
+  "status": "Live"
+ },
+ {
+  "path": "/blog/ai-agents-for-head-of-accounting/",
+  "url": "https://chatfin.ai/blog/ai-agents-for-head-of-accounting/",
+  "new_title": "AI Agents for Heads of Accounting",
+  "new_meta": "AI agents for heads of accounting: what they take off the team, what they escalate, and how the control model keeps the ledger defensible.",
+  "keyword": "ai agents for accounting leaders",
+  "status": "Live"
+ },
+ {
+  "path": "/blog/erp-connectivity-ai-agents-for-integrated-finance-operations/",
+  "url": "https://chatfin.ai/blog/erp-connectivity-ai-agents-for-integrated-finance-operations/",
+  "new_title": "How AI Agents Connect to Your ERP",
+  "new_meta": "How AI agents connect to an ERP: the read path, the write path, permission scoping, and which integration routes survive a version upgrade.",
+  "keyword": "erp ai agent connectivity",
+  "status": "Live"
+ },
+ {
+  "path": "/blog/netsuite-vs-competitors-comparison-for-finance/",
+  "url": "https://chatfin.ai/blog/netsuite-vs-competitors-comparison-for-finance/",
+  "new_title": "NetSuite vs Competitors for Finance",
+  "new_meta": "NetSuite compared with its main competitors for finance teams: what each handles natively, where the gaps are, and what fills them.",
+  "keyword": "netsuite vs competitors",
+  "status": "Live"
+ },
+ {
+  "path": "/blog/top-10-best-audit-ready-close-tools-for-controllers/",
+  "url": "https://chatfin.ai/blog/top-10-best-audit-ready-close-tools-for-controllers/",
+  "new_title": "Best Audit Ready Close Tools",
+  "new_meta": "The best audit ready close tools for controllers, compared on evidence capture, reconciliation depth and what an auditor will actually accept.",
+  "keyword": "audit ready close tools",
+  "status": "Live"
+ },
+ {
+  "path": "/automating-cash-application-when-remittance-is-messy/",
+  "url": "https://chatfin.ai/automating-cash-application-when-remittance-is-messy/",
+  "new_title": "How to Automate Messy Cash Application",
+  "new_meta": "How to automate cash application when remittance is messy: part payments, missing references and deductions, matched without manual keying.",
+  "keyword": "automate cash application",
+  "status": "Live"
+ },
+ {
+  "path": "/blog/finance-automation/",
+  "url": "https://chatfin.ai/blog/finance-automation/",
+  "new_title": "What Is Finance Automation?",
+  "new_meta": "What finance automation covers across AP, AR, close and reporting, which parts are mature, and a realistic order to tackle them in.",
+  "keyword": "what is finance automation",
+  "status": "Live"
+ },
+ {
+  "path": "/blog/esker-alternatives-2026/",
+  "url": "https://chatfin.ai/blog/esker-alternatives-2026/",
+  "new_title": "Best Esker Alternatives in 2026",
+  "new_meta": "The best Esker alternatives compared on AP and AR coverage, ERP connectivity, implementation time and what each one costs to run.",
+  "keyword": "esker alternatives",
+  "status": "Live"
+ },
+ {
+  "path": "/blog/digits-alternatives-2026/",
+  "url": "https://chatfin.ai/blog/digits-alternatives-2026/",
+  "new_title": "Best Digits Alternatives in 2026",
+  "new_meta": "The best Digits alternatives compared on bookkeeping automation, reporting depth and which ones suit a finance team rather than a founder.",
+  "keyword": "digits alternatives",
+  "status": "Live"
+ },
+ {
+  "path": "/blog/days-sales-outstanding-interpretation-2026/",
+  "url": "https://chatfin.ai/blog/days-sales-outstanding-interpretation-2026/",
+  "new_title": "What Is a Good DSO?",
+  "new_meta": "What counts as a good DSO, how to read days sales outstanding against your own terms and sector, and what a rising number is telling you.",
+  "keyword": "what is a good dso",
+  "status": "Live"
+ },
+ {
+  "path": "/blog/current-ratio-interpretation-2026/",
+  "url": "https://chatfin.ai/blog/current-ratio-interpretation-2026/",
+  "new_title": "What Is a Good Current Ratio?",
+  "new_meta": "What counts as a good current ratio, how to read it by sector, and why a high number is sometimes a sign of trapped cash rather than strength.",
+  "keyword": "what is a good current ratio",
+  "status": "Live"
+ },
+ {
+  "path": "/blog/cash-conversion-cycle-interpretation-2026/",
+  "url": "https://chatfin.ai/blog/cash-conversion-cycle-interpretation-2026/",
+  "new_title": "What Is a Good Cash Conversion Cycle?",
+  "new_meta": "What a good cash conversion cycle looks like, how to read each of its three components, and which lever moves it fastest in practice.",
+  "keyword": "cash conversion cycle",
+  "status": "Live"
+ },
+ {
+  "path": "/blog/bill-com-alternatives-2026/",
+  "url": "https://chatfin.ai/blog/bill-com-alternatives-2026/",
+  "new_title": "Best Bill.com Alternatives in 2026",
+  "new_meta": "The best Bill.com alternatives compared on AP automation, approval routing, ERP sync and what each one costs at real invoice volume.",
+  "keyword": "bill.com alternatives",
+  "status": "Live"
+ },
+ {
+  "path": "/blog/avidxchange-alternatives-2026/",
+  "url": "https://chatfin.ai/blog/avidxchange-alternatives-2026/",
+  "new_title": "Best AvidXchange Alternatives in 2026",
+  "new_meta": "The best AvidXchange alternatives compared on invoice capture, payment execution, ERP connectivity and total cost at your volume.",
+  "keyword": "avidxchange alternatives",
+  "status": "Live"
+ },
+ {
+  "path": "/blog/asset-turnover-interpretation-2026/",
+  "url": "https://chatfin.ai/blog/asset-turnover-interpretation-2026/",
+  "new_title": "What Is a Good Asset Turnover Ratio?",
+  "new_meta": "What a good asset turnover ratio looks like, how it differs by industry, and why comparing it across sectors tells you almost nothing.",
+  "keyword": "asset turnover ratio",
+  "status": "Live"
+ },
+ {
+  "path": "/blog/ai-agents-in-finance-2026/",
+  "url": "https://chatfin.ai/blog/ai-agents-in-finance-2026/",
+  "new_title": "AI Agents in Finance: 2026 Guide",
+  "new_meta": "A guide to AI agents in finance for 2026: what they do today, what they cannot do yet, and where teams are getting real payback.",
+  "keyword": "ai agents in finance",
+  "status": "Live"
+ },
+ {
+  "path": "/events/vancouver-cfo-network-ai-agents/",
+  "url": "https://chatfin.ai/events/vancouver-cfo-network-ai-agents/",
+  "new_title": "Vancouver CFO Network: AI Agents",
+  "new_meta": "The Vancouver CFO Network session on AI agents in finance: what was covered, who attended, and the questions finance leaders asked on the night.",
+  "keyword": "vancouver cfo network ai",
+  "status": "Live"
+ },
+ {
+  "path": "/blog/top-10-ai-for-fpa-influencers-2025/",
+  "url": "https://chatfin.ai/blog/top-10-ai-for-fpa-influencers-2025/",
+  "new_title": "Top AI and FP&A Voices to Follow",
+  "new_meta": "The AI and FP&A voices worth following, what each one actually publishes, and which are practitioners rather than commentators.",
+  "keyword": "ai fp&a influencers",
+  "status": "Live"
+ },
+ {
+  "path": "/blog/new-ai-agents-finance-automation/",
+  "url": "https://chatfin.ai/blog/new-ai-agents-finance-automation/",
+  "new_title": "New AI Agents for Finance Automation",
+  "new_meta": "The newest AI agents for finance automation, what each one adds over the previous generation, and which are ready for production use.",
+  "keyword": "new ai agents finance automation",
+  "status": "Live"
+ },
+ {
+  "path": "/blog/new-ai-agents-for-cfos/",
+  "url": "https://chatfin.ai/blog/new-ai-agents-for-cfos/",
+  "new_title": "New AI Agents for CFOs",
+  "new_meta": "The new AI agents a CFO should know about, what each one automates, and the questions to ask a vendor before any of it touches your ledger.",
+  "keyword": "new ai agents for cfos",
+  "status": "Live"
+ },
+ {
+  "path": "/blog/best-numerics-datatails-alternatives/",
+  "url": "https://chatfin.ai/blog/best-numerics-datatails-alternatives/",
+  "new_title": "Best Numeric and Datarails Alternatives",
+  "new_meta": "The best Numeric and Datarails alternatives compared on close management, reporting depth, ERP connectivity and implementation effort.",
+  "keyword": "numeric datarails alternatives",
+  "status": "Live"
+ },
+ {
+  "path": "/blog/ai-tools-every-controller-should-try-before-2026/",
+  "url": "https://chatfin.ai/blog/ai-tools-every-controller-should-try-before-2026/",
+  "new_title": "AI Tools Every Controller Should Try",
+  "new_meta": "The AI tools every controller should try, what each removes from the close, and which ones are worth a pilot before committing budget.",
+  "keyword": "ai tools for controllers",
+  "status": "Live"
+ },
+ {
+  "path": "/blog/autonomous-reconciliation-engines-from-matching-data-to-understanding-it/",
+  "url": "https://chatfin.ai/blog/autonomous-reconciliation-engines-from-matching-data-to-understanding-it/",
+  "new_title": "How Autonomous Reconciliation Works",
+  "new_meta": "How autonomous reconciliation works: the step from matching data to understanding it, and what an engine has to explain before you trust it.",
+  "keyword": "autonomous reconciliation",
+  "status": "Live"
+ },
+ {
+  "path": "/blog/ai-supply-chains-for-finance-from-static-documents-to-living-financial-assets/",
+  "url": "https://chatfin.ai/blog/ai-supply-chains-for-finance-from-static-documents-to-living-financial-assets/",
+  "new_title": "How AI Handles Finance Documents",
+  "new_meta": "How AI turns static finance documents into data you can query, what it extracts reliably, and which document types still defeat it.",
+  "keyword": "ai finance document processing",
+  "status": "Live"
+ },
+ {
+  "path": "/blog/ai-finance-fraud-protection-ap-ar-cfo-2026/",
+  "url": "https://chatfin.ai/blog/ai-finance-fraud-protection-ap-ar-cfo-2026/",
+  "new_title": "How AI Detects Finance Fraud",
+  "new_meta": "How AI detects finance fraud across AP and AR: duplicate payments, bank detail changes and the patterns a person would never spot in time.",
+  "keyword": "ai finance fraud detection",
+  "status": "Live"
+ },
+ {
+  "path": "/blog/2026-agi-agents-for-finance-operations-the-next-frontier-after-rpa-and-traditional-ai/",
+  "url": "https://chatfin.ai/blog/2026-agi-agents-for-finance-operations-the-next-frontier-after-rpa-and-traditional-ai/",
+  "new_title": "What Comes After RPA in Finance?",
+  "new_meta": "What comes after RPA in finance operations, why scripted automation stalls on exceptions, and what changes when a model handles them instead.",
+  "keyword": "after rpa finance automation",
+  "status": "Live"
+ },
+ {
+  "path": "/blog/salesforce-ai-integration-finance-hub/",
+  "url": "https://chatfin.ai/blog/salesforce-ai-integration-finance-hub/",
+  "new_title": "Salesforce and Finance AI Integration",
+  "new_meta": "How Salesforce connects to finance AI: which records matter for revenue and collections, and what flows back into the CRM once they do.",
+  "keyword": "salesforce finance ai integration",
+  "status": "Live"
+ },
+ {
+  "path": "/blog/the-rise-of-finance-ai-chat-2026/",
+  "url": "https://chatfin.ai/blog/the-rise-of-finance-ai-chat-2026/",
+  "new_title": "Why Finance Teams Are Using AI Chat",
+  "new_meta": "Why finance teams are using AI chat against their own data, what it answers reliably, and where a chat interface is the wrong tool entirely.",
+  "keyword": "finance ai chat",
+  "status": "Live"
+ }
+]

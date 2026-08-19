@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-Build data/plan26.json — the 2026 prune-and-build plan.
+Build data/plan26.json . the 2026 prune-and-build plan.
 
 Every live URL gets one of four actions: KEEP, UPDATE, MERGE or DELETE.
 Output is nested cluster -> sub-cluster -> page so the UI mirrors the site.
@@ -45,7 +45,7 @@ Checked in order, first match wins:
 Two things separate DELETE from MERGE. Age defends a unique page but not a
 duplicate: a new unique page might yet rank, whereas a near-duplicate of a page
 that already earns will not, because Google has already picked between them.
-And there is nothing to fold in — the canonical carries the same content — nor
+And there is nothing to fold in . the canonical carries the same content . nor
 anything to pass, since these have no links and no traffic. Per the redirect
 rules, a 301 is only worth adding when the source has signal to pass.
 
@@ -55,7 +55,7 @@ of 3+) marks crowded topic neighbourhoods. Separately, a page whose tokens are
 a strict SUPERSET of a shorter page's is a qualifier-padded variant of it
 ("accrual-automation-software-for-month-end-close" off
 "accrual-automation-software"), which Jaccard misses because the padding drags
-similarity down. Slug similarity is a proxy throughout — the real test is
+similarity down. Slug similarity is a proxy throughout . the real test is
 body-text hashing, which is what the SAP B1 audit used.
 
 ORDERING
@@ -70,7 +70,7 @@ Sources (read-only, outside the repo):
   ~/Desktop/chatfin/code/cf-platform/*Performance*.xlsx GSC page exports
   ~/Desktop/chatfin/seo/redirects/all-backlinked.txt    Ahrefs backlink set
 
-Writes to data/, NOT content/ — scripts/ingest.py wipes content/ on every run.
+Writes to data/, NOT content/ . scripts/ingest.py wipes content/ on every run.
 
     python3 scripts/build_plan26.py
 """
@@ -94,7 +94,7 @@ BL = os.path.join(HOME, "Desktop", "chatfin", "blogs", "backlinks")
 
 # What counts as backlinked: a URL that AHREFS reports as carrying links from
 # external domains. Nothing else. REVIVED-LINKS.txt is deliberately NOT a source
-# — it is the record of an August redirect job, listing URLs whose redirects
+# . it is the record of an August redirect job, listing URLs whose redirects
 # were removed, which is a history of what was done rather than current evidence
 # that a link exists today. Where those pages do still hold links, Ahrefs lists
 # them anyway and they are protected on that basis.
@@ -113,6 +113,13 @@ BACKLINK_TSV_COL0 = [                    # column 0 is the backlinked url
     os.path.join(BL, "final-status.tsv"),
 ]
 BACKLINK_XLSX = os.path.join(BL, "chatfin-backlinked-redirects.xlsx")
+# Pages already rewritten by the ERP rigs. A page rewritten days ago has had no
+# more chance to prove itself than one published days ago, so the fair-trial
+# logic applies to it too: it is never deleted, whatever the old numbers say.
+# Without this the plan bins work that was just done.
+REWRITTEN = os.path.join(HOME, "Desktop", "chatfin", "blogs", "plan26", "update",
+                         "updated-pages.json")
+
 BACKLINK_XLSX_SHEETS = [                 # column 0 only, never the target column
     "FINAL - all 98 resolved",
     "PROTECT - live backlinked",
@@ -120,6 +127,12 @@ BACKLINK_XLSX_SHEETS = [                 # column 0 only, never the target colum
     "KEEP - no page behind",
     "KEEP - slash normalisation",
 ]
+# GSC "Crawled - currently not indexed". Google fetched the page and decided not
+# to index it. That is the strongest quality signal available: unlike an absent
+# GSC row, which only means the page was below the export cap or too new, this
+# is Google actively refusing the page after looking at it.
+NOT_INDEXED = os.path.join(HOME, "Downloads", "Not Indexed Pages...xlsx")
+
 # Ahrefs Site Audit crawl: the pages a crawler can actually reach by following
 # links. Sitemap URLs missing from it are orphans with no internal links in.
 AHREFS_CRAWL = os.path.join(HOME, "Desktop", "chatfin", "keywords", "seo",
@@ -172,16 +185,17 @@ REASONS = {
     "earns-clicks":       "Earns clicks",
     "striking-distance":  "Position 20 or better, within reach of page one",
     "unique-untested":    "Unique topic, not yet given a fair trial",
-    "backlinked-idle":    "Backlinked but earning nothing — highest-value rewrite",
+    "backlinked-idle":    "Backlinked but earning nothing, highest-value rewrite",
     "indexed-weak":       "Indexed and served, not converting",
-    "canonical":          "Canonical of a duplicate group — absorb the others",
+    "canonical":          "Canonical of a duplicate group, absorb the others",
     "crowded":            "Crowded topic neighbourhood, needs differentiation",
     "dup-signal":         "Near-duplicate of a stronger page, but has signal",
-    "dup-untested":       "Near-duplicate, but its group is unmeasured — review before cutting",
-    "dup-redundant":      "Near-duplicate of a page that already earns — it cannot outrank it",
+    "dup-untested":       "Near-duplicate, group unmeasured, review before cutting",
+    "dup-redundant":      "Near-duplicate of a page that already earns, it cannot outrank it",
     "padded-variant":     "Qualifier-padded variant of a shorter page, no signal of its own",
     "dup-dead":           "Near-duplicate, no signal after a fair trial",
     "dark-after-trial":   "No signal at all after a fair trial",
+    "not-indexed":        "Google crawled it and refused to index it",
 }
 
 TIERS = [
@@ -195,6 +209,61 @@ TIERS = [
 STOP = {"the", "a", "an", "for", "to", "and", "of", "in", "with", "your", "how", "what",
         "is", "best", "top", "guide", "complete", "2026", "2025", "edition", "ultimate",
         "ai", "vs", "on", "from"}
+
+
+# Topic hierarchy. "How many pages should exist on SAP, or any topic" cannot be
+# answered without first seeing how many DO exist, what they earn, and whether a
+# real hub sits above them. A hub is a page outside /blog/: SAP Business One has
+# one, most topics do not, which is why their pages have nothing to link up to.
+TOPICS = [
+    ("SAP Business One", ["sap-business-one", "sap-b1"]),
+    ("NetSuite",         ["netsuite"]),
+    ("JD Edwards",       ["jd-edwards", "jde-"]),
+    ("Acumatica",        ["acumatica"]),
+    ("Sage Intacct",     ["sage-intacct"]),
+    ("Dynamics 365",     ["dynamics-365", "d365"]),
+    ("Oracle Fusion",    ["oracle-fusion"]),
+    ("QuickBooks",       ["quickbooks"]),
+    ("Accounts Payable", ["accounts-payable", "ap-automation"]),
+    ("Accounts Receivable", ["accounts-receivable", "ar-automation"]),
+    ("Month End Close",  ["month-end-close", "financial-close"]),
+    ("FP&A",             ["fpa", "fp-a"]),
+    ("Reconciliation",   ["reconciliation"]),
+    ("Cash Flow",        ["cash-flow"]),
+    ("Glossary",         ["/glossary/"]),
+]
+
+
+def build_topics(pages):
+    out = []
+    for name, keys in TOPICS:
+        hits = [p for p in pages if any(k in p["p"] for k in keys)]
+        if not hits:
+            continue
+        # a hub is a page outside /blog/; blog posts never count as a pillar
+        hubs = [p for p in hits if not p["p"].startswith("/blog/")]
+        hubs.sort(key=lambda x: (-x["i"], len(x["p"])))
+        hub = hubs[0] if hubs else None
+        counts = {"KEEP": 0, "UPDATE": 0, "MERGE": 0, "DELETE": 0}
+        for p in hits:
+            counts[p["s"]] += 1
+        # the pages worth working first: most impressions, still no clicks
+        best = sorted([p for p in hits if p["i"] > 0 and p["c"] == 0],
+                      key=lambda x: -x["i"])[:3]
+        out.append({
+            "topic": name,
+            "pages": len(hits),
+            "impressions": sum(p["i"] for p in hits),
+            "clicks": sum(p["c"] for p in hits),
+            "backlinked": sum(p["b"] for p in hits),
+            "orphans": sum(p["x"] for p in hits),
+            "counts": counts,
+            "hub": hub["p"] if hub else "",
+            "hubImpressions": hub["i"] if hub else 0,
+            "opportunities": [{"p": p["p"], "t": p["t"], "i": p["i"], "o": p["o"]} for p in best],
+        })
+    out.sort(key=lambda t: -t["impressions"])
+    return out
 
 
 def load_gsc():
@@ -247,6 +316,34 @@ def load_backlinked():
                 for r in wb[name].iter_rows(values_only=True):
                     if r:
                         add(r[0])
+    return out
+
+
+def load_rewritten():
+    """URLs the ERP rewrite rigs have already republished."""
+    if not os.path.exists(REWRITTEN):
+        return set()
+    out = set()
+    for row in json.load(open(REWRITTEN)):
+        n = _norm_path(row.get("url"))
+        if n:
+            out.add(n)
+    return out
+
+
+def load_not_indexed():
+    """URLs GSC reports as crawled but deliberately not indexed."""
+    if not os.path.exists(NOT_INDEXED):
+        return set()
+    import openpyxl
+    wb = openpyxl.load_workbook(NOT_INDEXED, read_only=True)
+    if "Table" not in wb.sheetnames:
+        return set()
+    out = set()
+    for r in list(wb["Table"].iter_rows(values_only=True))[1:]:
+        n = _norm_path(r[0] if r else None)
+        if n:
+            out.add(n)
     return out
 
 
@@ -336,7 +433,7 @@ def padded_variants(paths, toks, inv, has_signal):
     signature of batch-generated bloat, and Jaccard misses it because the extra
     qualifiers drag similarity below the threshold.
 
-    Only pages with no signal of their own are considered — a padded slug that
+    Only pages with no signal of their own are considered . a padded slug that
     actually earns is a real page.
     """
     variant = {}
@@ -356,7 +453,7 @@ def padded_variants(paths, toks, inv, has_signal):
 
 
 def keep_score(p, gsc, backlinked, ref_domains, crawled, canonical,
-               non_canonical, crowded, variants, old):
+               non_canonical, crowded, variants, old, not_indexed=frozenset()):
     """
     One number per page: how much it is worth keeping. Ranked descending, then
     filled into the quotas. Measured performance dominates; structural problems
@@ -381,8 +478,12 @@ def keep_score(p, gsc, backlinked, ref_domains, crawled, canonical,
     # Structural penalties apply only to pages that have not proved themselves.
     # A page earning clicks has answered the question the structure was a proxy
     # for, so a padded slug or a missing internal link no longer counts against
-    # it — otherwise the penalties can push an earning page into DELETE.
+    # it . otherwise the penalties can push an earning page into DELETE.
     if clicks == 0:
+        if p in not_indexed:
+            # Google looked at this page and said no. Age is no defence here:
+            # the page was crawled, so it had its chance to be judged.
+            score -= 5000
         if p in non_canonical:
             score -= 2000
         if p in variants:
@@ -426,6 +527,8 @@ def main():
     meta = {u["path"]: u for u in urls}
     gsc = load_gsc()
     crawled = load_crawled()
+    rewritten = load_rewritten()
+    not_indexed = load_not_indexed()
     ref_domains = load_ref_domains()
     backlinked = load_backlinked()
 
@@ -496,6 +599,8 @@ def main():
             return "KEEP", "earns-clicks"
         if i >= 10 and position is not None and position <= 20:
             return "KEEP", "striking-distance"
+        if p in not_indexed:
+            return "DELETE", "not-indexed"
         if p in non_canonical:
             if i > 0:
                 return "MERGE", "dup-signal"
@@ -504,7 +609,7 @@ def main():
             # Age defends a unique page, not a duplicate. A new page might yet
             # rank; a near-duplicate of a page that ALREADY earns will not,
             # because Google picks one of them and has already picked. There is
-            # nothing to fold in either — the canonical carries the content.
+            # nothing to fold in either . the canonical carries the content.
             if has_signal(defers_to.get(p, "")):
                 return "DELETE", "dup-redundant"
             # whole group unmeasured: cannot tell which member is best yet
@@ -536,7 +641,8 @@ def main():
     # ---- score every URL, rank once, fill the quotas -------------------------
     scored = sorted(
         ((keep_score(u["path"], gsc, backlinked, ref_domains, crawled, canonical,
-                     non_canonical, crowded, variants, had_fair_trial(u["path"])),
+                     non_canonical, crowded, variants, had_fair_trial(u["path"]),
+                     not_indexed),
           u["path"])
          for u in urls),
         key=lambda x: (-x[0], x[1]),
@@ -547,7 +653,9 @@ def main():
     # protected page, so a protected page cannot land there however badly it
     # scores. The surviving buckets then fill from the top in score order.
     protected = {u["path"] for u in urls
-                 if u["path"] in backlinked or clicks(u["path"]) > 0}
+                 if u["path"] in backlinked
+                 or clicks(u["path"]) > 0
+                 or u["path"] in rewritten}
 
     delete_quota = len(scored) - sum(size for _, size in QUOTAS)
     if delete_quota > len(scored) - len(protected):
@@ -605,6 +713,7 @@ def main():
             action in ("MERGE", "UPDATE")
             and g[0] == 0 and g[1] == 0
             and p not in backlinked
+            and p not in rewritten
             and g[0] == 0
             and reason != "canonical"
             and len(strikes) >= 1
@@ -724,6 +833,8 @@ def main():
             "paddedVariants": len(variants),
             "crawledUrls": len(crawled),
             "orphanUrls": orphan_count,
+            "rewrittenUrls": len(rewritten),
+            "notIndexedUrls": sum(1 for u in urls if u["path"] in not_indexed),
             "trialDays": TRIAL_DAYS,
             "untestedUrls": untested,
         },
@@ -762,6 +873,7 @@ def main():
             "byAction": watch_by_action,
             "nextReview": next_review,
         },
+        "topics": build_topics(pages),
         "actions": ACTIONS,
         "reasons": REASONS,
         "reasonCounts": dict(reason_counts),
@@ -782,6 +894,8 @@ def main():
         ("backlinked page on the watchlist", backlinked & watched),
         ("page with clicks in DELETE", {p for p in deleted if clicks(p) > 0}),
         ("page with clicks on the watchlist", {p for p in watched if clicks(p) > 0}),
+        ("already-rewritten page in DELETE", rewritten & deleted),
+        ("already-rewritten page on the watchlist", rewritten & watched),
     ):
         if offenders:
             violations.append(f"{label}: {len(offenders)} e.g. {sorted(offenders)[:3]}")

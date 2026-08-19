@@ -6,7 +6,7 @@ cluster: blog
 slug: new-ai-agents-for-cfos/ai-in-fixed-assets-the-definitive-guide-to-asset-management
 snapshots:
   - period: "2026-08-10_2026-08-17"
-    label: Aug 10–17
+    label: Aug 10-17
     start: "2026-08-10"
     end: "2026-08-17"
     clicks: 1

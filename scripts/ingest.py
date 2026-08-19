@@ -61,7 +61,7 @@ def parse_gsc_date_range(label):
     (m1, d1, y1), (m2, d2, y2) = m
     start = datetime.date(int(y1), MONTHS[m1], int(d1))
     end = datetime.date(int(y2), MONTHS[m2], int(d2))
-    human = f"{m1} {int(d1)}–{m2} {int(d2)}" if m1 != m2 else f"{m1} {int(d1)}–{int(d2)}"
+    human = f"{m1} {int(d1)}-{m2} {int(d2)}" if m1 != m2 else f"{m1} {int(d1)}-{int(d2)}"
     return (start.isoformat(), end.isoformat(), human)
 
 
@@ -385,7 +385,7 @@ def main():
                 home_snaps.append(snap_for(p, p["pages"][home_url]))
 
     front = [
-        "title: ChatFin — Site Overview",
+        "title: ChatFin - Site Overview",
         "type: main",
         f"url: {yq(home_url or 'https://chatfin.ai/')}",
         f"clusters: {len(cluster_pages)}",
@@ -466,11 +466,11 @@ def build_root_body(root_snaps, cluster_pages, periods):
 
 
 def fmt(v):
-    return "—" if v is None else f"{v:.1f}"
+    return "-" if v is None else f"{v:.1f}"
 
 
 def pct(v):
-    return "—" if v is None else f"{v * 100:.2f}%"
+    return "-" if v is None else f"{v * 100:.2f}%"
 
 
 # --------------------------------------------------------------------------- #
@@ -591,7 +591,7 @@ def record_updates(page_index, periods, home_url):
 
     targets = dict(page_index)
     if home_url:
-        targets[home_url] = {"slug": "", "cluster": "", "title": "ChatFin — Site Overview"}
+        targets[home_url] = {"slug": "", "cluster": "", "title": "ChatFin - Site Overview"}
 
     for url, info in targets.items():
         rec = hist["pages"].setdefault(url, {"events": [], "first_seen": None})
@@ -740,7 +740,7 @@ def load_updated_lists():
 
 
 def build_updated_page(updated_lists, periods, keywords):
-    """content/_updated.md — pages shipped per date, joined to any known stats."""
+    """content/_updated.md - pages shipped per date, joined to any known stats."""
     # latest GSC stats per normalized url
     stats = {}
     for p in periods:

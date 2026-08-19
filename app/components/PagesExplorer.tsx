@@ -150,7 +150,7 @@ export default function PagesExplorer({
                   </td>
                 )}
                 <td className="px-3 py-2 text-right tabular-nums text-slate-200">
-                  {r.position == null ? "—" : r.position.toFixed(1)}
+                  {r.position == null ? "-" : r.position.toFixed(1)}
                 </td>
                 <td className="hidden px-3 py-2 text-right sm:table-cell">
                   <DeltaBadge value={r.dPosition} invert digits={1} isNew={r.isNew} />
