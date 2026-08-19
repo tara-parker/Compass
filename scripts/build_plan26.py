@@ -80,6 +80,7 @@ import glob
 import os
 import re
 import collections
+import datetime
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO = os.path.dirname(HERE)
@@ -106,10 +107,24 @@ TIGHT = 0.6    # near-duplicate
 LOOSE = 0.35   # crowded neighbourhood
 CROWD_MIN = 3
 
+# Days a page needs before its numbers mean anything. Watchlisted pages are
+# re-checked once they clear this from their last modification.
+TRIAL_DAYS = 90
+
 # Pages are listed in this sequence, and ranked by measured strength inside it,
 # so the work reads top to bottom: what you protect, then what you fix, then
 # what you fold in, then what you cut.
 ACTION_RANK = {"KEEP": 0, "UPDATE": 1, "MERGE": 2, "DELETE": 3}
+
+# Pages parked in MERGE or UPDATE that carry no measured signal and at least
+# one structural strike. They stay on the site for now because they were
+# produced too recently to judge; if they still show nothing at their review
+# date, they become the next DELETE batch.
+WATCH_NOTE = (
+    "No measured signal yet and at least one structural problem. Kept for now "
+    "because it has not had a fair trial. Re-check at the review date: still "
+    "nothing, and it goes."
+)
 
 ACTIONS = {
     "KEEP":   "Leave alone. Either earning, or nothing argues against it.",
@@ -417,6 +432,34 @@ def main():
         else:
             cluster, sub, slug = parts[0], parts[1], parts[-1]
 
+        strikes = []
+        if crawled and p not in crawled:
+            strikes.append("orphan")
+        if p in canonical or p in non_canonical:
+            strikes.append("duplicate")
+        if p in crowded:
+            strikes.append("crowded")
+        if p in variants:
+            strikes.append("padded")
+
+        # watchlist: no signal, no links, structurally weak, and not the page
+        # its duplicate group is being consolidated onto
+        watch = (
+            action in ("MERGE", "UPDATE")
+            and g[0] == 0 and g[1] == 0
+            and p not in backlinked
+            and reason != "canonical"
+            and len(strikes) >= 1
+        )
+        review_due = ""
+        if watch:
+            lm = (meta[p].get("lastmod") or "")[:10]
+            try:
+                review_due = (datetime.date.fromisoformat(lm)
+                              + datetime.timedelta(days=TRIAL_DAYS)).isoformat()
+            except ValueError:
+                review_due = ""
+
         pages.append({
             "p": p,
             "t": titleise(slug),
@@ -431,6 +474,9 @@ def main():
             # orphan: in the sitemap but not reachable by Ahrefs' crawler
             "x": 0 if (not crawled or p in crawled) else 1,
             "rd": ref_domains.get(p, 0),
+            "w": 1 if watch else 0,
+            "wd": review_due,
+            "st": strikes,
             "_cluster": cluster,
             "_sub": sub,
         })
@@ -446,27 +492,27 @@ def main():
     clusters = []
     for cname, cpages in byc.items():
         counts, tiers = blank(), {}
-        cl = im = bkl = 0
+        cl = im = bkl = wch = 0
         subs = collections.defaultdict(list)
         direct = []
         for pg in cpages:
             counts[pg["s"]] += 1
             tiers[pg["k"]] = tiers.get(pg["k"], 0) + 1
-            cl += pg["c"]; im += pg["i"]; bkl += pg["b"]
+            cl += pg["c"]; im += pg["i"]; bkl += pg["b"]; wch += pg["w"]
             (subs[pg["_sub"]] if pg["_sub"] else direct).append(pg)
 
         sub_out = []
         for sname, spages in subs.items():
             sc, st = blank(), {}
-            scl = sim = sbk = 0
+            scl = sim = sbk = swc = 0
             for pg in spages:
                 sc[pg["s"]] += 1
                 st[pg["k"]] = st.get(pg["k"], 0) + 1
-                scl += pg["c"]; sim += pg["i"]; sbk += pg["b"]
+                scl += pg["c"]; sim += pg["i"]; sbk += pg["b"]; swc += pg["w"]
             sub_out.append({
                 "sub": sname, "title": titleise(sname), "urls": len(spages),
                 "counts": sc, "tiers": st, "clicks": scl, "impressions": sim,
-                "backlinked": sbk,
+                "backlinked": sbk, "watch": swc,
                 "pages": order_pages(spages),
             })
         sub_out.sort(key=lambda s: -s["urls"])
@@ -474,7 +520,7 @@ def main():
         clusters.append({
             "cluster": cname, "title": titleise(cname), "urls": len(cpages),
             "counts": counts, "tiers": tiers, "clicks": cl, "impressions": im,
-            "backlinked": bkl, "subs": sub_out,
+            "backlinked": bkl, "watch": wch, "subs": sub_out,
             "pages": order_pages(direct),
         })
     clusters.sort(key=lambda c: -c["urls"])
@@ -498,6 +544,10 @@ def main():
         tier_impr[pg["k"]] += pg["i"]
 
     orphan_count = sum(1 for pg in pages if pg["x"] == 1)
+    watch_count = sum(1 for pg in pages if pg["w"] == 1)
+    watch_by_action = dict(collections.Counter(pg["s"] for pg in pages if pg["w"] == 1))
+    review_dates = sorted(pg["wd"] for pg in pages if pg["w"] == 1 and pg["wd"])
+    next_review = review_dates[0] if review_dates else ""
     untested = sum(1 for pg in pages
                    if not had_fair_trial(pg["p"]) and pg["p"] not in gsc)
 
@@ -516,6 +566,7 @@ def main():
             "paddedVariants": len(variants),
             "crawledUrls": len(crawled),
             "orphanUrls": orphan_count,
+            "trialDays": TRIAL_DAYS,
             "untestedUrls": untested,
         },
         "source": {
@@ -547,6 +598,12 @@ def main():
             "backlinked": sum(p["b"] for p in pages),
             **totals,
         },
+        "watch": {
+            "note": WATCH_NOTE,
+            "count": watch_count,
+            "byAction": watch_by_action,
+            "nextReview": next_review,
+        },
         "actions": ACTIONS,
         "reasons": REASONS,
         "reasonCounts": dict(reason_counts),
@@ -567,6 +624,8 @@ def main():
     print("  " + "  ".join(f"{k}={v}" for k, v in totals.items()))
     print(f"  duplicate groups {len(dup_groups)} covering {sum(dup_groups)} URLs")
     print(f"  untested (no fair trial yet) {untested}")
+    print(f"  watchlist {watch_count} -> DELETE now {totals['DELETE']} + watch "
+          f"{watch_count} = {totals['DELETE'] + watch_count}")
 
 
 if __name__ == "__main__":

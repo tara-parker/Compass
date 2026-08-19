@@ -19,6 +19,7 @@ export default function Plan26Page() {
   const t = plan.totals;
   const m = plan.method;
   const survives = t.KEEP + t.UPDATE;
+  const w = plan.watch;
 
   // Reasons grouped under the action they produce, for the breakdown table.
   const REASON_BY_ACTION: Record<string, string[]> = {
@@ -64,8 +65,51 @@ export default function Plan26Page() {
           <p className="mt-2 text-xs text-flat">
             <span className="text-slate-200">{num(survives)}</span> pages stay on the site.{" "}
             <span className="text-slate-200">{num(t.MERGE)}</span> fold into a stronger
-            near-duplicate and <span className="text-slate-200">{num(t.DELETE)}</span> come off.
+            near-duplicate and <span className="text-slate-200">{num(t.DELETE)}</span> come off now,
+            with <span className="text-amber-300">{num(w.count)}</span> more queued for review.
           </p>
+        </div>
+      </Card>
+
+      {/* ---- the staged removal: now, then next ---- */}
+      <Card title="Removal happens in two passes, not one">
+        <div className="grid gap-3 sm:grid-cols-[auto_1fr] sm:items-start sm:gap-5">
+          <div className="flex gap-3">
+            <div className="rounded-xl border border-down/30 bg-down/10 p-3 text-center">
+              <div className="text-2xl font-semibold tabular-nums text-down">{num(t.DELETE)}</div>
+              <div className="text-[10px] uppercase tracking-wide text-flat">Now</div>
+            </div>
+            <div className="rounded-xl border border-amber-400/30 bg-amber-400/10 p-3 text-center">
+              <div className="text-2xl font-semibold tabular-nums text-amber-300">
+                {num(w.count)}
+              </div>
+              <div className="text-[10px] uppercase tracking-wide text-flat">Watchlist</div>
+            </div>
+            <div className="rounded-xl border border-ink-line bg-black/20 p-3 text-center">
+              <div className="text-2xl font-semibold tabular-nums text-slate-200">
+                {num(t.DELETE + w.count)}
+              </div>
+              <div className="text-[10px] uppercase tracking-wide text-flat">Ceiling</div>
+            </div>
+          </div>
+          <div className="space-y-2 text-[13px] text-slate-300">
+            <p>
+              The {num(t.DELETE)} in DELETE have evidence against them today. The watchlist is a
+              further {num(w.count)} that stay on the site for now, because they were produced too
+              recently for their numbers to mean anything.
+            </p>
+            <p className="text-slate-400">{w.note}</p>
+            <p className="text-xs text-flat">
+              Watchlisted pages sit inside{" "}
+              {Object.entries(w.byAction)
+                .map(([a, n]) => `${a} (${n.toLocaleString("en-US")})`)
+                .join(" and ")}
+              , so they keep getting worked on rather than being written off. Each carries its own
+              review date, {plan.method.trialDays} days from when it was last modified. The first
+              falls due {w.nextReview}. Re-run the generator then: anything still showing nothing
+              becomes the next DELETE batch, and anything that started ranking stays.
+            </p>
+          </div>
         </div>
       </Card>
 

@@ -16,9 +16,19 @@ export type PlanPage = {
   /** 1-based rank by measured strength within its list */ n: number;
   /** orphan: in the sitemap but not reachable by Ahrefs' crawler */ x: number;
   /** referring domains, where Ahrefs gave a number */ rd: number;
+  /** on the watchlist: next DELETE batch if it still shows nothing */ w: number;
+  /** review date, once it has had a fair trial */ wd: string;
+  /** structural strikes against it */ st: string[];
 };
 
 export type PlanCounts = Record<PlanAction, number>;
+
+export type PlanWatch = {
+  note: string;
+  count: number;
+  byAction: Record<string, number>;
+  nextReview: string;
+};
 
 export type PlanSub = {
   sub: string;
@@ -29,6 +39,7 @@ export type PlanSub = {
   clicks: number;
   impressions: number;
   backlinked: number;
+  watch: number;
   pages: PlanPage[];
 };
 
@@ -58,6 +69,7 @@ export type PlanMethod = {
   paddedVariants: number;
   crawledUrls: number;
   orphanUrls: number;
+  trialDays: number;
   untestedUrls: number;
 };
 
@@ -65,6 +77,7 @@ export type Plan = {
   generated: string;
   window: string;
   method: PlanMethod;
+  watch: PlanWatch;
   source: Record<string, string>;
   whyDeleteIsSmall: string[];
   caveats: string[];

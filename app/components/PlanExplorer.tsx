@@ -94,6 +94,14 @@ function PageRow({ pg, depth }: { pg: PlanPage; depth: number }) {
               {pg.rd > 0 && <span className="ml-0.5 opacity-80">{pg.rd}</span>}
             </span>
           )}
+          {pg.w === 1 && (
+            <span
+              className="shrink-0 rounded bg-amber-400/20 px-1 py-px text-[9px] font-semibold text-amber-200"
+              title={`Watchlist — next DELETE batch if it still shows nothing${pg.wd ? `. Review ${pg.wd}` : ""}`}
+            >
+              WATCH
+            </span>
+          )}
           {pg.x === 1 && (
             <span
               className="shrink-0 rounded bg-down/10 px-1 py-px text-[9px] font-semibold text-down/90"
@@ -127,6 +135,12 @@ function PageRow({ pg, depth }: { pg: PlanPage; depth: number }) {
           {pg.p}
         </a>
         {reason && <div className="truncate text-[10.5px] italic text-flat/80">{reason}</div>}
+        {pg.w === 1 && pg.wd && (
+          <div className="truncate text-[10px] text-amber-200/70">
+            review {pg.wd}
+            {pg.st.length > 0 && ` · ${pg.st.join(", ")}`}
+          </div>
+        )}
       </div>
       <div className="sm:hidden">
         <ActionChip action={pg.s} />
@@ -290,6 +304,7 @@ export default function PlanExplorer({ plan }: { plan: Plan }) {
   const [linkedOnly, setLinkedOnly] = useState(false);
   const [sortMode, setSortMode] = useState<SortMode>("action");
   const [orphanOnly, setOrphanOnly] = useState(false);
+  const [watchOnly, setWatchOnly] = useState(false);
 
   const clusters = useMemo(() => {
     const needle = q.trim().toLowerCase();
@@ -298,6 +313,7 @@ export default function PlanExplorer({ plan }: { plan: Plan }) {
       (tier === "all" || pg.k === tier) &&
       (!linkedOnly || pg.b === 1) &&
       (!orphanOnly || pg.x === 1) &&
+      (!watchOnly || pg.w === 1) &&
       (!needle || pg.p.toLowerCase().includes(needle) || pg.t.toLowerCase().includes(needle));
 
     return plan.clusters
@@ -309,7 +325,7 @@ export default function PlanExplorer({ plan }: { plan: Plan }) {
           .filter((s) => s.pages.length > 0),
       }))
       .filter((c) => c.pages.length > 0 || c.subs.length > 0);
-  }, [plan, q, action, tier, linkedOnly, orphanOnly]);
+  }, [plan, q, action, tier, linkedOnly, orphanOnly, watchOnly]);
 
   const matched = useMemo(
     () =>
@@ -321,7 +337,8 @@ export default function PlanExplorer({ plan }: { plan: Plan }) {
   );
 
   const filtering =
-    action !== "all" || tier !== "all" || linkedOnly || orphanOnly || q.trim() !== "";
+    action !== "all" || tier !== "all" || linkedOnly || orphanOnly || watchOnly ||
+    q.trim() !== "";
 
   return (
     <ReasonCtx.Provider value={plan.reasons}>
@@ -412,6 +429,21 @@ export default function PlanExplorer({ plan }: { plan: Plan }) {
           title="In the sitemap but not reachable by Ahrefs' crawler"
         >
           Orphans only
+        </button>
+
+        <button
+          onClick={() => setWatchOnly(!watchOnly)}
+          className={`rounded-lg border px-2.5 py-1 text-[11px] transition ${
+            watchOnly
+              ? "border-amber-400/40 bg-amber-400/10 text-amber-300"
+              : "border-ink-line text-slate-300 hover:text-white"
+          }`}
+          title="Kept for now, but queued for the next DELETE batch"
+        >
+          Watchlist{" "}
+          <span className="tabular-nums opacity-70">
+            {plan.watch.count.toLocaleString("en-US")}
+          </span>
         </button>
       </div>
 
