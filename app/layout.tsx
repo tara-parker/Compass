@@ -23,7 +23,7 @@ const NAV = [
   { href: "/pages", label: "Pages" },
   { href: "/keywords", label: "Keywords" },
   { href: "/updated", label: "Updated" },
-  { href: "/content", label: "Content" },
+  { href: "/plan26", label: "Plan26" },
 ];
 
 export default function RootLayout({
