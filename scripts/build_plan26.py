@@ -111,6 +111,10 @@ CROWD_MIN = 3
 # re-checked once they clear this from their last modification.
 TRIAL_DAYS = 90
 
+# Fixed quotas. Pages are scored, ranked once, then filled into these in order.
+# DELETE takes whatever is left, so the four always sum to the live URL count.
+QUOTAS = [("KEEP", 1200), ("UPDATE", 1000), ("MERGE", 1000)]
+
 # Pages are listed in this sequence, and ranked by measured strength inside it,
 # so the work reads top to bottom: what you protect, then what you fix, then
 # what you fold in, then what you cut.
@@ -280,6 +284,48 @@ def padded_variants(paths, toks, inv, has_signal):
     return variant
 
 
+def keep_score(p, gsc, backlinked, ref_domains, crawled, canonical,
+               non_canonical, crowded, variants, old):
+    """
+    One number per page: how much it is worth keeping. Ranked descending, then
+    filled into the quotas. Measured performance dominates; structural problems
+    subtract. A backlinked page carries a bonus large enough that it can never
+    fall into DELETE, whatever else is true of it.
+    """
+    g = gsc.get(p, (0, 0, []))
+    clicks, impressions, positions = g[0], g[1], g[2]
+    score = clicks * 1000.0 + impressions
+
+    if p in backlinked:
+        score += 50000 + ref_domains.get(p, 0) * 500
+
+    if positions:
+        avg = sum(positions) / len(positions)
+        if avg <= 20:
+            score += (21 - avg) * 50
+
+    if p in canonical:
+        score += 500
+
+    # Structural penalties apply only to pages that have not proved themselves.
+    # A page earning clicks has answered the question the structure was a proxy
+    # for, so a padded slug or a missing internal link no longer counts against
+    # it — otherwise the penalties can push an earning page into DELETE.
+    if clicks == 0:
+        if p in non_canonical:
+            score -= 2000
+        if p in variants:
+            score -= 3000
+        if p in crowded:
+            score -= 200
+        if crawled and p not in crawled:
+            score -= 300
+        if old and impressions == 0:
+            score -= 1000      # had its chance and showed nothing
+
+    return score
+
+
 def order_pages(pages):
     """
     Sort by action sequence, then by measured strength inside each action.
@@ -417,10 +463,28 @@ def main():
             return "D"
         return "E"
 
+    # ---- score every URL, rank once, fill the quotas -------------------------
+    scored = sorted(
+        ((keep_score(u["path"], gsc, backlinked, ref_domains, crawled, canonical,
+                     non_canonical, crowded, variants, had_fair_trial(u["path"])),
+          u["path"])
+         for u in urls),
+        key=lambda x: (-x[0], x[1]),
+    )
+    quota_action = {}
+    cursor = 0
+    for name, size in QUOTAS:
+        for _, path in scored[cursor:cursor + size]:
+            quota_action[path] = name
+        cursor += size
+    for _, path in scored[cursor:]:
+        quota_action[path] = "DELETE"
+
     pages = []
     for u in urls:
         p = u["path"]
-        action, reason = decide(p)
+        _, reason = decide(p)
+        action = quota_action[p]
         g = gsc.get(p, (0, 0, []))
         parts = [x for x in p.split("/") if x]
         if not parts:
