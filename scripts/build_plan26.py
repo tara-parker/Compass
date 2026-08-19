@@ -793,6 +793,12 @@ def main():
         json.dump(doc, fh, separators=(",", ":"))
 
     print(f"wrote {OUT} ({os.path.getsize(OUT)/1024:.0f} KB)")
+
+    # per-URL decisions, so the plan can actually be worked rather than only counted
+    PAGES_OUT = os.path.join(REPO, "data", "plan26-pages.json")
+    with open(PAGES_OUT, "w") as fh:
+        json.dump(pages, fh, separators=(",", ":"))
+    print(f"wrote {PAGES_OUT} ({os.path.getsize(PAGES_OUT)/1024:.0f} KB) rows={len(pages)}")
     print(f"  {len(pages)} URLs across {len(clusters)} clusters")
     print("  " + "  ".join(f"{k}={v}" for k, v in totals.items()))
     print(f"  duplicate groups {len(dup_groups)} covering {sum(dup_groups)} URLs")
