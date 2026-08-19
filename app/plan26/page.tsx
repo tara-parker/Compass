@@ -24,15 +24,12 @@ const REASON_BY_ACTION: Record<string, string[]> = {
 export default function Plan26Page() {
   const plan = getPlan();
   const t = plan.totals;
-  const m = plan.method;
 
   return (
     <div className="space-y-6">
       <header>
         <h1 className="text-2xl font-semibold tracking-tight text-white">Plan26</h1>
-        <p className="mt-1 text-sm text-slate-400">
-          {num(t.urls)} live URLs, ranked and split into fixed buckets.
-        </p>
+        <p className="mt-1 text-sm text-slate-400">{num(t.urls)} live URLs</p>
       </header>
 
       <Card title="The split">
@@ -50,11 +47,6 @@ export default function Plan26Page() {
         <div className="mt-3">
           <ActionBar counts={t} total={t.urls} />
         </div>
-        <p className="mt-2 text-xs text-flat">
-          All {num(t.clicks)} clicks and all {num(t.backlinked)} backlinked pages sit in KEEP. A page with
-          backlinks or clicks can never be assigned DELETE — the bucket is filled from the bottom
-          of the ranking skipping those pages, so it holds whatever the scoring does.
-        </p>
       </Card>
 
       <Card title="Why each page landed where it did">
@@ -136,36 +128,7 @@ export default function Plan26Page() {
         <PlanExplorer plan={plan} />
       </Card>
 
-      <Card title="Notes">
-        <dl className="grid gap-x-6 gap-y-2 text-[12.5px] sm:grid-cols-2">
-          <Note k="Sources">
-            Search Console, Ahrefs backlinks, Ahrefs Site Audit crawl, sitemap. No Google Analytics
-            export exists, so nothing is decided on engagement or conversion.
-          </Note>
-          <Note k="Orphans">
-            {num(m.orphanUrls)} URLs are not reachable by a crawler, and rank below reachable pages
-            of equal strength.
-          </Note>
-          <Note k="Untested">
-            {num(m.untestedUrls)} pages were modified inside the measurement window, so their zero
-            is not evidence. {num(plan.watch.count)} are flagged for review from{" "}
-            {plan.watch.nextReview}.
-          </Note>
-          <Note k="Redirects">
-            The export on hand holds 25 rows, not the ~1,800 live in the plugin. Redirect work is
-            blocked until a full export exists.
-          </Note>
-        </dl>
-      </Card>
     </div>
   );
 }
 
-function Note({ k, children }: { k: string; children: React.ReactNode }) {
-  return (
-    <div>
-      <dt className="text-[10px] uppercase tracking-wide text-flat">{k}</dt>
-      <dd className="text-slate-400">{children}</dd>
-    </div>
-  );
-}
