@@ -714,6 +714,10 @@ def main():
             and g[0] == 0 and g[1] == 0
             and p not in backlinked
             and p not in rewritten
+            # the watchlist exists for pages produced too recently to judge.
+            # a page that already had its fair trial and showed nothing is not
+            # waiting on anything, so it does not belong here.
+            and not had_fair_trial(p)
             and g[0] == 0
             and reason != "canonical"
             and len(strikes) >= 1
@@ -722,8 +726,12 @@ def main():
         if watch:
             lm = (meta[p].get("lastmod") or "")[:10]
             try:
-                review_due = (datetime.date.fromisoformat(lm)
-                              + datetime.timedelta(days=TRIAL_DAYS)).isoformat()
+                d0 = datetime.date.fromisoformat(lm)
+                # a handful of sitemap entries carry a 1970 epoch date. Treating
+                # those as real made the next review date read 1970-04-01.
+                if d0.year < 2020:
+                    d0 = datetime.date(2026, 8, 19)
+                review_due = (d0 + datetime.timedelta(days=TRIAL_DAYS)).isoformat()
             except ValueError:
                 review_due = ""
 
