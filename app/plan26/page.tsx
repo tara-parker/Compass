@@ -46,7 +46,7 @@ export default function Plan26Page() {
       <Card title="The split">
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
           {A27_ORDER.map((a) => {
-            const v = t[a.toLowerCase() as "keep" | "update" | "merge"];
+            const v = t[a.toLowerCase() as "keep" | "update" | "merge" | "frozen"];
             return (
               <div key={a} className="rounded-xl border border-ink-line bg-black/20 p-3">
                 <div className="flex items-center gap-1.5">
@@ -54,6 +54,9 @@ export default function Plan26Page() {
                   <span className="text-[11px] uppercase tracking-wide text-flat">{a}</span>
                 </div>
                 <div className="mt-1 text-xl font-semibold text-white">{num(v)}</div>
+                {a === "FROZEN" && (
+                  <div className="text-[10px] text-rose-300/80">no edits of any kind</div>
+                )}
               </div>
             );
           })}

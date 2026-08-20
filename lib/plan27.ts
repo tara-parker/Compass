@@ -56,7 +56,7 @@ export type Plan27 = {
   generated: string;
   window: string;
   totals: {
-    urls: number; keep: number; update: number; merge: number; delete: number;
+    urls: number; keep: number; update: number; merge: number; delete: number; frozen: number;
     create: number; links: number; removals: number; treeUrls: number; promoted: number;
   };
   findings: [string, string][];

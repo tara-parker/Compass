@@ -87,7 +87,7 @@ BLOCKED=[
 data={"generated":"2026-08-20",
  "window":"GSC US 16 months, GA US 18 months, master keyword list",
  "totals":{"urls":len(P),"keep":cnt["KEEP"],"update":cnt["UPDATE"],"merge":cnt["MERGE"],
-           "delete":0,"create":len(create),"links":len(links),"removals":len(removals),
+           "delete":0,"frozen":cnt["FROZEN"],"create":len(create),"links":len(links),"removals":len(removals),
            "treeUrls":sum(1+len(n["clusters"])+sum(len(c["subs"]) for c in n["clusters"]) for n in tree["erp"].values())
                       +sum(1+len(n["subs"]) for n in tree["non"]),
            "promoted":sum(x["promoted"] for x in erp)},
