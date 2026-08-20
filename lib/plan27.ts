@@ -1,5 +1,5 @@
 /** plan27: the structure build. Produced by scripts/build_plan27.py. */
-export type P27Action = "KEEP" | "UPDATE" | "MERGE";
+export type P27Action = "KEEP" | "UPDATE" | "MERGE" | "FROZEN";
 
 /** Terse keys: 4,539 pages ship to the browser. */
 export type P27Page = {
@@ -47,6 +47,11 @@ export type P27Protected = {
   pages: { p: string; rd: number; dr: number; dom: string[]; a: P27Action }[];
 };
 
+export type P27Frozen = {
+  reason: string;
+  pages: { p: string; impr: number; clicks: number; rd: number }[];
+};
+
 export type Plan27 = {
   generated: string;
   window: string;
@@ -64,15 +69,17 @@ export type Plan27 = {
   merges: P27Merge[];
   removals: P27Removal[];
   protected: P27Protected;
+  frozen: P27Frozen;
   pages: P27Page[];
 };
 
-export const A27_ORDER: P27Action[] = ["KEEP", "UPDATE", "MERGE"];
+export const A27_ORDER: P27Action[] = ["KEEP", "UPDATE", "MERGE", "FROZEN"];
 
 export const A27_STYLE: Record<P27Action, { dot: string; bar: string; text: string }> = {
   KEEP:   { dot: "bg-emerald-400", bar: "bg-emerald-400", text: "text-emerald-300" },
   UPDATE: { dot: "bg-sky-400",     bar: "bg-sky-400",     text: "text-sky-300" },
   MERGE:  { dot: "bg-amber-400",   bar: "bg-amber-400",   text: "text-amber-300" },
+  FROZEN: { dot: "bg-rose-400",    bar: "bg-rose-400",    text: "text-rose-300" },
 };
 
 export const TIER_LABEL: Record<string, string> = {

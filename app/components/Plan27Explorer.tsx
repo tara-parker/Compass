@@ -327,6 +327,7 @@ function RemovalList({ plan }: { plan: Plan27 }) {
 
 function ProtectedList({ plan }: { plan: Plan27 }) {
   const p = plan.protected;
+  const f = plan.frozen;
   const [q, setQ] = useState("");
   const rows = p.pages.filter((r) => !q || r.p.toLowerCase().includes(q.toLowerCase()));
   return (
@@ -337,6 +338,31 @@ function ProtectedList({ plan }: { plan: Plan27 }) {
         Enforced in the generator, not by review: the merge and delete passes skip
         them outright. Source: {p.source}.
       </div>
+      <div className="rounded-xl border border-rose-500/40 bg-rose-500/5 p-3">
+        <div className="text-[12px] font-semibold text-rose-200">
+          Do not touch these {f.pages.length}, in any case
+        </div>
+        <p className="mt-1 text-[11px] leading-relaxed text-rose-200/80">{f.reason}</p>
+        <div className="mt-2 space-y-1">
+          {f.pages.map((r) => (
+            <div key={r.p} className="flex items-start gap-2">
+              <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-rose-400" />
+              <a
+                href={`https://chatfin.ai${r.p}`}
+                target="_blank"
+                rel="noreferrer"
+                className="min-w-0 flex-1 truncate font-mono text-[11px] text-rose-100 hover:underline"
+              >
+                {r.p}
+              </a>
+              <span className="shrink-0 text-[10px] text-rose-200/70">
+                {n(r.impr)} impr{r.rd ? ` · ${r.rd} rd` : ""}
+              </span>
+            </div>
+          ))}
+        </div>
+      </div>
+
       <input
         value={q}
         onChange={(e) => setQ(e.target.value)}

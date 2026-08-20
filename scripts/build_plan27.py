@@ -37,6 +37,10 @@ for p, a in actions.items():
               "erp":d["erp"] or "", "cat":d["cat"] or ""})
 P.sort(key=lambda x:(x["w"] or 9, -x["c"], -x["i"]))
 
+FROZEN = ["/blog/top-10-best-ai-tools-for-finance-accounting-in-2026/",
+          "/blog/10-ai-tools-transforming-finance-overnight/",
+          "/blog/blackline-vs-competitors-which-financial-close-platform-gives-the-most-value-in-2026/",
+          "/blog/top-10-ai-tools-for-account-payables/"]
 cnt = collections.Counter(x["a"] for x in P)
 waves = [{"w":w, "n":sum(1 for x in P if x["a"]=="UPDATE" and x["w"]==w), "label":WAVE[w]} for w in (1,2,3,4,5)]
 
@@ -88,6 +92,12 @@ data={"generated":"2026-08-20",
                       +sum(1+len(n["subs"]) for n in tree["non"]),
            "promoted":sum(x["promoted"] for x in erp)},
  "findings":FINDINGS,"blocked":BLOCKED,"demand":DEMAND,"waves":waves,
+ "frozen":{"reason":"ChatFin is mentioned on other clients' pages for their DA. "
+                     "Editing the title or the copy risks breaking the mention that "
+                     "earned the link, so these take no write of any kind: not the "
+                     "title, not the meta, not the body.",
+           "pages":[{"p":p,"impr":round(pages[p]["impr"]),"clicks":round(pages[p]["clicks"]),
+                     "rd":BLMETA.get(p,{}).get("rd",0)} for p in FROZEN if p in pages]},
  "protected":{"count":len([p for p in BLMETA if p in pages]),
               "domains":len({x for v in BLMETA.values() for x in v.get("domains",[])}),
               "source":"authoritative backlink export, 20 aug 2026, 349 rows over 211 referring domains",
