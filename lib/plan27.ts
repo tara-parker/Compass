@@ -16,6 +16,9 @@ export type P27Page = {
   /** GA engagement seconds */ e: number;
   /** backlinked */ b: number;
   /** not indexed */ ni: number;
+  /** referring domains, authoritative export only */ rd: number;
+  /** highest DR pointing at it */ dr: number;
+  /** sample referring domains */ dom: string[];
   erp: string;
   cat: string;
 };
@@ -39,6 +42,11 @@ export type P27Removal = {
   url: string; core: string; competing: number; earners: number; sibling: string;
 };
 
+export type P27Protected = {
+  count: number; domains: number; source: string;
+  pages: { p: string; rd: number; dr: number; dom: string[]; a: P27Action }[];
+};
+
 export type Plan27 = {
   generated: string;
   window: string;
@@ -55,6 +63,7 @@ export type Plan27 = {
   create: P27Create[];
   merges: P27Merge[];
   removals: P27Removal[];
+  protected: P27Protected;
   pages: P27Page[];
 };
 

@@ -8,7 +8,7 @@ import {
 
 const n = (v: number | null | undefined) => (v == null ? "—" : v.toLocaleString("en-US"));
 
-const TABS = ["Tree", "Update queue", "Create", "Merges", "Removals"] as const;
+const TABS = ["Tree", "Update queue", "Protected", "Create", "Merges", "Removals"] as const;
 type Tab = (typeof TABS)[number];
 
 const WAVE_TONE: Record<number, string> = {
@@ -325,6 +325,56 @@ function RemovalList({ plan }: { plan: Plan27 }) {
   );
 }
 
+function ProtectedList({ plan }: { plan: Plan27 }) {
+  const p = plan.protected;
+  const [q, setQ] = useState("");
+  const rows = p.pages.filter((r) => !q || r.p.toLowerCase().includes(q.toLowerCase()));
+  return (
+    <div className="space-y-3">
+      <div className="rounded-xl border border-emerald-500/30 bg-emerald-500/5 p-3 text-[11px] leading-relaxed text-emerald-200/90">
+        <strong className="text-emerald-200">These {p.count} pages can never be merged or deleted.</strong>{" "}
+        External domains link to them, so a 301 or a removal throws that link away.
+        Enforced in the generator, not by review: the merge and delete passes skip
+        them outright. Source: {p.source}.
+      </div>
+      <input
+        value={q}
+        onChange={(e) => setQ(e.target.value)}
+        placeholder="filter by URL"
+        className="w-full rounded-lg border border-ink-line bg-black/30 px-3 py-2 text-[12px] text-slate-200 placeholder:text-flat focus:border-brand/60 focus:outline-none"
+      />
+      <p className="text-[11px] text-flat">
+        {n(rows.length)} pages · {n(p.domains)} referring domains
+      </p>
+      <div className="divide-y divide-ink-line/60 overflow-hidden rounded-xl border border-ink-line">
+        {rows.map((r) => (
+          <div key={r.p} className="flex items-start gap-3 bg-black/20 px-3 py-2.5">
+            <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-emerald-400" />
+            <div className="min-w-0 flex-1">
+              <a
+                href={`https://chatfin.ai${r.p}`}
+                target="_blank"
+                rel="noreferrer"
+                className="block truncate font-mono text-[12px] text-slate-200 hover:text-brand-soft"
+              >
+                {r.p}
+              </a>
+              {r.dom.length > 0 && (
+                <div className="truncate text-[10px] text-flat">{r.dom.join(" · ")}</div>
+              )}
+            </div>
+            <div className="shrink-0 text-right text-[10px] leading-tight text-flat">
+              <div className="text-emerald-300">{r.rd} rd</div>
+              {r.dr > 0 && <div>DR {r.dr}</div>}
+              <div className={A27_STYLE[r.a].text}>{r.a}</div>
+            </div>
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 /* ---------------------------------------------------------------- root ---- */
 
 export default function Plan27Explorer({ plan }: { plan: Plan27 }) {
@@ -392,6 +442,7 @@ export default function Plan27Explorer({ plan }: { plan: Plan27 }) {
       )}
 
       {tab === "Update queue" && <UpdateQueue plan={plan} />}
+      {tab === "Protected" && <ProtectedList plan={plan} />}
       {tab === "Create" && <CreateList plan={plan} />}
       {tab === "Merges" && <MergeList plan={plan} />}
       {tab === "Removals" && <RemovalList plan={plan} />}

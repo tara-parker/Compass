@@ -22,7 +22,7 @@ const RULES: [string, string][] = [
   ["Impressions are not demand",
    "The site converts 0.9% of expected clicks at position 3-5. Never prioritise a rewrite on impressions alone."],
   ["Nothing that earns or is backlinked is removed",
-   "Enforced by construction, not by scoring margin."],
+   "182 pages carry links from 176 external domains. Enforced by construction: the merge and delete passes skip them outright, so a protected page cannot land there however badly it scores."],
   ["A cluster is finished when it is linked",
    "Sub links up, cluster links up, pillar links down to all. A rewrite without the link step is unreachable."],
 ];
@@ -71,7 +71,7 @@ export default function Plan26Page() {
             ["To create", num(t.create), "against a 2,000 ceiling"],
             ["Tree URLs", num(t.treeUrls), `${num(t.promoted)} promoted from existing`],
             ["Internal links", num(t.links), "sub → cluster → pillar"],
-            ["Held for review", num(t.removals), "not actioned"],
+            ["Backlink-protected", num(plan.protected.count), "never merged or deleted"],
           ].map(([l, v, s]) => (
             <div key={l} className="rounded-xl border border-ink-line bg-black/20 p-3">
               <div className="text-[11px] uppercase tracking-wide text-flat">{l}</div>

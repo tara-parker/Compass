@@ -9,6 +9,8 @@ def tsv(f):
     with open(R(f)) as fh: return list(csv.DictReader(fh, delimiter="\t"))
 
 pages   = {x["p"]: x for x in json.load(open(R("plan27-pages.json")))}
+joined  = json.load(open(R("joined.json")))
+BLMETA  = joined.get("backlink_meta", {})   # authoritative export, 20 aug 2026
 actions = json.load(open(R("actions-final.json")))
 tree    = json.load(open(R("tree-final.json")))
 create  = json.load(open(R("create-final.json")))
@@ -30,6 +32,8 @@ for p, a in actions.items():
               "c":round(d["clicks"]), "i":round(d["impr"]), "o":d["pos"],
               "v":round(d["views"]), "e":round(d["engage"] or 0),
               "b":1 if d["bl"] else 0, "ni":1 if d["ni"] else 0,
+              "rd":BLMETA.get(p,{}).get("rd",0), "dr":BLMETA.get(p,{}).get("dr",0),
+              "dom":BLMETA.get(p,{}).get("domains",[])[:4],
               "erp":d["erp"] or "", "cat":d["cat"] or ""})
 P.sort(key=lambda x:(x["w"] or 9, -x["c"], -x["i"]))
 
@@ -84,6 +88,13 @@ data={"generated":"2026-08-20",
                       +sum(1+len(n["subs"]) for n in tree["non"]),
            "promoted":sum(x["promoted"] for x in erp)},
  "findings":FINDINGS,"blocked":BLOCKED,"demand":DEMAND,"waves":waves,
+ "protected":{"count":len([p for p in BLMETA if p in pages]),
+              "domains":len({x for v in BLMETA.values() for x in v.get("domains",[])}),
+              "source":"authoritative backlink export, 20 aug 2026, 349 rows over 211 referring domains",
+              "pages":sorted([{"p":p,"rd":v["rd"],"dr":v["dr"],"dom":v.get("domains",[])[:4],
+                               "a":actions[p]["action"]}
+                              for p,v in BLMETA.items() if p in pages],
+                             key=lambda x:(-x["rd"],-x["dr"]))},
  "erpTree":erp,
  "nonTree":[{"url":n["url"],"label":n["label"],"existing":n["existing"],
              "subs":[{"label":s["label"],"url":s["url"],"existing":s["existing"]} for s in n["subs"]]}
