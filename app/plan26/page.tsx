@@ -1,231 +1,146 @@
-import { getPlan } from "@/lib/plan.server";
-import { ACTION_ORDER, ACTION_STYLE } from "@/lib/plan";
+import { getPlan27 } from "@/lib/plan27.server";
+import { A27_ORDER, A27_STYLE } from "@/lib/plan27";
 import { num } from "@/lib/format";
 import { Card } from "../components/StatCard";
-import PlanExplorer, { ActionBar } from "../components/PlanExplorer";
+import Plan27Explorer from "../components/Plan27Explorer";
 
-export const metadata = { title: "Plan26 · Compass" };
+export const metadata = { title: "Plan27 · Compass" };
 
-const TIER_TONE: Record<string, string> = {
-  A: "text-up",
-  B: "text-up",
-  C: "text-amber-300",
-  D: "text-flat",
-  E: "text-slate-400",
-};
-
-const REASON_BY_ACTION: Record<string, string[]> = {
-  KEEP: ["backlinked-earning", "earns-clicks", "striking-distance", "unique-untested"],
-  UPDATE: ["backlinked-idle", "indexed-weak", "canonical", "crowded"],
-  MERGE: ["dup-signal", "dup-untested"],
-  DELETE: ["not-indexed", "dup-redundant", "padded-variant", "dup-dead", "dark-after-trial"],
-};
-
-// The rules the rewrites follow. Kept on the page because a plan nobody can see
-// the rules for gets worked differently by every person who touches it.
+/** The rules the build follows. On the page because a plan whose rules are
+ *  invisible gets worked differently by every person who touches it. */
 const RULES: [string, string][] = [
-  ["Title and meta are search terms",
-   "Both must read like something a person typed into Google, not like a headline."],
-  ["Never change the slug or the URL",
-   "Change the title, the body and the meta. The URL stays, so nothing needs a redirect."],
-  ["Work the impressions first",
-   "A page with impressions and no clicks is a snippet problem and the fastest fix on the site."],
-  ["One wording for the product",
-   "Finance AI platform. Same phrase every time, so it accumulates instead of splitting."],
-  ["Keep the WP forms",
-   "Do not drop the form when rewriting a page body."],
-  ["Only SAP Business One has a real hub",
-   "Every other topic is a flat pile of posts with nothing to link up to. Build the hub before more posts."],
-  ["Create by intersection, not by volume",
-   "ERP x function x use case. A new page needs a query no existing page answers."],
-  ["Zero impressions is not proof on its own",
-   "Delete only with evidence: not indexed by Google, near-duplicate, padded variant, or dead after 90 days."],
+  ["A cluster is a group of usecases",
+   "Not one page per function. 27 cluster templates cover all 138 usecases. A usecase that does not warrant its own URL is a section on the cluster page."],
+  ["Combination words are title variants",
+   "AI, AI agents, Claude, Cowork, ChatGPT, Codex vary the title and the body. A separate URL only where demand shows one."],
+  ["Never change the slug of a page that exists",
+   "Where an existing page becomes a tree node, the tree points at its URL. New URLs are for new pages only, so nothing needs a redirect it did not already need."],
+  ["Merge inside one intersection, never across two",
+   "Every merge was computed by folding an ERP x category x usecase cell down to its strongest page. Mixing two intersections loses the keywords already cited."],
+  ["Publish the target first, redirect second",
+   "Reverse order points every 301 at the old thin page."],
+  ["Impressions are not demand",
+   "The site converts 0.9% of expected clicks at position 3-5. Never prioritise a rewrite on impressions alone."],
+  ["Nothing that earns or is backlinked is removed",
+   "Enforced by construction, not by scoring margin."],
+  ["A cluster is finished when it is linked",
+   "Sub links up, cluster links up, pillar links down to all. A rewrite without the link step is unreachable."],
 ];
 
 export default function Plan26Page() {
-  const plan = getPlan();
+  const plan = getPlan27();
   const t = plan.totals;
 
   return (
     <div className="space-y-6">
       <header>
-        <h1 className="text-2xl font-semibold tracking-tight text-white">Plan26</h1>
-        <p className="mt-1 text-sm text-slate-400">{num(t.urls)} live URLs</p>
+        <div className="flex flex-wrap items-baseline gap-x-3">
+          <h1 className="text-2xl font-semibold tracking-tight text-white">Plan27</h1>
+          <span className="text-xs text-flat">supersedes Plan26 · {plan.generated}</span>
+        </div>
+        <p className="mt-1 text-sm text-slate-400">
+          {num(t.urls)} live URLs · {plan.window}
+        </p>
       </header>
 
       <Card title="The split">
         <div className="grid grid-cols-2 gap-3 sm:grid-cols-4">
-          {ACTION_ORDER.map((a) => (
-            <div key={a} className="rounded-xl border border-ink-line bg-black/20 p-3">
-              <div className="flex items-center gap-1.5">
-                <span className={`h-2 w-2 rounded-full ${ACTION_STYLE[a].dot}`} />
-                <span className="text-[10px] uppercase tracking-wide text-flat">{a}</span>
+          {A27_ORDER.map((a) => {
+            const v = t[a.toLowerCase() as "keep" | "update" | "merge"];
+            return (
+              <div key={a} className="rounded-xl border border-ink-line bg-black/20 p-3">
+                <div className="flex items-center gap-1.5">
+                  <span className={`h-1.5 w-1.5 rounded-full ${A27_STYLE[a].dot}`} />
+                  <span className="text-[11px] uppercase tracking-wide text-flat">{a}</span>
+                </div>
+                <div className="mt-1 text-xl font-semibold text-white">{num(v)}</div>
               </div>
-              <div className="mt-1 text-2xl font-semibold tabular-nums text-white">{num(t[a])}</div>
+            );
+          })}
+          <div className="rounded-xl border border-ink-line bg-black/20 p-3">
+            <div className="flex items-center gap-1.5">
+              <span className="h-1.5 w-1.5 rounded-full bg-slate-600" />
+              <span className="text-[11px] uppercase tracking-wide text-flat">Delete</span>
             </div>
-          ))}
+            <div className="mt-1 text-xl font-semibold text-slate-500">0</div>
+            <div className="text-[10px] text-flat">empty by instruction</div>
+          </div>
         </div>
-        <div className="mt-3">
-          <ActionBar counts={t} total={t.urls} />
-        </div>
-      </Card>
-
-      <Card title="Topics: what exists, what it earns, what is missing">
-        <div className="overflow-x-auto">
-          <table className="w-full min-w-[720px] text-sm">
-            <thead>
-              <tr className="border-b border-ink-line text-[10px] uppercase tracking-wide text-flat">
-                <th className="px-2 py-2 text-left font-medium">Topic</th>
-                <th className="px-2 py-2 text-right font-medium">Pages</th>
-                <th className="px-2 py-2 text-right font-medium">Impressions</th>
-                <th className="px-2 py-2 text-right font-medium">Clicks</th>
-                <th className="px-2 py-2 text-right font-medium">Orphans</th>
-                <th className="px-2 py-2 text-left font-medium">Hub</th>
-                <th className="px-2 py-2 text-left font-medium">Keep / Update / Merge / Delete</th>
-              </tr>
-            </thead>
-            <tbody>
-              {plan.topics.map((tp) => {
-                const realHub = tp.hub && !tp.hub.startsWith("/blog/") && tp.hubImpressions > 0;
-                return (
-                  <tr key={tp.topic} className="border-b border-ink-line/50 last:border-0">
-                    <td className="whitespace-nowrap px-2 py-2 font-medium text-slate-200">
-                      {tp.topic}
-                    </td>
-                    <td className="px-2 py-2 text-right tabular-nums text-slate-200">
-                      {num(tp.pages)}
-                    </td>
-                    <td className="px-2 py-2 text-right tabular-nums text-slate-200">
-                      {num(tp.impressions)}
-                    </td>
-                    <td
-                      className={`px-2 py-2 text-right tabular-nums ${
-                        tp.clicks ? "text-up" : "text-flat"
-                      }`}
-                    >
-                      {num(tp.clicks)}
-                    </td>
-                    <td className="px-2 py-2 text-right tabular-nums text-flat">
-                      {num(tp.orphans)}
-                    </td>
-                    <td className="px-2 py-2">
-                      {realHub ? (
-                        <span className="font-mono text-[10.5px] text-slate-400">{tp.hub}</span>
-                      ) : (
-                        <span className="rounded bg-down/15 px-1.5 py-0.5 text-[10px] font-semibold text-down">
-                          NO HUB
-                        </span>
-                      )}
-                    </td>
-                    <td className="px-2 py-2">
-                      <div className="flex items-center gap-2">
-                        <span className="w-24 shrink-0 tabular-nums text-[11px] text-slate-400">
-                          {tp.counts.KEEP}/{tp.counts.UPDATE}/{tp.counts.MERGE}/{tp.counts.DELETE}
-                        </span>
-                        <span className="min-w-[72px] flex-1">
-                          <ActionBar counts={tp.counts} total={tp.pages} />
-                        </span>
-                      </div>
-                    </td>
-                  </tr>
-                );
-              })}
-            </tbody>
-          </table>
-        </div>
-      </Card>
-
-      <Card title="Rules for every rewrite">
-        <div className="grid gap-x-6 gap-y-3 sm:grid-cols-2">
-          {RULES.map(([rule, detail]) => (
-            <div key={rule} className="border-b border-ink-line/40 pb-2 last:border-0">
-              <div className="text-[12.5px] font-semibold text-slate-200">{rule}</div>
-              <div className="text-[12px] leading-snug text-flat">{detail}</div>
+        <div className="mt-3 grid grid-cols-2 gap-3 sm:grid-cols-4">
+          {[
+            ["To create", num(t.create), "against a 2,000 ceiling"],
+            ["Tree URLs", num(t.treeUrls), `${num(t.promoted)} promoted from existing`],
+            ["Internal links", num(t.links), "sub → cluster → pillar"],
+            ["Held for review", num(t.removals), "not actioned"],
+          ].map(([l, v, s]) => (
+            <div key={l} className="rounded-xl border border-ink-line bg-black/20 p-3">
+              <div className="text-[11px] uppercase tracking-wide text-flat">{l}</div>
+              <div className="mt-1 text-xl font-semibold text-white">{v}</div>
+              <div className="text-[10px] text-flat">{s}</div>
             </div>
           ))}
         </div>
       </Card>
 
-      <Card title="Why each page landed where it did">
-        <div className="grid gap-x-6 gap-y-4 sm:grid-cols-2">
-          {ACTION_ORDER.map((a) => (
-            <div key={a}>
-              <div className="mb-1.5 flex items-center gap-2">
-                <span className={`h-2 w-2 rounded-full ${ACTION_STYLE[a].dot}`} />
-                <span className="text-[11px] font-semibold uppercase tracking-wide text-slate-200">
-                  {a}
-                </span>
+      <div className="grid gap-4 lg:grid-cols-2">
+        <Card title="What the data changed">
+          <ul className="space-y-3">
+            {plan.findings.map(([h, b]) => (
+              <li key={h}>
+                <div className="text-[12px] font-medium text-slate-200">{h}</div>
+                <div className="text-[11px] leading-relaxed text-flat">{b}</div>
+              </li>
+            ))}
+          </ul>
+        </Card>
+
+        <Card title="Where the clicks actually come from">
+          <p className="mb-3 text-[11px] text-flat">
+            Non-branded demand, 16 months US. 83% of all clicks are branded and excluded here.
+          </p>
+          <div className="space-y-1.5">
+            {plan.demand.map(([theme, clicks, queries]) => (
+              <div key={theme} className="flex items-center gap-2">
+                <div className="w-32 shrink-0 truncate text-[11px] text-slate-300">{theme}</div>
+                <div className="h-1.5 flex-1 overflow-hidden rounded-full bg-black/40">
+                  <div className="h-full bg-brand" style={{ width: `${(clicks / 67) * 100}%` }} />
+                </div>
+                <div className="w-20 shrink-0 text-right text-[10px] text-flat">
+                  {clicks} clk · {queries}q
+                </div>
               </div>
-              <div className="space-y-1">
-                {REASON_BY_ACTION[a].map((key) => {
-                  const count = plan.reasonCounts[key] ?? 0;
-                  if (!count) return null;
-                  return (
-                    <div
-                      key={key}
-                      className="flex items-baseline justify-between gap-3 border-b border-ink-line/40 pb-1 last:border-0"
-                    >
-                      <span className="text-[12.5px] text-slate-300">{plan.reasons[key]}</span>
-                      <span className="shrink-0 tabular-nums text-[12px] text-slate-400">
-                        {num(count)}
-                      </span>
-                    </div>
-                  );
-                })}
-              </div>
-            </div>
-          ))}
-        </div>
+            ))}
+          </div>
+        </Card>
+      </div>
+
+      <Card title="The plan">
+        <Plan27Explorer plan={plan} />
       </Card>
 
-      <Card title="Measured performance">
-        <div className="overflow-x-auto">
-          <table className="w-full min-w-[460px] text-sm">
-            <thead>
-              <tr className="border-b border-ink-line text-[10px] uppercase tracking-wide text-flat">
-                <th className="px-2 py-2 text-left font-medium">Tier</th>
-                <th className="px-2 py-2 text-left font-medium">Definition</th>
-                <th className="px-2 py-2 text-right font-medium">URLs</th>
-                <th className="px-2 py-2 text-right font-medium">Clicks</th>
-                <th className="px-2 py-2 text-right font-medium">Impressions</th>
-              </tr>
-            </thead>
-            <tbody>
-              {plan.tiers.map((tr) => (
-                <tr key={tr.tier} className="border-b border-ink-line/50 last:border-0">
-                  <td className={`px-2 py-2 font-mono font-semibold ${TIER_TONE[tr.tier]}`}>
-                    {tr.tier}
-                  </td>
-                  <td className="px-2 py-2 text-slate-300">{tr.definition}</td>
-                  <td className="px-2 py-2 text-right tabular-nums text-slate-200">
-                    {num(tr.urls)}
-                  </td>
-                  <td
-                    className={`px-2 py-2 text-right tabular-nums ${
-                      tr.clicks ? "text-slate-200" : "text-flat"
-                    }`}
-                  >
-                    {num(tr.clicks)}
-                  </td>
-                  <td
-                    className={`px-2 py-2 text-right tabular-nums ${
-                      tr.impressions ? "text-slate-200" : "text-flat"
-                    }`}
-                  >
-                    {num(tr.impressions)}
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </Card>
+      <div className="grid gap-4 lg:grid-cols-2">
+        <Card title="Rules">
+          <ul className="space-y-2.5">
+            {RULES.map(([h, b]) => (
+              <li key={h}>
+                <div className="text-[12px] text-slate-200">{h}</div>
+                <div className="text-[11px] leading-relaxed text-flat">{b}</div>
+              </li>
+            ))}
+          </ul>
+        </Card>
 
-      <Card title="Clusters, sub-clusters and pages">
-        <PlanExplorer plan={plan} />
-      </Card>
-
+        <Card title="Blocked, needed from outside">
+          <ul className="space-y-2.5">
+            {plan.blocked.map(([h, b]) => (
+              <li key={h}>
+                <div className="text-[12px] text-amber-200/90">{h}</div>
+                <div className="text-[11px] leading-relaxed text-flat">{b}</div>
+              </li>
+            ))}
+          </ul>
+        </Card>
+      </div>
     </div>
   );
 }
-
